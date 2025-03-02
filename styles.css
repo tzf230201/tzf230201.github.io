@@ -1,15 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #ffffff; /* White */
 }
 
 header {
-    background: #007acc;
-    color: #fff;
+    background: #3498db; /* Bright Blue */
+    color: #ffffff; /* White */
     padding: 1rem 0;
     text-align: center;
 }
@@ -26,8 +26,8 @@ header .container p {
 }
 
 nav {
-    background: #005ea3;
-    color: #fff;
+    background: #2980b9; /* Darker Blue */
+    color: #ffffff; /* White */
     display: flex;
     justify-content: center;
     padding: 0.5rem;
@@ -45,7 +45,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff; /* White */
     text-decoration: none;
 }
 
@@ -56,7 +56,7 @@ nav ul li a:hover {
 .section {
     padding: 2rem;
     margin: 1rem auto;
-    background: #fff;
+    background: #ecf0f1; /* Light Gray */
     max-width: 800px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -64,16 +64,16 @@ nav ul li a:hover {
 
 .section h2 {
     margin-bottom: 1rem;
-    color: #007acc;
+    color: #3498db; /* Bright Blue */
 }
 
 .project, .experience {
     margin-bottom: 1.5rem;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+footer p {
+    background: #3498db; /* Bright Blue */
+    color: #ffffff; /* White */
     text-align: center;
     padding: 1rem 0;
     position: relative;
@@ -102,16 +102,14 @@ img {
 
 /* Style for the vertical line */
 .vertical-line {
-    border-left: 2px solid #000; /* Adjust the color and width as needed */
-    height: auto; /* Adjust the height as needed */
-    margin: 0 20px; /* Adjust the margin as needed */
+    border-left: 2px solid #2980b9; /* Darker Blue */
+    height: auto;
+    margin: 0 20px;
 }
-
-
 
 /* Style for the vertical line */
 .projects-year {
-    border-left: 1px dashed #333; /* Adjust the color and width as needed */
-    padding-left: 10px; /* Adjust the padding as needed */
-    margin-left: 10px; /* Adjust the margin as needed */
+    border-left: 1px solid #bdc3c7; /* Gray */
+    padding-left: 10px;
+    margin-left: 10px;
 }
