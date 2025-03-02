@@ -19,8 +19,10 @@ header h1 {
     font-size: 2.5rem;
 }
 
-header p {
+/* Center the text inside the header container */
+header .container p {
     font-size: 1.2rem;
+    text-align: center;
 }
 
 nav {
@@ -77,4 +79,39 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Justify all paragraphs */
+p {
+    text-align: justify;
+}
+
+/* Center all images */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center the video container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Style for the vertical line */
+.vertical-line {
+    border-left: 2px solid #000; /* Adjust the color and width as needed */
+    height: auto; /* Adjust the height as needed */
+    margin: 0 20px; /* Adjust the margin as needed */
+}
+
+
+
+/* Style for the vertical line */
+.projects-year {
+    border-left: 1px dashed #333; /* Adjust the color and width as needed */
+    padding-left: 10px; /* Adjust the padding as needed */
+    margin-left: 10px; /* Adjust the margin as needed */
 }

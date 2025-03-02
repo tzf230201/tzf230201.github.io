@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teuku Zikri Fatahillah | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Teuku Zikri Fatahillah</h1>
-            <p>Robotics Engineer | Developer | Innovator</p>
+            <p>Robotics | Embedded System | Computer Vision | Electronics | AI </p>
         </div>
     </header>
     <nav>
@@ -30,99 +31,374 @@
             </p>
         </section>
         <section id="projects" class="section">
-            <div class="project">
-                <h3>Implementing Model Predictive Control (MPC) on Ackermann Drive Robot for Autonomous Vehicle Simulation on ROS Gazebo</h3>
-                <p>
-                    I've tried implementing Model Predictive Control (MPC) on a simulated Ackermann drive robot described in URDF (Universal Robot Description Format). This allows the robot to predict future states and adjust its path accordingly. Utilizing the Robot Operating System (ROS), the robot navigates through dynamic environments using Gazebo for 3D simulation and RViz for visualization.
-                </p>
-                <p>
-                    The robot relies on a Lidar sensor to understand its surroundings, spotting obstacles and other simulation-vehicles . It also uses odometry through dead reckoning to know its exact location amidst the chaos.
-                </p>
-                <img src="picture/ackermann_mpc_1.png" alt="Profile Picture" style="width:600px;height:300px;">
-                <p>
-                    Through this project, I aim to show that autonomous navigation in dynamic environments is achievable, obviously with keen perception, smart planning, and accurate modeling, I'm paving the way for a future where autonomous vehicles can navigate the world around them effortlessly.
-                </p>
-                <p><strong>Keywords:</strong> MPC, ROS, Path Planning, Ackermann Drive, Autonomous Vehicle, Gazebo, URDF (Universal Robot Description Format)</p>
-            </div>
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Reverse Engineering Command and Weapon-Control Console (CWCC) of CAKRA-401 Submarine</h3>
-                <img src="picture/cakra_1.jpg" alt="Profile Picture" style="width:600px;height:300px;">
+            <h3>2024</h3>
+            <div class="projects-year">
                 <p>
-                    KRI Cakra, a submarine of the 209/1300 type, was manufactured by Howaldtswerke in Kiel, Germany, in 1981. This type of submarine is widely utilized by navies around the world. The difficulty in sourcing spare parts for repairs poses a significant challenge. Therefore, it becomes essential to consider modernizing the submarine system.
+                    In 2024, I haven't been involved in many projects yet, except from work or my hobby in robotics. I'm planning to build my career in Japan, so I've been spending a lot of time deepening my fundamental knowledge in electronics, robotics, as well as English and Japanese languages for my future career prospects.
                 </p>
-                <p>
-                    Reverse engineering an old device with fully analog signals need to understanding its inner workings. documentation plays a crucial role in the reverse engineering process, especially for an old device with fully analog signals. Any documentation or technical specifications related to the device can provide valuable insights for us. We also utilizing tools like oscilloscopes to analyze signal characteristics, identifying electronic components, and tracing circuit paths on the PCB. Through this process, we recreate the schematic, unravel the function of each component, and, if possible, replicate the circuit for testing purpose.
-                </p>
-                <p><strong>Keywords:</strong> FPGA, Analog Signal, Signal Processing, Vector Monitor</p>
+                <div class="project">
+                    <h3>Implementing Model Predictive Control (MPC) on Ackermann Drive Robot for Autonomous Vehicle Simulation on ROS Gazebo</h3>
+                    <p>
+                        I've tried implementing Model Predictive Control (MPC) on a simulated Ackermann drive robot described in URDF (Universal Robot Description Format). This allows the robot to predict future states and adjust its path accordingly. Utilizing the Robot Operating System (ROS), the robot navigates through dynamic environments using Gazebo for 3D simulation and RViz for visualization.
+                    </p>
+                    <p>
+                        The robot relies on a Lidar sensor to understand its surroundings, spotting obstacles and other simulation-vehicles . It also uses odometry through dead reckoning to know its exact location amidst the chaos.
+                    </p>
+                    <img src="picture/ackermann_mpc_1.png" alt="Profile Picture" style="width:600px;height:300px;">
+                    <p>
+                        Through this project, I aim to show that autonomous navigation in dynamic environments is achievable, obviously with keen perception, smart planning, and accurate modeling, I'm paving the way for a future where autonomous vehicles can navigate the world around them effortlessly.
+                    </p>
+                    <div class="video-container">
+                        <video width="600" height="300" controls>
+                            <source src="https://drive.google.com/uc?export=download&id=1BM3USdEU8ueO4HI-mr-v-Gc8QcOIIfYa" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p><strong>Keywords:</strong> Autonomous Vehicle, Robotics, Path Planning, MPC, ROS, Ackermann Drive, Gazebo, URDF</p>
+                </div>
             </div>
-            <div class="project">
-                <h3>Reengineering Avionics: Rear Cockpit Monitor (RCM) for Hawk 100 Aircraft</h3>
-                <img src="picture/hudmon_1.jpg" alt="Profile Picture" style="width:600px;height:300px;">
-                <p>
-                    The Rear Cockpit Monitor (RCM) on the Hawk 100 aircraft plays a crucial role as a co- pilot aid, enhancing situational awareness during flights. Serving as a Head-Up Display Monitor (HUDMON), the RCM displays video data from the aircraft's camera (CAM) and Head-Up Display (HUD) symbology.
-                </p>
-                <img src="picture/hudmon_2.png" alt="Profile Picture" style="width:600px;height:300px;">
-                <p>
-                    The RCM enables the co-pilot in the rear cockpit to easily monitor critical flight information, including real-time video data and HUD symbology. Its integration into the Hawk 100 cockpit design reflects a commitment to operational efficiency and pilot coordination. The RCM plays a key role in improving situational awareness during flights, ensuring quick and efficient access to essential information for the co-pilot.
-                </p>
-                <img src="picture/hudmon_3.jpg" alt="Profile Picture" style="width:600px;height:300px;">
-                <p>
-                    My objective is to designing new reliable PCB circuit by considering several safety parameters and military standard requirement also program the FPGA in VHDL language.
-                </p>
-                <p><strong>Keywords:</strong> FPGA, PAL, DSP, DDR-SDRAM, Image Processing</p>
+
+            <h3>2023</h3>
+            <p>
+                This year, I spend the most of time to learn about electronics circuit in avionics application. Because, at this time I am working as electronics development engineer in one of defense industry in indonesia (PT. Infoglobal Teknologi Semesta) that heavily involved with military standard circuit and FPGA as the main controller.
+            </p>
+            <div class="projects-year">
+                <div class="project">
+                    <h3>Reverse Engineering Command and Weapon-Control Console (CWCC) of CAKRA-401 Submarine</h3>
+                    <p>
+                        KRI Cakra, a submarine of the 209/1300 type, was manufactured by Howaldtswerke in Kiel, Germany, in 1981. This type of submarine is widely utilized by navies around the world. The difficulty in sourcing spare parts for repairs poses a significant challenge. Therefore, it becomes essential to consider modernizing the submarine system.
+                    </p>
+                    <img src="picture/cakra_1.jpg" alt="Profile Picture" style="width:600px;height:300px;">
+                    <p>
+                        Reverse engineering an old device with fully analog signals need to understanding its inner workings. documentation plays a crucial role in the reverse engineering process, especially for an old device with fully analog signals. Any documentation or technical specifications related to the device can provide valuable insights for us. We also utilizing tools like oscilloscopes to analyze signal characteristics, identifying electronic components, and tracing circuit paths on the PCB. Through this process, we recreate the schematic, unravel the function of each component, and, if possible, replicate the circuit for testing purpose.
+                    </p>
+                    <img src="picture/cakra_2.jpg" alt="Profile Picture" style="width:500px;height:500px;">
+                    <p>
+                        The struggle of this project is, this submarine was built in 80’s in germany, it is using analog video signal that does not follow analog video standard at that time like PAL or NTSC. So I need to use flexible Video ADC chip as signal processing and find the best settings for the signals by analyzing the signal characteristics.
+                    </p>
+                    <img src="picture/cakra_3.jpg" alt="Profile Picture" style="width:500px;height:500px;">
+                    <p>
+                        The result is looks like the same as the old one but with newer technology like FPGA, replacing CRT with LCD display, make it lighter, save a lot of space, simple and more reliable.        
+                    </p>
+                    <p><strong>Keywords:</strong> FPGA, Analog signal, Signal Processing, Vector monitor, Reverse engineering</p>
+                </div>
+                <div class="project">
+                    <h3>Reengineering Avionics: Rear Cockpit Monitor (RCM) for Hawk 100 Aircraft</h3>
+                    <img src="picture/hudmon_1.jpg" alt="Profile Picture" style="width:600px;height:300px;">
+                    <p>
+                        The Rear Cockpit Monitor (RCM) on the Hawk 100 aircraft plays a crucial role as a co- pilot aid, enhancing situational awareness during flights. Serving as a Head-Up Display Monitor (HUDMON), the RCM displays video data from the aircraft's camera (CAM) and Head-Up Display (HUD) symbology.
+                    </p>
+                    <img src="picture/hudmon_2.png" alt="Profile Picture" style="width:600px;height:300px;">
+                    <p>
+                        The RCM enables the co-pilot in the rear cockpit to easily monitor critical flight information, including real-time video data and HUD symbology. Its integration into the Hawk 100 cockpit design reflects a commitment to operational efficiency and pilot coordination. The RCM plays a key role in improving situational awareness during flights, ensuring quick and efficient access to essential information for the co-pilot.
+                    </p>
+                    <img src="picture/hudmon_3.jpg" alt="Profile Picture" style="width:500px;height:550px;">
+                    <p>
+                        My objective is to designing new reliable PCB circuit by considering several safety parameters and military standard requirement also program the FPGA in VHDL language.
+                    </p>
+                    <p><strong>Keywords:</strong> FPGA, DSP, DDR-SDRAM, Image Processing, Electronic design</p>
+                </div>
+                <div class="project">
+                    <h3>Measure the waves run-up using CNN image segmentation</h3>
+                    <p>
+                        The objective is to measure the heigh of the wave in real-time using CNN method from the top view. It used by someone from faculty of marine technology to analyse the physical model testing of coastal structures.
+                    </p>
+                    <img src="picture/wave_run_up_1.png" alt="Profile Picture" style="width:600px;height:300px;">
+                    <p>
+                        It was use U-Net architecture, achieved an accuracy rate of 94%, even human eye hard to see. I also adding a simple image processing to convert the heigh wave in standard unit, draw the value to the output image, save the data into CSV file for analysis purpose and so on.
+                    </p>
+                    <img src="picture/wave_run_up_2.png" alt="Profile Picture" style="width:600px;height:450px;">
+                    <div class="video-container">
+                        <video width="600" height="300" controls>
+                            <source src="https://drive.google.com/uc?export=download&id=1erenR6hVwHaVQ5EcAaqMMq4gkkTaAbBr" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p><strong>Keywords:</strong> CNN, Image segmentation, Wave Run-up, Computer vision, Deep learning</p>
+                </div>
+                <div class="project">
+                    <h3>Sound recognition using CNN in microcontroller for broken motor detection</h3>
+                    <p>
+                        Neural network training process requires high computing hardware. Thus, it is trained on a generic TensorFlow model. Moreover, training is only necessary if the customized dataset is suitable for deep learning models, as the application can also use pre-trained framework models. The dataset will be trained by TensorFlow and generate a model, but this model cannot be applied to the microcontroller yet. Because of this, the model is converted using TensorFlow Lite so that it can be applied to the microcontroller.
+                    </p>
+                    <img src="picture/sound_recognition_1.jpg" alt="Profile Picture" style="width:600px;height:180px;">
+                    <p>
+                        The model doesn't take in raw audio sample data, instead it works with spectrograms which are two dimensional arrays that are made up of slices of frequency information, each taken from a different time window. The recipe for creating the spectrogram data is that each frequency slice is created by running an FFT across a 30ms window of the audio sample data.
+                    </p>
+                    <img src="picture/sound_recognition_2.png" alt="Profile Picture" style="width:600px;height:250px;">
+                    <p>
+                        Using STM32F746NG discovery board to record audio by using internal MEMS digital microphone, save it into micro SD card in .wav form. The datasets also have taken by this hardware.
+                    </p>
+                    <img src="picture/sound_recognition_3_1.jpg" alt="Profile Picture" style="width:600px;height:320px;">
+                    <img src="picture/sound_recognition_3_2.jpg" alt="Profile Picture" style="width:600px;height:320px;">
+                    <p>
+                        The implementation of the designed system has been successfully implemented with a accuracy rate of 88.325%.
+                    </p>
+                    <img src="picture/sound_recognition_4.jpg" alt="Profile Picture" style="width:600px;height:350px;">
+                    <p><strong>Keywords:</strong> CNN, Sound Recognition, deep learning, TensorFlow-Lite, Embedded System</p>
+                </div>
             </div>
-            
-            <div class="project">
-                <h3>Sound Recognition Using CNN for Broken Motor Detection</h3>
-                <p>
-                    Implemented a spectrogram-based sound recognition model on an STM32 microcontroller, enabling real-time fault detection.
-                </p>
-                <p><strong>Keywords:</strong> CNN, FFT, Microcontroller, Signal Processing</p>
+
+            <h3>2022</h3>
+            <p>
+                This year, I was doing my final project, I involved a lot in robotics field especially humanoid robot, learning any branch of robotics such as forward and inverse kinematics, embedded programming, ROS, robot simulation and so on.
+            </p>
+            <div class="projects-year">
+                <div class="project">
+                    <h3>Projecting the Center of Mass of 20 DoF humanoid robot in realtime. (Digital Twin).</h3>
+                    <p>
+                        A humanoid robot model is needed to records all CoM locations of each link connected to the robot body so that a single point position can be calculated that represents the entire body of the humanoid robot.
+                    </p>
+                    <img src="picture/dynamic_walking_1.png" alt="Profile Picture" style="width:600px;height:320px;">
+                    <p>
+                        I was using URDF (Universal Robot Description Format) and presenting in RVIZ (Robot Virtualization) under ROS (Robot Operating System) framework. The Humanoid Robot can be said to be in a balanced position if the position of the Ground Projection Center of Mass (GCoM) is in the polygon support area. The support polygon got by calculating the convex hull using Jarvis March method. This project involved a lot basic of linear algebra, the exciting part for me when apply math in form of programming language and find the most effective way to do it. I was using recursive style that proposed by Mr. shuuji kajita in his book “Introduction to Humanoid Robot”. The humanoid robot designed in this project has a height of ±590 mm and a weight of ±4.9 kg.
+                    </p>
+                    <div class="video-container">
+                        <video width="600" height="300" controls>
+                            <source src="https://drive.google.com/uc?export=download&id=1lrG4TtlAgIi0zB1SQcYGWvoW3oX8ve_q" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p><strong>Keywords:</strong> URDF, Center of Mass, Support polygon, Humanoid, ROS, Robotics</p>
+                </div>
+                <div class="project">
+                    <h3>Embedded Programming for the Vehicle Controller Unit (VCU) of Electric Bus.</h3>
+                    <img src="picture/vcu_1.jpg" alt="Profile Picture" style="width:600px;height:320px;">
+                    <p>
+                        In order to achieve a Domestic Component Level (TKDN) of more than 40%, PT. INKA is making every effort to prioritize the use of domestic components for the Merah Putih Electric Bus project it is developing.
+                    </p>
+                    <img src="picture/vcu_2.jpg" alt="Profile Picture" style="width:600px;height:320px;">
+                    <p>
+                        With the multitude of components required from the mechanics, hardware, and software aspects, and PT. INKA's desire for the Red and White Electric Bus to operate at the G20 Summit in 2022, PT. INKA has decided to collaborate with PT. NSAD for the manufacturing of the Vehicle Control Unit (VCU) used in this Merah Putih Electric Bus project. PT. NSAD itself is a domestic embedded electronics company engaged in power electronics, industrial control systems, and IoT.
+                    </p>
+                    <img src="picture/vcu_3.png" alt="Profile Picture" style="width:600px;height:350px;">
+                    <p>
+                        I am working on the Vehicle Control Unit (VCU) source code that utilizes the main microcontroller from Texas Instruments, specifically the Hercules series. I am configuring the I/O using the HalCoGen application and programming the state machine and interlock in the C language using Code Composer Studio (CCS). The communication between components is done using the CAN bus protocol. I also need to ensure the quality of the signals generated by the circuit before coding, and perform troubleshooting or add features if errors arise.   
+                    </p>
+                    <img src="picture/vcu_4.png" alt="Profile Picture" style="width:600px;height:320px;">
+                    <p>
+                        During the VCU program design phase, it would be highly risky to directly experiment with the algorithm on the electric bus directly. Therefore, a VCU test jig is necessary as a tool to simulate all components connected directly to the VCU, such as the gas pedal, key switch, and so on.
+                    </p>
+                    <p><strong>Keywords:</strong> Vehicle Controller Unit, CAN-Bus, Electric Vehicle</p>
+                </div>
             </div>
-            <div class="project">
-                <h3>Vehicle Controller Unit (VCU) Firmware for Electric Bus</h3>
-                <p>
-                    Created reliable VCU firmware for the Merah Putih Electric Bus, featuring CAN bus communication and state machine programming.
-                </p>
-                <p><strong>Keywords:</strong> CAN Bus, Electric Vehicle, Embedded Systems</p>
+
+            <h3>2021</h3>
+            <p>
+                In 2021, I was a member of the robotics team in my university, I was involved in several projects such as 3D Lidar tracking, autonomous robot, and so on. I also involved in robotics competitions such Indonesia Robot Contest (KRI) especially in humanoid robotics.
+            </p>
+            <div class="projects-year">
+                <div class="project">
+                    <h3>3D Tracking Lidar</h3>
+                    <img src="picture/3d_lidar_1.png" alt="Profile Picture" style="width:400px;height:400px;">
+                    <p>
+                        In the mechanical aspect, I utilize a 2D Lidar sensor combined with a Dynamixel servo motor to add an additional axis. The servo motor is controlled through a USB to Dynamixel interface, and the system is powered by a LiPo battery. Electronically, all the programs run on ROS, which already supports the entire environment and necessary libraries such as PointCloud (PCL), Dynamixel SDK, RPLidar library, and others.
+                    </p>
+                    <img src="picture/3d_lidar_2.png" alt="Profile Picture" style="width:450px;height:450px;">
+                    <p>
+                        The perception is achieved by combining PointCloud data with the basic of linear algebra and visualizing the results in RVIZ.
+                    </p>
+                    <img src="picture/3d_lidar_3.png" alt="Profile Picture" style="width:600px;height:300px;">
+                    <p><strong>Keywords:</strong> 3D scan, Lidar, PCL, Perception.</p>
+                </div>
             </div>
         </section>
         <section id="experience" class="section">
-            <h2>Experience</h2>
+            <h2>Professional Experices</h2>
             <div class="experience">
-                <h3>Electronics Development Engineer</h3>
-                <p><strong>PT. Infoglobal Teknologi Semesta</strong> (Oct 2022 – Apr 2024)</p>
+                <h3>PT. Genesis Technology Indonesia (Sep 2024 – Jan 2025)</h3>
+                <p><strong>Production Maintenance Technician – Contract</strong></p>
                 <ul>
-                    <li>Reverse engineered avionics and submarine systems.</li>
-                    <li>Designed PCB layouts and programmed FPGA for advanced signal processing.</li>
-                    <li>Developed testing tools for avionics hardware and ensured adherence to military standards.</li>
+                    <li>Led a team of machine operators in a production line.</li>
+                    <li>Provided training to new employees on machine operation procedures, maintenance, and safety protocols.</li>
+                    <li>Oversaw machine installations based on technical drawings, including coordinating and directing forklift drivers.</li>
+                    <li>Managed maintenance schedules and tasks to ensure smooth operations.</li>
+                    <li>Troubleshot and identified production machine issues.</li>
+                    <li>Prepared and submitted comprehensive monthly reports.</li>
+                    <li>Installed electrical panels and programmed PLCs.</li>
+                    <li>Installed and maintained pneumatic systems.</li>
                 </ul>
+                <p><strong>Skills:</strong> Leadership, Communication, Microsoft Excel, Microsoft Power Point, Festo Fluidsim, Siemens Tia Portal</p>
             </div>
             <div class="experience">
-                <h3>Embedded Programmer (Intern)</h3>
-                <p><strong>PT. Industri Kereta Api (Persero)</strong> (Feb 2022 – Jul 2022)</p>
+                <h3>PT. Infoglobal Teknologi Semesta (Oct 2022 – Apr 2024)</h3>
+                <p><strong>Electronic Engineer – Contract</strong></p>
                 <ul>
-                    <li>Developed firmware for electric bus controllers.</li>
-                    <li>Conducted simulation and testing of control systems using CAN bus protocol.</li>
+                    <li>Troubleshot and identified damage to CN235-220 aircraft components.</li>
+                    <li>Provided datasheet, manual book or technical specification related to project for system discussion.</li>
+                    <li>Upgraded avionics features through research, prototyping, and testing.</li>
+                    <li>Designed schematics and PCB layout for Rear Cockpit Monitor (RCM) for Hawk-100 aircraft, incorporating high-speed communication like DDR SDRAM, etc.</li>
+                    <li>Build a tester device for hawk-100’s Rear Cockpit Monitor (RCM).</li>
+                    <li>Programmed FPGA using System Verilog/VHDL for digital video processing, resulting in a 66% reduction in processing time.</li>
+                    <li>Constructed a Data Entry Panel for avionics development purposes.</li>
+                    <li>Conducted Reverse Engineering on the Electronic Data Display (EDD) of CAKRA-401 Submarine.</li>
+                    <li>Rebuilt the Electronic Data Display (EDD) of CAKRA-401 Submarine from scratch.</li>
+                    <li>Managed project release utilizing version control tools.</li>
                 </ul>
+                <p><strong>Skills:</strong> KiCAD, Picoscope, NGSpice, OpenCAD, Solid Works, Linux, Gitlab, FPGA, Xilinx ISE, Xilinx Vivado, Xilinx Vitis, Visual Studio IDE, .NET Framework, STM32CubeIDE, PlatformIO, ArduinoIDE, Logic Analyzer, Wireshark, VHDL, C#, C/C++, Python, Autodesk Eagle, H-term, Putty, Hoddo</p>
+            </div>
+            <div class="experience">
+                <h3>PT. Industri Kereta Api (Persero) (Feb 2022 – Jul 2022)</h3>
+                <p><strong>Embedded Programmer – Intern</strong></p>
+                <ul>
+                    <li>Attained the highest score in the Certified Internship and Independent Study Program Batch II.</li>
+                    <li>Successfully devised and developed the Vehicle Control Unit (VCU) firmware of the Merah Putih Electric Bus from concept to road testing.</li>
+                    <li>Made a comprehensive documentation about the firmware.</li>
+                    <li>Consistently made daily activity report and project progress to supervisor.</li>
+                </ul>
+                <p><strong>Skills:</strong> KiCAD, Code Composer Studio (CCS) IDE, HalCoGen, STM32CubeIDE, Vector CAN</p>
+            </div>
+            <h2>Organizational Experiences</h2>
+            <div class="experience">
+                <h3>EEPIS Robot Soccer (EROS) (Nov 2019 – Nov 2021)</h3>
+                <p><strong>Humanoid robot soccer team – Co-Leader, Programmer, Electrical Design</strong></p>
+                <ul>
+                    <li>Collaborated with a team to refine the decision-making algorithm for humanoid robot soccer players, resulting in enhancements to ball-finding algorithms, ball approaches, path planning, and individual attacking strategies, increasing performance during gameplay.</li>
+                    <li>Worked collaboratively to upgrade the robot teamwork algorithm, leading to improved role allocation and teamwork performance for humanoid robot soccer players.</li>
+                    <li>Programmed soccer-playing strategy for humanoid robot on ROS Platform.</li>
+                    <li>Designed PCB schematic, PCB layout and firmware for the sub-controller, utilizing STM32 Microcontroller.</li>
+                    <li>Analyzed kinematics and dynamics of the humanoid walking system.</li>
+                    <li>Applied control methods for humanoid robot reflex systems.</li>
+                    <li>Developed 20 Degree of Freedom humanoid robots URDF model for Digital Twin.</li>
+                    <li>Planned, modified, and executed research techniques, procedures, and tests.</li>
+                    <li>Reduce Center of Mass (CoM) error 68% from ZMP reference.</li>
+                    <li>Improve the Maneuver system by implementing footstep planner.</li>
+                </ul>
+                <p><strong>Skills:</strong> Robot Operating System (ROS/ROS2), OpenCV, C++, Python, Autodesk Eagle, Autodesk Inventor, Gazebo, URDF, STM32CubeIDE, Keil uVision, ArduinoIDE, Visual Basic, UDP, TCP/IP, Docker, GitHub, H-term, CURA, TensorFlow, Keras, CUDA, Proteus, CoppeliaSim, LabView, Linux</p>
+            </div>
+            <div class="experience">
+                <h3>HIMA ELKA PENS (Oct 2019 – Des 2020)</h3>
+                <p><strong>Electronics Engineering Student Association – Research and Technology Staff</strong> </p>
+                <ul>
+                    <li>Conducted training, workshops, seminars, and other facilities for student development.</li>
+                    <li>Prepared laboratories, organized competitions, and assisted students interested in participating in competitions.</li>
+                    <li>Coordinated with lecturers and obtained permits for ongoing research efforts.</li>
+                </ul>
+                <p><strong>Skills:</strong> Project Management, Trello, Team work, Communication, Road map</p>
             </div>
         </section>
         <section id="skills" class="section">
             <h2>Skills</h2>
             <ul>
-                <li><strong>Programming:</strong> C/C++, Python, MATLAB, VHDL/Verilog</li>
-                <li><strong>Robotics:</strong> ROS/ROS2, Gazebo, OpenCV</li>
-                <li><strong>Embedded Systems:</strong> STM32, FPGA, CAN Bus</li>
-                <li><strong>PCB Design:</strong> KiCad, Autodesk Eagle</li>
-                <li><strong>Machine Learning:</strong> TensorFlow, CNNs</li>
+                <h3>Programming Languages:</h3>
+                <ul>
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>Embedded C</li>
+                    <li>Makefile</li>
+                    <li>Python</li>
+                    <li>MATLAB</li>
+                    <li>LabVIEW</li>
+                    <li>VHDL / Verilog</li>
+                    <li>Shell Scripting</li>
+                    <li>URDF / Xacro</li>
+                    <li>Lua Script</li>
+                    <li>PHP</li>
+                    <li>JavaScript</li>
+                </ul>
+            
+                <h3>Robot Operating System:</h3>
+                <ul>
+                    <li>ROS & ROS2</li>
+                </ul>
+            
+                <h3>Version Control:</h3>
+                <ul>
+                    <li>Git / GitHub / GitLab</li>
+                </ul>
+            
+                <h3>Containerization:</h3>
+                <ul>
+                    <li>Docker</li>
+                </ul>
+            
+                <h3>Robotics Simulation:</h3>
+                <ul>
+                    <li>Gazebo</li>
+                    <li>CoppeliaSim</li>
+                </ul>
+            
+                <h3>Web Development & IoT:</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Node.js</li>
+                    <li>RESTful API</li>
+                    <li>MQTT</li>
+                    <li>Unity Web</li>
+                    <li>PyQT</li>
+                </ul>
+            
+                <h3>Computer Vision:</h3>
+                <ul>
+                    <li>OpenCV</li>
+                    <li>FPGA optimization Computer Vision</li>
+                </ul>
+            
+                <h3>Operating System:</h3>
+                <ul>
+                    <li>Linux</li>
+                </ul>
+            
+                <h3>Machine Learning:</h3>
+                <ul>
+                    <li>TensorFlow / TensorFlow Lite</li>
+                    <li>Keras</li>
+                    <li>CUDA</li>
+                </ul>
+            
+                <h3>ECAD / PCB Design Tools:</h3>
+                <ul>
+                    <li>KiCad</li>
+                    <li>Autodesk Eagle</li>
+                    <li>LTSpice</li>
+                    <li>PSpice</li>
+                    <li>Proteus</li>
+                </ul>
+            
+                <h3>PLC & Ladder Diagram:</h3>
+                <ul>
+                    <li>Omron</li>
+                    <li>Siemens</li>
+                </ul>
+            
+                <h3>CAD / 3D Design Tools:</h3>
+                <ul>
+                    <li>Autodesk-Inventor</li>
+                    <li>FreeCAD</li>
+                    <li>CURA</li>
+                </ul>
+            
+                <h3>Project Management:</h3>
+                <ul>
+                    <li>Trello</li>
+                    <li>Hoddo</li>
+                </ul>
+            
+                <h3>FPGA Tools:</h3>
+                <ul>
+                    <li>Xilinx ISE</li>
+                    <li>Xilinx Vitis</li>
+                    <li>Xilinx Vivado</li>
+                </ul>
+            
+                <h3>Embedded System Tools:</h3>
+                <ul>
+                    <li>STM32CubeIDE</li>
+                    <li>ArduinoIDE</li>
+                    <li>Code Composer Studio</li>
+                    <li>HalCoGen</li>
+                    <li>PlatformIO</li>
+                </ul>
             </ul>
         </section>
         <section id="contact" class="section">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:teukuzikrifatahillah@gmail.com">teukuzikrifatahillah@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/tzf230201">tzf230201</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/teukuzikrifatahillah">teukuzikrifatahillah</a></p>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:teukuzikrifatahillah@gmail.com">teukuzikrifatahillah@gmail.com</a></p>
+            <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/tzf230201">tzf230201</a></p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/teukuzikrifatahillah">teukuzikrifatahillah</a></p>
+            <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/6285156088402">+62 85156088402</a></p>
         </section>
     </main>
     <footer>
