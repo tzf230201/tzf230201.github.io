@@ -1,0 +1,22 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </div>
+        
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <ul class="navbar-menu">
+            <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+            <li><a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="active"{% endif %}>Projects</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}" {% if page.url == '/contact/' %}class="active"{% endif %}>Contact</a></li>
+            <!-- Uncomment when ready to add CV/Resume -->
+            <!-- <li><a href="{{ '/resume/' | relative_url }}" {% if page.url == '/resume/' %}class="active"{% endif %}>Resume</a></li> -->
+        </ul>
+    </div>
+</nav>

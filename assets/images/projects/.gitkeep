@@ -1,0 +1,18 @@
+# Placeholder images for projects
+# Replace these with your actual project images
+
+This directory should contain your project images:
+- Cover images for project cards
+- Screenshots for project detail pages
+- Gallery images
+
+Recommended naming convention:
+- `project-name-cover.jpg` - Main cover image
+- `project-name-screenshot1.jpg` - Additional screenshots
+- `project-name-screenshot2.jpg`
+
+Image guidelines:
+- Cover images: 800x600px or 16:9 aspect ratio
+- Screenshots: Any resolution, but optimize for web
+- File formats: JPG for photos, PNG for screenshots with text
+- Optimize images before uploading to keep site fast
