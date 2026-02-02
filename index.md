@@ -7,7 +7,7 @@ title: Home
     <div class="container">
         <div class="hero-content">
             <h1 class="hero-title">Hello, I'm <span class="highlight">Teuku Zikri Fatahillah</span></h1>
-            <p class="hero-subtitle">Robotics | Embedded System | Computer Vision | Electronics | AI</p>
+            <p class="hero-subtitle"></p>
             <p class="hero-description">
                 Welcome to my personal website. I specialize in robotics, embedded systems, and AI, creating innovative solutions for complex engineering challenges.
             </p>

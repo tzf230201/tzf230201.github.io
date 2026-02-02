@@ -93,15 +93,6 @@ Built complete pipeline from data collection to deployment
 ### Model Optimization
 Optimized neural network for embedded systems
 
-## Future Improvements
-
-- [ ] Increase model accuracy through data augmentation
-- [ ] Add more motor fault categories
-- [ ] Implement online learning capabilities
-- [ ] Reduce model size further
-- [ ] Add wireless connectivity for remote monitoring
-- [ ] Integrate with industrial IoT platforms
-
 ## Skills Demonstrated
 
 - Embedded machine learning
