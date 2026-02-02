@@ -23,7 +23,7 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 **Web & IoT:** HTML, CSS, JavaScript, Node.js, RESTful API, MQTT, PyQT
 
 ### Embedded & Hardware
-**FPGA Tools:** Xilinx ISE, Vivado, Vitis  
+**FPGA Tools:** Xilinx ISE, Vivado, Vitis, Gowin EDA
 **Microcontrollers:** STM32, Texas Instruments Hercules  
 **IDEs:** STM32CubeIDE, Code Composer Studio, ArduinoIDE, PlatformIO  
 **Protocols:** CAN Bus, I2C, SPI, UART, USB
