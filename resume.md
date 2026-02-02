@@ -48,6 +48,20 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ## Professional Experience
 
+### PT. Reka Inovasi Cerdas
+**Electronics & Embedded Systems Engineer**  
+*April 2025 – August 2025*
+
+- Designed and developed CNC Laser Cutting system with precise motion control
+- Engineered LoRa IoT device for long-range wireless communication and data monitoring
+- Conducted reverse engineering of valve turbine components for system optimization
+- Implemented embedded control systems for industrial automation
+- Created technical documentation and system specifications
+
+**Key Achievement:** Successfully delivered three major projects meeting client specifications and industrial standards
+
+---
+
 ### PT. Genesis Technology Indonesia
 **Production Maintenance Technician – Contract**  
 *September 2024 – January 2025*
@@ -157,6 +171,10 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 ---
 
 ## Education
+
+**Tokyo Metropolitan University**  
+Master of Engineering - Mechanical System Engineering  
+*October 2025 – September 2027 (Expected)*
 
 **Politeknik Elektronika Negeri Surabaya (PENS)**  
 Electronics Engineering  
