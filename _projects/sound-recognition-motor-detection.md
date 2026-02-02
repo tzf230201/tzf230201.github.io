@@ -1,7 +1,7 @@
 ---
 title: Sound Recognition for Motor Fault Detection
 description: CNN-based sound recognition system on microcontroller for detecting broken motors using TensorFlow Lite with 88.3% accuracy.
-cover_image: /assets/images/projects/sound_recognition_4.jpg
+cover_image: /assets/images/projects/sound_recognition_1.jpg
 tags: [CNN, TensorFlow-Lite, Embedded System, Deep Learning, STM32]
 featured: false
 demo_url: 
@@ -13,7 +13,7 @@ date: 2023-06-15
 
 Neural network training requires high computing hardware. In this project, I implemented a sound recognition system on a microcontroller to detect broken motors through audio analysis. The system uses TensorFlow Lite for edge deployment, enabling real-time fault detection without cloud connectivity.
 
-![System Architecture](/assets/images/projects/sound_recognition_1.jpg)
+![System Architecture](/assets/images/projects/sound_recognition_4.jpg)
 
 ## Technical Implementation
 
@@ -52,7 +52,7 @@ The datasets were collected using the same hardware platform to ensure consisten
 
 The implementation achieved an **accuracy rate of 88.325%** in detecting motor faults through sound analysis.
 
-![Results](/assets/images/projects/sound_recognition_4.jpg)
+![Results](/assets/images/projects/sound_recognition_1.jpg)
 
 ### Performance Metrics
 
