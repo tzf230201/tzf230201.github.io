@@ -13,7 +13,7 @@ date: 2023-06-15
 
 Neural network training requires high computing hardware. In this project, I implemented a sound recognition system on a microcontroller to detect broken motors through audio analysis. The system uses TensorFlow Lite for edge deployment, enabling real-time fault detection without cloud connectivity.
 
-![System Architecture](/assets/images/projects/sound_recognition_1.jpg)
+![System Architecture](/assets/images/projects/sound_recognition_4.jpg)
 
 ## Technical Implementation
 

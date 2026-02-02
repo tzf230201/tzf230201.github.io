@@ -5,8 +5,6 @@ subtitle: Electronics Engineer | Robotics Specialist | Embedded Systems Develope
 permalink: /resume/
 ---
 
-<div class="resume-content">
-    
 ## Professional Summary
 
 A highly motivated electronics engineer with 3+ years of experience in robotics, embedded systems, and FPGA development. Proven track record in avionics, automotive, and marine technology sectors with expertise in ROS/ROS2, computer vision, and control systems. Successfully delivered critical projects for military applications and electric vehicle systems.
@@ -14,8 +12,6 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 ---
 
 ## Technical Skills
-
-<div class="skills-grid">
 
 ### Programming & Development
 **Languages:** C/C++, Python, Embedded C, C#, VHDL/Verilog, MATLAB, Shell Scripting  
@@ -47,8 +43,6 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 **Containerization:** Docker  
 **Testing:** Oscilloscope, Logic Analyzer, Vector CANalyzer, Wireshark  
 **Project Management:** Trello, Hoddo
-
-</div>
 
 ---
 
@@ -219,74 +213,6 @@ Electronics Engineering
     </a>
 </div>
 
-</div>
+---
 
-<style>
-.resume-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.resume-content h2 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.resume-content h3 {
-    color: var(--text-color);
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.resume-content h4 {
-    color: var(--text-light);
-    font-size: 1rem;
-    margin-top: 1rem;
-}
-
-.skills-grid {
-    display: grid;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.skills-grid h3 {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.skills-grid strong {
-    color: var(--text-color);
-}
-
-.resume-content ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.resume-content li {
-    margin-bottom: 0.3rem;
-}
-
-.cv-download {
-    background-color: var(--bg-alt);
-    padding: 2rem;
-    border-radius: var(--radius);
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.cv-download .btn {
-    margin-top: 1rem;
-}
-
-@media print {
-    .navbar, .footer, .cv-download {
-        display: none;
-    }
-}
-</style>
+*Last Updated: February 2026*
