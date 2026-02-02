@@ -7,7 +7,7 @@ permalink: /contact/
 
 <div class="contact-content">
     <div class="contact-intro">
-        <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+        <p>I'm always interested in discussing robotics, embedded systems, and engineering opportunities. Whether you want to collaborate on a project, discuss technical challenges, or just connect, feel free to reach out through any of the channels below!</p>
     </div>
     
     <div class="contact-methods">
