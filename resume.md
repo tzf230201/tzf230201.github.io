@@ -24,18 +24,18 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ### Embedded & Hardware
 **FPGA Tools:** Xilinx ISE, Vivado, Vitis, Gowin EDA
-**Microcontrollers:** STM32, Texas Instruments Hercules  
+**Microcontrollers:** STM32, Texas Instruments Hercules, National Instruments MyRio
 **IDEs:** STM32CubeIDE, Code Composer Studio, ArduinoIDE, PlatformIO  
-**Protocols:** CAN Bus, I2C, SPI, UART, USB
+**Protocols:** CAN Bus, I2C, I2S, SPI, UART, USB
 
 ### Electronics & PCB Design
-**ECAD Tools:** KiCAD, Autodesk Eagle, LTSpice, PSpice, Proteus  
+**ECAD Tools:** KiCAD, EasyEDA, Autodesk Eagle, LTSpice, PSpice, Proteus  
 **CAD/3D:** Autodesk Inventor, FreeCAD, SolidWorks, CURA
 
 ### AI & Computer Vision
 **Frameworks:** TensorFlow, TensorFlow Lite, Keras, CUDA  
 **Libraries:** OpenCV, PCL (Point Cloud Library)  
-**Specialization:** CNN, Image Segmentation, Edge AI
+**Specialization:** CNN, Image Segmentation, Edge AI, Edge Unsupervosed Learning
 
 ### Industrial Automation
 **PLC:** Omron, Siemens (Ladder Diagram)  
