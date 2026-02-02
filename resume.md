@@ -19,8 +19,8 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 **Web & IoT:** HTML, CSS, JavaScript, Node.js, RESTful API, MQTT, PyQT
 
 ### Embedded & Hardware
-**FPGA Tools:** Xilinx ISE, Vivado, Vitis, Gowin EDA
-**Microcontrollers:** STM32, Texas Instruments Hercules, National Instruments MyRio
+**FPGA Tools:** Xilinx ISE, Vivado, Vitis, Gowin EDA  
+**Microcontrollers:** STM32, Texas Instruments Hercules, National Instruments MyRio  
 **IDEs:** STM32CubeIDE, Code Composer Studio, ArduinoIDE, PlatformIO  
 **Protocols:** CAN Bus, I2C, I2S, SPI, UART, USB
 
@@ -31,7 +31,7 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 ### AI & Computer Vision
 **Frameworks:** TensorFlow, TensorFlow Lite, Keras, CUDA  
 **Libraries:** OpenCV, PCL (Point Cloud Library)  
-**Specialization:** CNN, Image Segmentation, Edge AI, Edge Unsupervosed Learning
+**Specialization:** CNN, Image Segmentation, Edge AI, Edge Unsupervised Learning
 
 ### Industrial Automation
 **PLC:** Omron, Siemens (Ladder Diagram)  
@@ -195,7 +195,7 @@ Electronics Engineering
 ## Languages
 
 - **English** - Professional Working Proficiency
-- **Japanese** - Currently Learning (N5 Level)
+- **Japanese** - Currently Learning (N4 Level)
 - **Indonesian** - Native
 
 ---
