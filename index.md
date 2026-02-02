@@ -6,10 +6,10 @@ title: Home
 <div class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">Hello, I'm <span class="highlight">Your Name</span></h1>
-            <p class="hero-subtitle">Developer | Designer | Problem Solver</p>
+            <h1 class="hero-title">Hello, I'm <span class="highlight">Teuku Zikri Fatahillah</span></h1>
+            <p class="hero-subtitle">Robotics | Embedded System | Computer Vision | Electronics | AI</p>
             <p class="hero-description">
-                Welcome to my personal website. I build things for the web and love creating elegant solutions to complex problems.
+                Welcome to my personal website. I specialize in robotics, embedded systems, and AI, creating innovative solutions for complex engineering challenges.
             </p>
             <div class="hero-actions">
                 <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View My Projects</a>
@@ -24,11 +24,10 @@ title: Home
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <p>
-                I'm a passionate developer with experience in building web applications and creating beautiful user experiences. 
-                This section will showcase my skills, background, and what I'm currently working on.
+                A highly motivated and enthusiastic engineer with expertise in various aspects of robotics, including Embedded Systems, Automation, Electronics Design, IoT, DSP, FPGA, Computer Vision, Robot Operating System (ROS/ROS2) and Robotics Simulation.
             </p>
             <p>
-                <strong>Note:</strong> Content will be added later. This is the template structure.
+                I hold a track record of winning several national competitions and possess experience in research and development across avionics, automotive, and marine technology sectors. Currently focusing on building my career in advanced robotics and embedded systems, while continuously deepening my knowledge in electronics, AI, and autonomous systems.
             </p>
         </div>
     </div>

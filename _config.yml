@@ -1,8 +1,9 @@
 # Site settings
-title: Your Name
-email: your.email@example.com
+title: Teuku Zikri Fatahillah
+email: teukuzikrifatahillah@gmail.com
 description: >-
-  Personal website showcasing my projects and professional work.
+  A highly motivated robotics engineer with expertise in Embedded Systems, 
+  Computer Vision, Electronics Design, ROS/ROS2, and FPGA development.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tzf230201.github.io" # your site URL
 
