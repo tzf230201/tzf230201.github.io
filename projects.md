@@ -1,52 +1,52 @@
 ---
 layout: page
 title: Projects
-subtitle: A collection of my work and side projects
+subtitle: A collection of robotics, embedded & engineering work
 permalink: /projects/
 ---
 
+{% comment %} Build a unique, sorted list of tags across all projects {% endcomment %}
+{% capture tags_str %}{% for project in site.projects %}{% for tag in project.tags %}{{ tag }},{% endfor %}{% endfor %}{% endcapture %}
+{% assign all_tags = tags_str | split: "," | uniq | sort_natural %}
+
 <div class="projects-filter">
-    <p class="filter-label">Filter by:</p>
-    <div class="filter-tags">
-        <button class="filter-tag active" data-filter="all">All</button>
-        <!-- Add more filter tags based on your project tags -->
-        <button class="filter-tag" data-filter="web">Web</button>
-        <button class="filter-tag" data-filter="mobile">Mobile</button>
-        <button class="filter-tag" data-filter="ai">AI/ML</button>
-    </div>
+    <button class="filter-tag active" data-filter="all">All</button>
+    {% for tag in all_tags %}
+    <button class="filter-tag" data-filter="{{ tag | downcase }}">{{ tag }}</button>
+    {% endfor %}
 </div>
 
 <div class="projects-grid">
     {% if site.projects.size > 0 %}
-        {% for project in site.projects %}
+        {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+        {% for project in sorted_projects %}
         <div class="project-card" data-tags="{{ project.tags | join: ',' | downcase }}">
+            {% if project.featured %}<span class="featured-badge">★ Featured</span>{% endif %}
             {% if project.cover_image %}
             <div class="project-card-image">
                 <a href="{{ project.url | relative_url }}">
-                    <img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}">
+                    <img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}" loading="lazy">
                 </a>
             </div>
             {% endif %}
-            
+
             <div class="project-card-content">
-                <h3>
-                    <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
-                </h3>
-                
+                <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+
                 {% if project.description %}
-                <p class="project-description">{{ project.description }}</p>
+                <p class="project-description">{{ project.description | truncate: 120 }}</p>
                 {% endif %}
-                
+
                 {% if project.tags %}
                 <div class="project-tags">
-                    {% for tag in project.tags %}
+                    {% for tag in project.tags limit: 4 %}
                     <span class="tag">{{ tag }}</span>
                     {% endfor %}
                 </div>
                 {% endif %}
-                
+
                 <div class="project-card-footer">
-                    <a href="{{ project.url | relative_url }}" class="btn btn-small">View Details →</a>
+                    <a href="{{ project.url | relative_url }}" class="card-link">View Details &rarr;</a>
                 </div>
             </div>
         </div>
@@ -60,27 +60,20 @@ permalink: /projects/
 </div>
 
 <script>
-// Simple filter functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const filterTags = document.querySelectorAll('.filter-tag');
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    filterTags.forEach(tag => {
-        tag.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            
-            // Update active state
-            filterTags.forEach(t => t.classList.remove('active'));
+document.addEventListener('DOMContentLoaded', function () {
+    var filterTags = document.querySelectorAll('.filter-tag');
+    var projectCards = document.querySelectorAll('.project-card');
+
+    filterTags.forEach(function (tag) {
+        tag.addEventListener('click', function () {
+            var filter = this.getAttribute('data-filter');
+            filterTags.forEach(function (t) { t.classList.remove('active'); });
             this.classList.add('active');
-            
-            // Filter projects
-            projectCards.forEach(card => {
-                const tags = card.getAttribute('data-tags');
-                if (filter === 'all' || tags.includes(filter)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+
+            projectCards.forEach(function (card) {
+                var tags = card.getAttribute('data-tags') || '';
+                var show = filter === 'all' || tags.split(',').indexOf(filter) !== -1;
+                card.style.display = show ? 'flex' : 'none';
             });
         });
     });

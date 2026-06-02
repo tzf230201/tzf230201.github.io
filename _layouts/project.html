@@ -21,7 +21,7 @@ layout: default
         
         {% if page.cover_image %}
         <div class="project-cover">
-            <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}">
+            <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}" loading="lazy">
         </div>
         {% endif %}
         
@@ -35,7 +35,7 @@ layout: default
             <div class="gallery-grid">
                 {% for image in page.gallery %}
                 <div class="gallery-item">
-                    <img src="{{ image | relative_url }}" alt="{{ page.title }} screenshot">
+                    <img src="{{ image | relative_url }}" alt="{{ page.title }} screenshot" loading="lazy">
                 </div>
                 {% endfor %}
             </div>
