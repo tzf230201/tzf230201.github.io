@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(foreach \\($t in 'winget','choco','scoop','ruby'\\) { $c = Get-Command $t -ErrorAction SilentlyContinue; if \\($c\\) { \"$t : $\\($c.Source\\)\" } else { \"$t : \\(not found\\)\" } })",
+      "PowerShell(winget install -e --id RubyInstallerTeam.RubyWithDevKit.3.3 --accept-source-agreements --accept-package-agreements --silent --scope machine)",
+      "PowerShell($env:Path = 'C:\\\\Ruby33-x64\\\\bin;' + $env:Path; bundle exec jekyll build 2>&1 | Select-Object -Last 25)",
+      "PowerShell($env:Path = 'C:\\\\Ruby33-x64\\\\bin;' + $env:Path; bundle exec jekyll serve --livereload --host 127.0.0.1 --port 4000)",
+      "PowerShell(Start-Sleep -Seconds 4; try { $r = Invoke-WebRequest -Uri 'http://127.0.0.1:4000/' -UseBasicParsing -TimeoutSec 10; \"HTTP $\\($r.StatusCode\\)\"; if \\($r.Content -match 'hero-title'\\) { 'Home page rendered OK' } } catch { \"Not ready yet: $\\($_.Exception.Message\\)\" })"
+    ]
+  }
+}

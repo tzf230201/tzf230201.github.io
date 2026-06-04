@@ -1,0 +1,85 @@
+# Career / education / organization timeline.
+# The Gantt chart on the homepage is generated from this file.
+# Just add an item with start/end dates (YYYY-MM-DD) and a category;
+# the bar position & width are computed automatically.
+#
+#   category:  edu | work | org
+#   current:   true  -> adds a "live" pulse and a "· current" label
+#   end:       omit to run the bar up to today
+
+axis_start: 2018   # left edge of the chart (year)
+axis_end: 2028     # right edge of the chart (exclusive year)
+
+items:
+  - role: "B.A.Eng, Electronics Engineering"
+    org: "Politeknik Elektronika Negeri Surabaya (PENS)"
+    link: "https://www.pens.ac.id/"
+    cert: "https://drive.google.com/file/d/1Zkzphf9Zs9DofBsya9QLxsumhvso7-r3/view"
+    cert_label: "Graduation Certificate & Transcript"
+    category: edu
+    start: 2018-05-01
+    end: 2022-08-01
+
+  - role: "Research & Technology Staff"
+    org: "HIMA ELKA PENS"
+    cert: "https://drive.google.com/file/d/1JQiV3lSoq9-BeyalGl2yK8bX2Yxvq7mY/view"
+    category: org
+    start: 2019-10-01
+    end: 2020-12-01
+
+  - role: "Competitor — Mobile Robotics"
+    org: "ASEAN Skills Competition"
+    cert: "https://drive.google.com/file/d/19-KrbkLAL8kFno8pT8F3oiR97kIbzUia/view?usp=sharing"
+    category: org
+    start: 2019-01-01
+    end: 2019-10-01
+
+  - role: "Humanoid Robot Team — Co-Leader"
+    org: "EEPIS Robot Soccer (EROS)"
+    category: org
+    start: 2019-11-01
+    end: 2021-11-01
+
+  - role: "Embedded Programmer (Intern)"
+    org: "PT. Industri Kereta Api (INKA)"
+    cert: "https://drive.google.com/file/d/1dEjMEYla6MItw9q3Akhxx56kID7jGwfx/view"
+    category: work
+    start: 2022-02-01
+    end: 2022-07-01
+
+  - role: "Electronic Engineer"
+    org: "PT. Infoglobal Teknologi Semesta"
+    cert: "https://drive.google.com/file/d/1f5H_25XOcWxXqd87NUN5z3seU22ZcZC5/view"
+    category: work
+    start: 2022-10-01
+    end: 2024-04-01
+
+  - role: "Production Maintenance Technician"
+    org: "PT. Genesis Technology Indonesia"
+    cert: "https://drive.google.com/file/d/1JECmoV8kVXku5UZdwmXYNTs507V_sAsk/view?usp=sharing"
+    category: work
+    start: 2024-09-01
+    end: 2025-01-01
+
+  - role: "Electronics & Embedded Systems Engineer"
+    org: "PT. Reka Inovasi Cerdas"
+    cert: "https://drive.google.com/file/d/1xuFuP9mLMFbr0Iwdjz4QYN2PK9asUmbD/view?usp=sharing"
+    category: work
+    start: 2025-04-01
+    end: 2025-08-01
+
+  - role: "M.Eng, Mechanical Systems Engineering"
+    org: "Tokyo Metropolitan University"
+    link: "https://www.tmu.ac.jp/english/index.html"
+    lab: "Kubota Lab"
+    lab_link: "https://kub-lab.jp/"
+    category: edu
+    start: 2025-10-01
+    end: 2027-09-01
+    current: true
+
+  - role: "Member"
+    org: "PPI TMU"
+    category: org
+    start: 2025-10-01
+    current: true

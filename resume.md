@@ -50,7 +50,7 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ### PT. Reka Inovasi Cerdas
 **Electronics & Embedded Systems Engineer**  
-*April 2025 – August 2025*
+*April 2025 – August 2025* · [📄 Certificate](https://drive.google.com/file/d/1xuFuP9mLMFbr0Iwdjz4QYN2PK9asUmbD/view?usp=sharing)
 
 - Designed and developed CNC Laser Cutting system with precise motion control
 - Engineered LoRa IoT device for long-range wireless communication and data monitoring
@@ -64,7 +64,7 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ### PT. Genesis Technology Indonesia
 **Production Maintenance Technician – Contract**  
-*September 2024 – January 2025*
+*September 2024 – January 2025* · [📄 Certificate](https://drive.google.com/file/d/1JECmoV8kVXku5UZdwmXYNTs507V_sAsk/view?usp=sharing)
 
 - Led a team of machine operators in a high-volume production line
 - Provided comprehensive training to new employees on machine operation, maintenance protocols, and safety procedures
@@ -81,7 +81,7 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ### PT. Infoglobal Teknologi Semesta
 **Electronic Engineer – Contract**  
-*October 2022 – April 2024*
+*October 2022 – April 2024* · [📄 Certificate](https://drive.google.com/file/d/1f5H_25XOcWxXqd87NUN5z3seU22ZcZC5/view)
 
 #### Key Projects & Achievements:
 
@@ -114,7 +114,7 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ### PT. Industri Kereta Api (Persero) - INKA
 **Embedded Programmer – Intern**  
-*February 2022 – July 2022*
+*February 2022 – July 2022* · [📄 Certificate](https://drive.google.com/file/d/1dEjMEYla6MItw9q3Akhxx56kID7jGwfx/view)
 
 **Merah Putih Electric Bus - Vehicle Control Unit (VCU)**
 - Developed complete VCU firmware from concept to deployment
@@ -133,9 +133,26 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ## Organizational Experience
 
+### PPI TMU — Persatuan Pelajar Indonesia, Tokyo Metropolitan University
+**Member**  
+*2025 – Present*
+
+- Active member of the Indonesian Students Association at Tokyo Metropolitan University
+
+---
+
 ### EEPIS Robot Soccer (EROS)
 **Humanoid Robot Team – Co-Leader, Programmer, Electrical Design**  
 *November 2019 – November 2021*
+
+**Competition Awards:**
+
+- **1st Place — Overall**, KRSBI-Humanoid · Kontes Robot Indonesia (KRI) 2021 — [📄 Certificate](https://drive.google.com/file/d/12G93wXLHL9m8xaeZVwWCW7ixxk9gPJGo/view?usp=sharing)
+- **1st Place — Humanoid Sprint**, 2021 — [📄 Certificate](https://drive.google.com/file/d/1t5OZ1Qtv61nGQD8Ca01dXrgN3Mo3_X2-/view?usp=sharing)
+- **2nd Place — Humanoid Ball Dribbling**, 2021 — [📄 Certificate](https://drive.google.com/file/d/15wXfL1nZ7qrEKdjAz2kUToiA5i1_b1ks/view?usp=sharing)
+- **3rd Place — Humanoid Robot Cooperation**, 2021 — [📄 Certificate](https://drive.google.com/file/d/1IeBGSdQhzQAt1nw2beYOM0bFHLzK82IU/view?usp=sharing)
+- **1st Place — Humanoid Ball Dribbling**, 2020 — [📄 Certificate](https://drive.google.com/file/d/1yWsQuFd0xY0ZyYOV_rGDnLX6WleSgD4W/view?usp=sharing)
+- **Honorable Mention — Humanoid Sprint**, 2020 — [📄 Certificate](https://drive.google.com/file/d/1s5c62mNvQKXNdPCPEclWlJ_hXfpegGf9/view?usp=sharing)
 
 **Technical Contributions:**
 - Developed 20 DoF humanoid robot with dynamic walking capability
@@ -159,9 +176,19 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ---
 
+### ASEAN Skills Competition 2019 — Mobile Robotics
+**National Training Team (Quarantine) – Competitor**  
+*2019*
+
+- **1st Place** — Regional Selection (Seleksi Daerah), Mobile Robotics — [📄 Certificate](https://drive.google.com/file/d/19-KrbkLAL8kFno8pT8F3oiR97kIbzUia/view?usp=sharing)
+- **3rd Place** — National Selection (Seleksi Nasional), Mobile Robotics — [📄 Certificate](https://drive.google.com/file/d/1jXcYniuPxPpEExFUY9R5FCgrNv0piZXi/view?usp=sharing)
+- Selected for the national training team representing the Mobile Robotics field
+
+---
+
 ### HIMA ELKA PENS
 **Electronics Engineering Student Association – Research and Technology Staff**  
-*October 2019 – December 2020*
+*October 2019 – December 2020* · [📄 Certificate](https://drive.google.com/file/d/1JQiV3lSoq9-BeyalGl2yK8bX2Yxvq7mY/view)
 
 - Organized training, workshops, and seminars for student development
 - Prepared laboratories and facilitated student participation in competitions
@@ -172,17 +199,37 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ## Education
 
-**Tokyo Metropolitan University**  
-Master of Engineering - Mechanical System Engineering  
+**[Tokyo Metropolitan University](https://www.tmu.ac.jp/english/index.html)**  
+Master of Engineering - Mechanical Systems Engineering  
+[Kubota Laboratory](https://kub-lab.jp/)  
 *October 2025 – September 2027 (Expected)*
 
-**Politeknik Elektronika Negeri Surabaya (PENS)**  
-Electronics Engineering  
-*2019 – 2022*
+**[Politeknik Elektronika Negeri Surabaya (PENS)](https://www.pens.ac.id/)**  
+Bachelor of Applied Engineering - Electronics Engineering  
+*May 2018 – August 2022* · [📄 Graduation Certificate & Transcript](https://drive.google.com/file/d/1Zkzphf9Zs9DofBsya9QLxsumhvso7-r3/view)
 
 ---
 
-## Key Projects
+{% assign pubs = site.data.publications.list %}{% if pubs and pubs.size > 0 %}
+## Publications
+
+<div class="pub-list">
+{% for p in pubs %}
+<div class="pub-item">
+    <span class="pub-type">{{ p.type | default: "Publication" }}</span>
+    <div class="pub-body">
+        <h3 class="pub-title">{% if p.url and p.url != "" %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+        <p class="pub-authors">{{ p.authors | replace: "Fatahillah, T. Z.", "<strong>Fatahillah, T. Z.</strong>" | replace: "Teuku Zikri Fatahillah", "<strong>Teuku Zikri Fatahillah</strong>" }}</p>
+        <p class="pub-venue">{{ p.venue }}{% if p.year %} · {{ p.year }}{% endif %}{% if p.award %} · <span class="pub-award">🏆 {{ p.award }}</span>{% endif %}</p>
+        {% if p.certificate and p.certificate != "" %}<p class="pub-links"><a href="{{ p.certificate }}" target="_blank" rel="noopener">📄 View Certificate</a></p>{% endif %}
+    </div>
+</div>
+{% endfor %}
+</div>
+
+---
+
+{% endif %}## Key Projects
 
 ### 2024
 - **MPC on Ackermann Drive Robot** - Autonomous navigation with Lidar-based obstacle avoidance
@@ -202,17 +249,28 @@ Electronics Engineering
 
 ---
 
-## Certifications & Achievements
+## Certifications
 
-- **Highest Score** - Certified Internship Program Batch II (PT. INKA)
+- **Robot Operating System (ROS)** — [📄 Certificate](https://drive.google.com/file/d/1LM8hsLIXTGnpNHXLcgbOVcnnWag0LxZK/view?usp=sharing)
+- **CoppeliaSim / V-REP** — [📄 Certificate](https://drive.google.com/file/d/19XatatfVS4H4B0ARhDy1Ca2_XALR_KIi/view?usp=sharing)
+- **Autodesk Inventor** — [📄 Certificate](https://drive.google.com/file/d/1a_00ngwbrEVT2FfVWGpNtntYzX5hZO9P/view?usp=sharing)
+- **Embedded Systems and Data Acquisition** (2021) — [📄 Certificate](https://drive.google.com/file/d/13Xv3cw4rMbddr5dr_QXpSMCCHodCf_wS/view?usp=sharing)
+- **Nature Masterclasses** — *Getting Published: Effectively Communicating Your Research* (Expert Trainer-led workshop) — [📄 Certificate](https://drive.google.com/file/d/1wZqS2FHIkRcvL9hELS3fHMuLNpHDSvhn/view?usp=sharing)
+
+---
+
+## Achievements & Activities
+
+- **Highest Score** — Certified Internship Program Batch II (PT. INKA)
+- **Robotics Workshop Speaker / Instructor** — [📄 Certificates](https://drive.google.com/drive/folders/1jC2G61Z253U08smOECb1QE_vJEKeILxf)
+- **Committee Member — Java Robot Contest X** (2018–2019) — [📄 Certificate](https://drive.google.com/file/d/1z2y2tYTTZwQREU7dWf3LJCxSkeJ87j4Q/view?usp=sharing)
 - Multiple national robotics competition participations
-- Published research on humanoid robot walking control
 
 ---
 
 ## Languages
 
-- **English** - Professional Working Proficiency
+- **English** - Professional Working Proficiency · [EF SET Certificate](https://cert.efset.org/en/ui9fgu)
 - **Japanese** - Currently Learning (N4 Level)
 - **Indonesian** - Native
 
