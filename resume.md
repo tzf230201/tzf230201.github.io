@@ -5,44 +5,24 @@ subtitle: Electronics Engineer | Robotics Specialist | Embedded Systems Develope
 permalink: /resume/
 ---
 
+<nav class="resume-toc" id="resume-toc" aria-label="Resume sections"></nav>
+
 ## Professional Summary
 
 A highly motivated electronics engineer with 3+ years of experience in robotics, embedded systems, and FPGA development. Proven track record in avionics, automotive, and marine technology sectors with expertise in ROS/ROS2, computer vision, and control systems. Successfully delivered critical projects for military applications and electric vehicle systems.
 
 ---
 
-## Technical Skills
+## Education
 
-### Programming & Development
-**Languages:** C/C++, Python, Embedded C, C#, VHDL/Verilog, MATLAB, Shell Scripting  
-**Robotics:** ROS/ROS2, URDF/Xacro, Gazebo, CoppeliaSim  
-**Web & IoT:** HTML, CSS, JavaScript, Node.js, RESTful API, MQTT, PyQT
+**[Tokyo Metropolitan University](https://www.tmu.ac.jp/english/index.html)**  
+Master of Engineering - Mechanical Systems Engineering  
+[Kubota Laboratory](https://kub-lab.jp/)  
+*October 2025 – September 2027 (Expected)*
 
-### Embedded & Hardware
-**FPGA Tools:** Xilinx ISE, Vivado, Vitis, Gowin EDA  
-**Microcontrollers:** STM32, Texas Instruments Hercules, National Instruments MyRio  
-**IDEs:** STM32CubeIDE, Code Composer Studio, ArduinoIDE, PlatformIO  
-**Protocols:** CAN Bus, I2C, I2S, SPI, UART, USB
-
-### Electronics & PCB Design
-**ECAD Tools:** KiCAD, EasyEDA, Autodesk Eagle, LTSpice, PSpice, Proteus  
-**CAD/3D:** Autodesk Inventor, FreeCAD, SolidWorks, CURA
-
-### AI & Computer Vision
-**Frameworks:** TensorFlow, TensorFlow Lite, Keras, CUDA  
-**Libraries:** OpenCV, PCL (Point Cloud Library)  
-**Specialization:** CNN, Image Segmentation, Edge AI, Edge Unsupervised Learning
-
-### Industrial Automation
-**PLC:** Omron, Siemens (Ladder Diagram)  
-**Simulation:** Festo Fluidsim, Siemens TIA Portal  
-**HMI:** LabVIEW
-
-### Development Tools
-**Version Control:** Git, GitHub, GitLab  
-**Containerization:** Docker  
-**Testing:** Oscilloscope, Logic Analyzer, Vector CANalyzer, Wireshark  
-**Project Management:** Trello, Hoddo
+**[Politeknik Elektronika Negeri Surabaya (PENS)](https://www.pens.ac.id/)**  
+Bachelor of Applied Engineering - Electronics Engineering  
+*May 2018 – August 2022* · [📄 Graduation Certificate & Transcript](https://drive.google.com/file/d/1Zkzphf9Zs9DofBsya9QLxsumhvso7-r3/view)
 
 ---
 
@@ -197,16 +177,38 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 ---
 
-## Education
+## Technical Skills
 
-**[Tokyo Metropolitan University](https://www.tmu.ac.jp/english/index.html)**  
-Master of Engineering - Mechanical Systems Engineering  
-[Kubota Laboratory](https://kub-lab.jp/)  
-*October 2025 – September 2027 (Expected)*
+### Programming & Development
+**Languages:** C/C++, Python, Embedded C, C#, VHDL/Verilog, MATLAB, Shell Scripting  
+**Robotics:** ROS/ROS2, URDF/Xacro, Gazebo, CoppeliaSim  
+**Web & IoT:** HTML, CSS, JavaScript, Node.js, RESTful API, MQTT, PyQT
 
-**[Politeknik Elektronika Negeri Surabaya (PENS)](https://www.pens.ac.id/)**  
-Bachelor of Applied Engineering - Electronics Engineering  
-*May 2018 – August 2022* · [📄 Graduation Certificate & Transcript](https://drive.google.com/file/d/1Zkzphf9Zs9DofBsya9QLxsumhvso7-r3/view)
+### Embedded & Hardware
+**FPGA Tools:** Xilinx ISE, Vivado, Vitis, Gowin EDA  
+**Microcontrollers:** STM32, Texas Instruments Hercules, National Instruments MyRio  
+**IDEs:** STM32CubeIDE, Code Composer Studio, ArduinoIDE, PlatformIO  
+**Protocols:** CAN Bus, I2C, I2S, SPI, UART, USB
+
+### Electronics & PCB Design
+**ECAD Tools:** KiCAD, EasyEDA, Autodesk Eagle, LTSpice, PSpice, Proteus  
+**CAD/3D:** Autodesk Inventor, FreeCAD, SolidWorks, CURA
+
+### AI & Computer Vision
+**Frameworks:** TensorFlow, TensorFlow Lite, Keras, CUDA  
+**Libraries:** OpenCV, PCL (Point Cloud Library)  
+**Specialization:** CNN, Image Segmentation, Edge AI, Edge Unsupervised Learning
+
+### Industrial Automation
+**PLC:** Omron, Siemens (Ladder Diagram)  
+**Simulation:** Festo Fluidsim, Siemens TIA Portal  
+**HMI:** LabVIEW
+
+### Development Tools
+**Version Control:** Git, GitHub, GitLab  
+**Containerization:** Docker  
+**Testing:** Oscilloscope, Logic Analyzer, Vector CANalyzer, Wireshark  
+**Project Management:** Trello, Hoddo
 
 ---
 
@@ -292,3 +294,62 @@ Bachelor of Applied Engineering - Electronics Engineering
 ---
 
 *Last Updated: February 2026*
+
+<script>
+(function () {
+    function init() {
+        var content = document.querySelector('.page-content');
+        var toc = document.getElementById('resume-toc');
+        if (!content || !toc) return;
+        var heads = [].slice.call(content.querySelectorAll('h2'));
+        if (!heads.length) { toc.remove(); return; }
+
+        function slug(t) {
+            return t.toLowerCase().trim().replace(/[^\w]+/g, '-').replace(/^-+|-+$/g, '');
+        }
+
+        var byId = {};
+        heads.forEach(function (h) {
+            if (!h.id) h.id = slug(h.textContent);
+            var a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent;
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                history.replaceState(null, '', '#' + h.id);
+                h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            toc.appendChild(a);
+            byId[h.id] = a;
+        });
+
+        // Keep the sticky bar just below the main navbar
+        var navbar = document.querySelector('.navbar');
+        function setTop() { if (navbar) toc.style.top = navbar.offsetHeight + 'px'; }
+        setTop();
+        window.addEventListener('resize', setTop);
+
+        // Scrollspy: highlight the section currently in view
+        var current = null;
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) current = entry.target.id;
+            });
+            if (current && byId[current]) {
+                Object.keys(byId).forEach(function (id) { byId[id].classList.remove('active'); });
+                var link = byId[current];
+                link.classList.add('active');
+                toc.scrollLeft = link.offsetLeft - (toc.offsetWidth / 2) + (link.offsetWidth / 2);
+            }
+        }, { rootMargin: '-120px 0px -65% 0px', threshold: 0 });
+
+        heads.forEach(function (h) { observer.observe(h); });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>

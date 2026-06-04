@@ -415,6 +415,17 @@ h1, h2, h3, h4 {
     letter-spacing: 0.06em;
 }
 
+.hero-quip {
+    margin-top: 2.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-faint);
+    cursor: help;
+    opacity: 0.85;
+    transition: var(--transition);
+}
+.hero-quip:hover { opacity: 1; color: var(--accent); }
+
 /* ============================================================
    Buttons
    ============================================================ */
@@ -865,6 +876,66 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================================
+   /cmd_vel teleop mini-game
+   ============================================================ */
+.robot-game { margin-top: 4.5rem; }
+.robot-game .section-title { border: none; padding: 0; }
+.robot-game .section-title::before { content: none; }
+
+.game-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background:
+        radial-gradient(120% 120% at 50% 0%, color-mix(in srgb, var(--primary) 12%, transparent), transparent 55%),
+        var(--surface);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.game-canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    touch-action: none;
+    cursor: pointer;
+}
+.game-overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    background: color-mix(in srgb, var(--bg) 58%, transparent);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: opacity 0.25s;
+    cursor: pointer;
+}
+.game-overlay.hidden { opacity: 0; pointer-events: none; }
+.game-emoji { font-size: 2.6rem; margin-bottom: 0.5rem; animation: bob 1.6s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translateY(-9px); } }
+.game-msg { font-family: var(--font-mono); font-size: 0.92rem; color: var(--text); line-height: 1.7; }
+.game-best { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-faint); margin-top: 0.5rem; }
+.game-card kbd {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    padding: 0.12rem 0.42rem;
+    border: 1px solid var(--border-strong);
+    border-bottom-width: 2px;
+    border-radius: 6px;
+    background: var(--bg-alt);
+    color: var(--text);
+}
+.game-hint {
+    margin-top: 0.9rem;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-faint);
+}
+
+/* ============================================================
    Projects filter
    ============================================================ */
 .projects-filter {
@@ -1085,8 +1156,47 @@ h1, h2, h3, h4 {
 
 .page-content { max-width: 820px; margin: 0 auto; }
 
+/* ---- Resume in-page section nav (sticky) ---- */
+.resume-toc {
+    position: sticky;
+    top: 60px; /* refined to navbar height via JS */
+    z-index: 900;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.7rem 0.25rem;
+    margin: -0.5rem 0 2.25rem;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--border);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+.resume-toc::-webkit-scrollbar { height: 5px; }
+.resume-toc::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; }
+.resume-toc a {
+    flex: 0 0 auto;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-strong);
+    white-space: nowrap;
+    transition: var(--transition);
+}
+.resume-toc a:hover { color: var(--text); border-color: var(--primary); }
+.resume-toc a.active {
+    color: #fff;
+    background: var(--gradient-brand);
+    border-color: transparent;
+}
+
 /* ---- Resume markdown styling ---- */
 .page-content h2 {
+    scroll-margin-top: 120px;
     font-size: 1.7rem;
     margin: 2.5rem 0 1.25rem;
     padding-bottom: 0.6rem;

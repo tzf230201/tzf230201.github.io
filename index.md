@@ -29,6 +29,7 @@ title: Home
                 <div class="label">Summit Deployment</div>
             </div>
         </div>
+        <p class="hero-quip" title="with apologies to “Attention Is All You Need”">// robotics is all you need</p>
     </div>
 </section>
 
