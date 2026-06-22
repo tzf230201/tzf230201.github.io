@@ -834,7 +834,6 @@ h1, h2, h3, h4 {
     overflow: hidden;
     background: var(--bg-alt);
     border-bottom: 1px solid var(--border);
-    padding: 0.6rem;
 }
 .repo-card-image[hidden] { display: none; }
 .repo-card-image img {
