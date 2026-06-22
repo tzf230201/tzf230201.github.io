@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +10,11 @@
     <script>
         (function () {
             try {
-                var t = localStorage.getItem('theme') || 'dark';
+                var t = localStorage.getItem('theme') || 'light';
                 document.documentElement.setAttribute('data-theme', t);
             } catch (e) {}
         })();
     </script>
-
-    <!-- Favicon (emoji robot) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

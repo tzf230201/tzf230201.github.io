@@ -26,7 +26,26 @@ Bachelor of Applied Engineering - Electronics Engineering
 
 ---
 
-## Professional Experience
+{% assign pubs = site.data.publications.list %}{% if pubs and pubs.size > 0 %}
+## Publications
+
+<div class="pub-list">
+{% for p in pubs %}
+<div class="pub-item">
+    <span class="pub-type">{{ p.type | default: "Publication" }}</span>
+    <div class="pub-body">
+        <h3 class="pub-title">{% if p.url and p.url != "" %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+        <p class="pub-authors">{{ p.authors | replace: "Fatahillah, T. Z.", "<strong>Fatahillah, T. Z.</strong>" | replace: "Teuku Zikri Fatahillah", "<strong>Teuku Zikri Fatahillah</strong>" }}</p>
+        <p class="pub-venue">{{ p.venue }}{% if p.year %} · {{ p.year }}{% endif %}{% if p.award %} · <span class="pub-award">🏆 {{ p.award }}</span>{% endif %}</p>
+        {% if p.certificate and p.certificate != "" %}<p class="pub-links"><a href="{{ p.certificate }}" target="_blank" rel="noopener">📄 View Certificate</a></p>{% endif %}
+    </div>
+</div>
+{% endfor %}
+</div>
+
+---
+
+{% endif %}## Professional Experience
 
 ### PT. Reka Inovasi Cerdas
 **Electronics & Embedded Systems Engineer**  
@@ -212,26 +231,7 @@ Bachelor of Applied Engineering - Electronics Engineering
 
 ---
 
-{% assign pubs = site.data.publications.list %}{% if pubs and pubs.size > 0 %}
-## Publications
-
-<div class="pub-list">
-{% for p in pubs %}
-<div class="pub-item">
-    <span class="pub-type">{{ p.type | default: "Publication" }}</span>
-    <div class="pub-body">
-        <h3 class="pub-title">{% if p.url and p.url != "" %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
-        <p class="pub-authors">{{ p.authors | replace: "Fatahillah, T. Z.", "<strong>Fatahillah, T. Z.</strong>" | replace: "Teuku Zikri Fatahillah", "<strong>Teuku Zikri Fatahillah</strong>" }}</p>
-        <p class="pub-venue">{{ p.venue }}{% if p.year %} · {{ p.year }}{% endif %}{% if p.award %} · <span class="pub-award">🏆 {{ p.award }}</span>{% endif %}</p>
-        {% if p.certificate and p.certificate != "" %}<p class="pub-links"><a href="{{ p.certificate }}" target="_blank" rel="noopener">📄 View Certificate</a></p>{% endif %}
-    </div>
-</div>
-{% endfor %}
-</div>
-
----
-
-{% endif %}## Key Projects
+## Key Projects
 
 ### 2024
 - **MPC on Ackermann Drive Robot** - Autonomous navigation with Lidar-based obstacle avoidance

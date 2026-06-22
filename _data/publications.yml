@@ -18,7 +18,7 @@ list:
     venue: "2026 IEEE World Congress on Computational Intelligence (WCCI), IEEE"
     year: 2026
     type: "Conference Paper"
-    url: "https://drive.google.com/file/d/1sK3XszC_yT5Wa-kXhZQSGbONnfKRUn7d/view?usp=sharing"
+    url: "https://tzf230201.github.io/fpga_gng/"
 
   - title: "Interpretable Soil-Robust Bipedal Locomotion on Tilled Soils with Material Curriculum and a Stance-Gated Slip Reward"
     authors: "Anhar Risnumawan, Achmad Fahrul Aji, Yoshimasa Nakamura, Teuku Zikri Fatahillah, Hasan Imaduddin, Naoyuki Kubota"
