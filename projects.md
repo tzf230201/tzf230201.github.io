@@ -120,11 +120,14 @@ document.addEventListener('DOMContentLoaded', function () {
             var u = m[1] || m[2];
             if (!u) continue;
             if (/shields\.io|img\.shields|badgen|\/badge|badge\.|\.svg($|\?)|actions\/work/i.test(u)) continue;
-            u = u.replace(/^https?:\/\/github\.com\/([^/]+\/[^/]+)\/(?:blob|raw)\//i, 'https://raw.githubusercontent.com/$1/');
+            // GitHub blob/raw or raw.githubusercontent links -> jsDelivr CDN (reliable, CORS, cached)
+            var g = u.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/(?:blob|raw)\/([^/]+)\/(.+)$/i)
+                 || u.match(/^https?:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/i);
+            if (g) return 'https://cdn.jsdelivr.net/gh/' + g[1] + '/' + g[2] + '@' + g[3] + '/' + g[4].split('?')[0];
             if (/^https?:\/\//i.test(u)) return u;
             if (u.indexOf('//') === 0) return 'https:' + u;
-            if (u.charAt(0) === '/') return 'https://raw.githubusercontent.com/' + USER + '/' + repo + '/' + branch + u;
-            return 'https://raw.githubusercontent.com/' + USER + '/' + repo + '/' + branch + '/' + u.replace(/^\.\//, '');
+            var rel = (u.charAt(0) === '/' ? u.slice(1) : u.replace(/^\.\//, ''));
+            return 'https://cdn.jsdelivr.net/gh/' + USER + '/' + repo + '@' + branch + '/' + rel;
         }
         return null;
     }
@@ -169,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var card = cards[i];
                 if (!card) return;
                 var branch = r.default_branch || 'main';
-                fetch('https://raw.githubusercontent.com/' + USER + '/' + r.name + '/' + branch + '/README.md')
+                fetch('https://cdn.jsdelivr.net/gh/' + USER + '/' + r.name + '@' + branch + '/README.md')
                     .then(function (res) { return res.ok ? res.text() : null; })
                     .then(function (md) {
                         if (!md) return;
