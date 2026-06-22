@@ -3,7 +3,7 @@ title: Model Predictive Control (MPC) on Ackermann Drive Robot
 description: Implementing MPC for autonomous vehicle simulation on ROS Gazebo with Lidar-based navigation in dynamic environments.
 cover_image: /assets/images/projects/ackermann_mpc_1.png
 tags: [ROS, Autonomous Vehicle, MPC, Gazebo, URDF, Path Planning]
-featured: true
+featured: false
 demo_url: 
 repo_url: 
 date: 2024-01-15
