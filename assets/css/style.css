@@ -810,6 +810,7 @@ h1, h2, h3, h4 {
 }
 
 .repo-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     background: var(--surface);
