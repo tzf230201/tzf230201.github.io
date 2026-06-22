@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Featured = repos you've pinned on GitHub (community API); falls back gracefully, then loads all repos
-    fetch('https://pinned.berrysauce.dev/get/' + USER)
+    fetch('https://pinned.berrysauce.dev/get/' + USER + '?_=' + Date.now(), { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : []; })
         .then(function (pins) { (pins || []).forEach(function (p) { PINNED[(p.name || '').toLowerCase()] = true; }); })
         .catch(function () {})

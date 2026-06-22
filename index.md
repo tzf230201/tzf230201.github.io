@@ -192,7 +192,7 @@ title: Home
     }
 
     Promise.all([
-        fetch('https://pinned.berrysauce.dev/get/' + USER).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }),
+        fetch('https://pinned.berrysauce.dev/get/' + USER + '?_=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }),
         fetch('https://api.github.com/users/' + USER + '/repos?per_page=100').then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; })
     ]).then(function (out) {
         var pins = out[0] || [], repos = out[1] || [];
