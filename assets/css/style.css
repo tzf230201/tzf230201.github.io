@@ -818,12 +818,32 @@ h1, h2, h3, h4 {
     padding: 1.4rem;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    overflow: hidden;
 }
 .repo-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-lg);
     border-color: var(--border-strong);
 }
+
+/* README thumbnail (filled async by JS) */
+.repo-card-image {
+    display: block;
+    margin: -1.4rem -1.4rem 1.1rem;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+}
+.repo-card-image[hidden] { display: none; }
+.repo-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.repo-card:hover .repo-card-image img { transform: scale(1.06); }
 
 .repo-card h3 {
     font-size: 1.1rem;

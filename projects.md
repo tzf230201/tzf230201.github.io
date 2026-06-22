@@ -112,6 +112,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
 
+    // Find the first usable image URL in a README's markdown (skips badges), resolving relative paths
+    function firstImage(md, repo, branch) {
+        var re = /!\[[^\]]*\]\(\s*<?([^)\s>]+)>?[^)]*\)|<img[^>]+src\s*=\s*["']([^"']+)["']/ig;
+        var m;
+        while ((m = re.exec(md))) {
+            var u = m[1] || m[2];
+            if (!u) continue;
+            if (/shields\.io|img\.shields|badgen|\/badge|badge\.|\.svg($|\?)|actions\/work/i.test(u)) continue;
+            u = u.replace(/^https?:\/\/github\.com\/([^/]+\/[^/]+)\/(?:blob|raw)\//i, 'https://raw.githubusercontent.com/$1/');
+            if (/^https?:\/\//i.test(u)) return u;
+            if (u.indexOf('//') === 0) return 'https:' + u;
+            if (u.charAt(0) === '/') return 'https://raw.githubusercontent.com/' + USER + '/' + repo + '/' + branch + u;
+            return 'https://raw.githubusercontent.com/' + USER + '/' + repo + '/' + branch + '/' + u.replace(/^\.\//, '');
+        }
+        return null;
+    }
+
     fetch('https://api.github.com/users/' + USER + '/repos?per_page=100&sort=updated')
         .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
         .then(function (repos) {
@@ -136,7 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 }).join('');
                 var stars = r.stargazers_count ? '<span class="stat">★ ' + r.stargazers_count + '</span>' : '';
                 var forks = r.forks_count ? '<span class="stat">⑂ ' + r.forks_count + '</span>' : '';
-                return '<div class="repo-card">' +
+                return '<div class="repo-card" data-name="' + esc(r.name) + '" data-branch="' + esc(r.default_branch || 'main') + '">' +
+                    '<a class="repo-card-image" href="' + r.html_url + '" target="_blank" rel="noopener" hidden><img alt="' + esc(r.name) + '" loading="lazy"></a>' +
                     '<h3><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8zM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2z"/></svg>' +
                     '<a href="' + r.html_url + '" target="_blank" rel="noopener">' + esc(r.name) + '</a></h3>' +
                     '<p class="repo-desc">' + (r.description ? esc(r.description) : '<em>No description provided.</em>') + '</p>' +
@@ -144,6 +162,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     '<div class="repo-meta">' + lang + stars + forks + '</div>' +
                     '</div>';
             }).join('');
+
+            // Pull a thumbnail from each repo's README.md (raw CDN — no API rate limit)
+            var cards = grid.querySelectorAll('.repo-card');
+            repos.forEach(function (r, i) {
+                var card = cards[i];
+                if (!card) return;
+                var branch = r.default_branch || 'main';
+                fetch('https://raw.githubusercontent.com/' + USER + '/' + r.name + '/' + branch + '/README.md')
+                    .then(function (res) { return res.ok ? res.text() : null; })
+                    .then(function (md) {
+                        if (!md) return;
+                        var url = firstImage(md, r.name, branch);
+                        if (!url) return;
+                        var box = card.querySelector('.repo-card-image');
+                        var img = box && box.querySelector('img');
+                        if (!img) return;
+                        img.onload = function () { box.hidden = false; };
+                        img.src = url;
+                    })
+                    .catch(function () {});
+            });
         })
         .catch(function () {
             grid.innerHTML = '<p class="repo-status">Couldn\'t load repositories right now (GitHub rate limit?). ' +
