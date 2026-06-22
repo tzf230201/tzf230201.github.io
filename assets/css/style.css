@@ -722,6 +722,11 @@ h1, h2, h3, h4 {
 }
 .project-card:hover .project-card-image img { transform: scale(1.07); }
 
+/* GitHub-pinned repos surfaced in the home Featured grid */
+.project-card-image[hidden] { display: none; }
+.project-card--gh .project-card-image { background: var(--bg-alt); }
+.project-card--gh .project-card-image img { object-fit: contain; }
+
 .project-card-content {
     padding: 1.5rem;
     display: flex;

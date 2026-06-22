@@ -131,7 +131,7 @@ title: Home
             <h2 class="section-title">Featured Projects</h2>
             <p class="section-sub">A few projects I'm proud of. Browse the full archive for more.</p>
         </div>
-        <div class="projects-grid">
+        <div class="projects-grid" id="featured-grid">
             {% assign featured_projects = site.projects | where: "featured", true | limit: 3 %}
             {% if featured_projects.size == 0 %}
                 {% assign featured_projects = site.projects | sort: "date" | reverse | limit: 3 %}
@@ -167,3 +167,65 @@ title: Home
         </div>
     </div>
 </section>
+
+<script>
+(function () {
+    var grid = document.getElementById('featured-grid');
+    if (!grid) return;
+    var USER = 'tzf230201';
+
+    function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+    function firstImage(md, repo, branch) {
+        var re = /!\[[^\]]*\]\(\s*<?([^)\s>]+)>?[^)]*\)|<img[^>]+src\s*=\s*["']([^"']+)["']/ig, m;
+        while ((m = re.exec(md))) {
+            var u = m[1] || m[2]; if (!u) continue;
+            if (/shields\.io|img\.shields|badgen|\/badge|badge\.|\.svg($|\?)|actions\/work/i.test(u)) continue;
+            var g = u.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/(?:blob|raw)\/([^/]+)\/(.+)$/i)
+                 || u.match(/^https?:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/i);
+            if (g) return 'https://cdn.jsdelivr.net/gh/' + g[1] + '/' + g[2] + '@' + g[3] + '/' + g[4].split('?')[0];
+            if (/^https?:\/\//i.test(u)) return u;
+            if (u.indexOf('//') === 0) return 'https:' + u;
+            var rel = (u.charAt(0) === '/' ? u.slice(1) : u.replace(/^\.\//, ''));
+            return 'https://cdn.jsdelivr.net/gh/' + USER + '/' + repo + '@' + branch + '/' + rel;
+        }
+        return null;
+    }
+
+    Promise.all([
+        fetch('https://pinned.berrysauce.dev/get/' + USER).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }),
+        fetch('https://api.github.com/users/' + USER + '/repos?per_page=100').then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; })
+    ]).then(function (out) {
+        var pins = out[0] || [], repos = out[1] || [];
+        if (!pins.length || !repos.length) return;
+        var byName = {}; repos.forEach(function (r) { byName[(r.name || '').toLowerCase()] = r; });
+        pins.forEach(function (p) {
+            var r = byName[(p.name || '').toLowerCase()];
+            if (!r) return;
+            var topics = (r.topics || []).slice(0, 3).map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('');
+            var card = document.createElement('div');
+            card.className = 'project-card project-card--gh';
+            card.innerHTML =
+                '<span class="featured-badge">★ GitHub</span>' +
+                '<div class="project-card-image" hidden><a href="' + r.html_url + '" target="_blank" rel="noopener"><img alt="' + esc(r.name) + '"></a></div>' +
+                '<div class="project-card-content">' +
+                    '<h3><a href="' + r.html_url + '" target="_blank" rel="noopener">' + esc(r.name) + '</a></h3>' +
+                    '<p class="project-description">' + (r.description ? esc(r.description) : '') + '</p>' +
+                    (topics ? '<div class="project-tags">' + topics + '</div>' : '') +
+                    '<div class="project-card-footer"><a href="' + r.html_url + '" target="_blank" rel="noopener" class="card-link">View on GitHub &rarr;</a></div>' +
+                '</div>';
+            grid.appendChild(card);
+            var branch = r.default_branch || 'main';
+            fetch('https://cdn.jsdelivr.net/gh/' + USER + '/' + r.name + '@' + branch + '/README.md')
+                .then(function (res) { return res.ok ? res.text() : null; })
+                .then(function (md) {
+                    if (!md) return;
+                    var url = firstImage(md, r.name, branch); if (!url) return;
+                    var box = card.querySelector('.project-card-image'), img = box && box.querySelector('img');
+                    if (!img) return;
+                    img.onload = function () { box.hidden = false; };
+                    img.src = url;
+                }).catch(function () {});
+        });
+    }).catch(function () {});
+})();
+</script>
