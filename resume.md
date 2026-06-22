@@ -130,15 +130,7 @@ Bachelor of Applied Engineering - Electronics Engineering
 
 ---
 
-## Organizational Experience
-
-### PPI TMU — Persatuan Pelajar Indonesia, Tokyo Metropolitan University
-**Member**  
-*2025 – Present*
-
-- Active member of the Indonesian Students Association at Tokyo Metropolitan University
-
----
+## Competition
 
 ### EEPIS Robot Soccer (EROS)
 **Humanoid Robot Team – Co-Leader, Programmer, Electrical Design**  
@@ -182,6 +174,16 @@ Bachelor of Applied Engineering - Electronics Engineering
 - **1st Place** — Regional Selection (Seleksi Daerah), Mobile Robotics — [📄 Certificate](https://drive.google.com/file/d/19-KrbkLAL8kFno8pT8F3oiR97kIbzUia/view?usp=sharing)
 - **3rd Place** — National Selection (Seleksi Nasional), Mobile Robotics — [📄 Certificate](https://drive.google.com/file/d/1jXcYniuPxPpEExFUY9R5FCgrNv0piZXi/view?usp=sharing)
 - Selected for the national training team representing the Mobile Robotics field
+
+---
+
+## Organizational Experience
+
+### PPI TMU — Persatuan Pelajar Indonesia, Tokyo Metropolitan University
+**Member**  
+*2025 – Present*
+
+- Active member of the Indonesian Students Association at Tokyo Metropolitan University
 
 ---
 
