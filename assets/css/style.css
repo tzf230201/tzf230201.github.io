@@ -807,6 +807,9 @@ h1, h2, h3, h4 {
 /* Neutralize the resume-style h2 borders for this section's heading */
 .gh-section .section-title { border: none; padding: 0; }
 .gh-section .section-title::before { content: none; }
+/* section-head titles on the wide Projects page shouldn't get the resume h2 border */
+.page-wide .section-head .section-title { border: none; padding: 0; }
+.page-wide .section-head .section-title::before { content: none; }
 
 .repo-grid {
     display: grid;
