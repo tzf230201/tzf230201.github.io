@@ -9,7 +9,7 @@ permalink: /resume/
 
 ## Professional Summary
 
-A highly motivated electronics engineer with 3+ years of experience in robotics, embedded systems, and FPGA development. Proven track record in avionics, automotive, and marine technology sectors with expertise in ROS/ROS2, computer vision, and control systems. Successfully delivered critical projects for military applications and electric vehicle systems.
+M.Eng candidate in Mechanical Systems Engineering at Tokyo Metropolitan University, specializing in robotics, embedded systems, FPGA-based edge intelligence, and control systems. Experienced in developing embedded firmware, FPGA-based video processing, ROS-based robotic systems, and industrial automation systems across avionics, electric vehicle, and robotics projects. Published in IEEE conferences and actively working on robotics research and embedded AI.
 
 ---
 
