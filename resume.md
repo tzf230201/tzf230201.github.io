@@ -17,11 +17,12 @@ A highly motivated electronics engineer with 3+ years of experience in robotics,
 
 **[Tokyo Metropolitan University](https://www.tmu.ac.jp/english/index.html)** · Japan <img src="https://flagcdn.com/jp.svg" alt="Japan" width="20" style="display:inline-block;vertical-align:middle;border-radius:2px;">  
 Master of Engineering - Mechanical Systems Engineering  
-[Kubota Laboratory](https://kub-lab.jp/)  
+[Intelligent Robotics Laboratory / Kubota Laboratory](https://kub-lab.jp/)  
 *October 2025 – September 2027 (Expected)*
 
 **[Politeknik Elektronika Negeri Surabaya (PENS)](https://www.pens.ac.id/)** · Indonesia <img src="https://flagcdn.com/id.svg" alt="Indonesia" width="20" style="display:inline-block;vertical-align:middle;border-radius:2px;">  
 Bachelor of Applied Engineering - Electronics Engineering  
+Industrial Robotics Laboratory  
 *May 2018 – August 2022* · [📄 Graduation Certificate & Transcript](https://drive.google.com/file/d/1Zkzphf9Zs9DofBsya9QLxsumhvso7-r3/view)
 
 ---

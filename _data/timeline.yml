@@ -14,6 +14,7 @@ items:
   - role: "B.A.Eng, Electronics Engineering"
     org: "Politeknik Elektronika Negeri Surabaya (PENS)"
     link: "https://www.pens.ac.id/"
+    lab: "Industrial Robotics Lab"
     cert: "https://drive.google.com/file/d/1Zkzphf9Zs9DofBsya9QLxsumhvso7-r3/view"
     cert_label: "Graduation Certificate & Transcript"
     category: edu
@@ -71,7 +72,7 @@ items:
   - role: "M.Eng, Mechanical Systems Engineering"
     org: "Tokyo Metropolitan University"
     link: "https://www.tmu.ac.jp/english/index.html"
-    lab: "Kubota Lab"
+    lab: "Intelligent Robotics Lab"
     lab_link: "https://kub-lab.jp/"
     category: edu
     start: 2025-10-01
