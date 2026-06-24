@@ -19,9 +19,8 @@ content_class: page-wide
 
 <div class="gh-section">
     <div class="section-head">
-        <span class="section-kicker">// open source</span>
-        <h2 class="section-title">From GitHub</h2>
-        <p class="section-sub">Live from <a href="https://github.com/tzf230201" target="_blank" rel="noopener">@tzf230201</a> — auto-updated, sorted by stars.</p>
+        <span class="section-kicker">// github</span>
+        <h2 class="section-title">Open Source</h2>
     </div>
     <div id="gh-repos" class="repo-grid">
         <p class="repo-status">Loading repositories…</p>
@@ -33,7 +32,7 @@ content_class: page-wide
 
 <div class="section-head" style="margin-top:4.5rem">
     <span class="section-kicker">// case studies</span>
-    <h2 class="section-title">Case Studies</h2>
+    <h2 class="section-title">Closed Source</h2>
     <p class="section-sub">In-depth write-ups of selected engineering work.</p>
 </div>
 
