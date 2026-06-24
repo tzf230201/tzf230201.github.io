@@ -7,9 +7,9 @@ title: Home
     <div class="container">
         <span class="hero-eyebrow"><span class="pulse"></span> Available for robotics & embedded roles</span>
         <h1 class="hero-title">Hi, I'm <span class="highlight">Teuku Zikri Fatahillah</span></h1>
-        <p class="hero-subtitle">&lt;robotics /&gt; &middot; embedded systems &middot; computer vision</p>
+        <p class="hero-subtitle">Robotics &amp; Embedded Systems Engineer &middot; M.Eng @ Tokyo Metropolitan University</p>
         <p class="hero-description">
-            I build intelligent machines — from FPGA-based avionics and electric-vehicle firmware to humanoid robots and Lidar perception. Turning hard engineering problems into systems that actually ship.
+            I'm a robotics and embedded systems engineer, currently doing my M.Eng at Tokyo Metropolitan University. I've worked on avionics displays, an electric-bus control unit, a humanoid soccer robot, and FPGA-based perception — usually somewhere between the firmware, the electronics, and the code.
         </p>
         <div class="hero-actions">
             <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View My Projects</a>
@@ -22,7 +22,7 @@ title: Home
             </div>
             <div class="hero-stat">
                 <div class="num">{{ site.projects.size }}+</div>
-                <div class="label">Projects Shipped</div>
+                <div class="label">Projects Built</div>
             </div>
             <div class="hero-stat">
                 <div class="num">G20</div>
