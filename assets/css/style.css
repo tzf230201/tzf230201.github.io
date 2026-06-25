@@ -6,31 +6,31 @@
 /* ---------- Design Tokens ---------- */
 :root {
     /* Functional accent palette (solid colors, no gradients) */
-    --c-violet: #6d28d9;
-    --c-indigo: #4f46e5;
+    --c-violet: #2563eb;
+    --c-indigo: #2563eb;
     --c-pink: #db2777;
     --c-orange: #ea580c;
     --c-amber: #d97706;
     --c-cyan: #0891b2;
 
-    /* Solid brand fills (flat backgrounds and text clips, no gradients) */
-    --gradient-brand: #6d28d9;
-    --gradient-warm: #ea580c;
-    --gradient-cool: #6d28d9;
+    /* Single solid blue accent (used sparingly) */
+    --gradient-brand: #2563eb;
+    --gradient-warm: #2563eb;
+    --gradient-cool: #2563eb;
 
-    /* Light theme — clean white canvas with a violet accent */
-    --primary: #6d28d9;
-    --primary-dark: #5b21b6;
-    --accent: #6d28d9;
-    --text: #1a1820;
-    --text-soft: #5c5866;
-    --text-faint: #9b97a6;
+    /* Light theme — clean white canvas, calm blue accent */
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --accent: #2563eb;
+    --text: #171717;
+    --text-soft: #585858;
+    --text-faint: #9b9b9b;
     --bg: #ffffff;
-    --bg-alt: #f6f5fa;
-    --bg-tint: #fbfafd;
+    --bg-alt: #f6f7f9;
+    --bg-tint: #fbfcfd;
     --surface: #ffffff;
-    --border: #eae8f1;
-    --border-strong: #d9d4e6;
+    --border: #e8e9ec;
+    --border-strong: #d6d8dd;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
     --shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
@@ -51,28 +51,28 @@
 }
 
 [data-theme="dark"] {
-    --c-violet: #a78bfa;
+    --c-violet: #60a5fa;
     --c-pink: #f472b6;
     --c-orange: #fb923c;
     --c-amber: #fbbf24;
     --c-cyan: #22d3ee;
 
-    --gradient-brand: #a78bfa;
-    --gradient-warm: #fb923c;
-    --gradient-cool: #a78bfa;
+    --gradient-brand: #60a5fa;
+    --gradient-warm: #60a5fa;
+    --gradient-cool: #60a5fa;
 
-    --primary: #a78bfa;
-    --primary-dark: #c4b5fd;
-    --accent: #a78bfa;
-    --text: #f1eff7;
-    --text-soft: #aaa6b8;
-    --text-faint: #716d7e;
-    --bg: #0e0d12;
-    --bg-alt: #17151e;
-    --bg-tint: #131119;
-    --surface: #17151e;
-    --border: #2a2734;
-    --border-strong: #3a3648;
+    --primary: #60a5fa;
+    --primary-dark: #93c5fd;
+    --accent: #60a5fa;
+    --text: #ededee;
+    --text-soft: #a6a6ab;
+    --text-faint: #6e6e75;
+    --bg: #0d0e10;
+    --bg-alt: #16181c;
+    --bg-tint: #121316;
+    --surface: #16181c;
+    --border: #272a30;
+    --border-strong: #383b43;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
@@ -369,10 +369,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-title .highlight {
-    background: var(--gradient-brand);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text);
 }
 
 .hero-subtitle {
@@ -499,7 +496,7 @@ h1, h2, h3, h4 {
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--primary);
+    color: var(--text-faint);
     margin-bottom: 0.75rem;
     display: block;
 }
