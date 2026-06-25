@@ -5,32 +5,32 @@
 
 /* ---------- Design Tokens ---------- */
 :root {
-    /* Neutral accents (kept minimal; color comes from imagery) */
-    --c-violet: #111111;
-    --c-indigo: #111111;
-    --c-pink: #111111;
-    --c-orange: #b45309;
-    --c-amber: #b45309;
-    --c-cyan: #0e7490;
+    /* Functional accent palette (solid colors, no gradients) */
+    --c-violet: #6d28d9;
+    --c-indigo: #4f46e5;
+    --c-pink: #db2777;
+    --c-orange: #ea580c;
+    --c-amber: #d97706;
+    --c-cyan: #0891b2;
 
-    /* "Gradients" are now flat ink — used as solid fills and text clips */
-    --gradient-brand: #111111;
-    --gradient-warm: #111111;
-    --gradient-cool: #111111;
+    /* Solid brand fills (flat backgrounds and text clips, no gradients) */
+    --gradient-brand: #6d28d9;
+    --gradient-warm: #ea580c;
+    --gradient-cool: #6d28d9;
 
-    /* Light theme — gallery white */
-    --primary: #111111;
-    --primary-dark: #000000;
-    --accent: #111111;
-    --text: #0e0e0d;
-    --text-soft: #565552;
-    --text-faint: #9a9892;
+    /* Light theme — clean white canvas with a violet accent */
+    --primary: #6d28d9;
+    --primary-dark: #5b21b6;
+    --accent: #6d28d9;
+    --text: #1a1820;
+    --text-soft: #5c5866;
+    --text-faint: #9b97a6;
     --bg: #ffffff;
-    --bg-alt: #f4f3f0;
-    --bg-tint: #faf9f6;
+    --bg-alt: #f6f5fa;
+    --bg-tint: #fbfafd;
     --surface: #ffffff;
-    --border: #e7e5e0;
-    --border-strong: #d3d0c9;
+    --border: #eae8f1;
+    --border-strong: #d9d4e6;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
     --shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
@@ -51,26 +51,28 @@
 }
 
 [data-theme="dark"] {
+    --c-violet: #a78bfa;
+    --c-pink: #f472b6;
     --c-orange: #fb923c;
     --c-amber: #fbbf24;
     --c-cyan: #22d3ee;
 
-    --gradient-brand: #f2f1ee;
-    --gradient-warm: #f2f1ee;
-    --gradient-cool: #f2f1ee;
+    --gradient-brand: #a78bfa;
+    --gradient-warm: #fb923c;
+    --gradient-cool: #a78bfa;
 
-    --primary: #f2f1ee;
-    --primary-dark: #ffffff;
-    --accent: #f2f1ee;
-    --text: #f2f1ee;
-    --text-soft: #a8a6a0;
-    --text-faint: #706e68;
-    --bg: #0c0c0b;
-    --bg-alt: #151513;
-    --bg-tint: #121210;
-    --surface: #151513;
-    --border: #2a2a26;
-    --border-strong: #3a3a35;
+    --primary: #a78bfa;
+    --primary-dark: #c4b5fd;
+    --accent: #a78bfa;
+    --text: #f1eff7;
+    --text-soft: #aaa6b8;
+    --text-faint: #716d7e;
+    --bg: #0e0d12;
+    --bg-alt: #17151e;
+    --bg-tint: #131119;
+    --surface: #17151e;
+    --border: #2a2734;
+    --border-strong: #3a3648;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
@@ -408,7 +410,7 @@ h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-size: 2.2rem;
     font-weight: 700;
-    color: var(--text);
+    color: var(--primary);
 }
 
 .hero-stat .label {
@@ -497,7 +499,7 @@ h1, h2, h3, h4 {
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--text-faint);
+    color: var(--primary);
     margin-bottom: 0.75rem;
     display: block;
 }
@@ -572,9 +574,9 @@ h1, h2, h3, h4 {
     height: 14px;
     border-radius: 4px;
 }
-.swatch.edu  { background: #aeaca6; border-left: 4px solid #1c1c1a; }
-.swatch.work { background: #cbc9c3; border-left: 4px solid #1c1c1a; }
-.swatch.org  { background: #e4e2dc; border-left: 4px solid #1c1c1a; }
+.swatch.edu  { background: #bfdbfe; border-left: 4px solid #2563eb; }
+.swatch.work { background: #fde68a; border-left: 4px solid #d97706; }
+.swatch.org  { background: #a7f3d0; border-left: 4px solid #059669; }
 
 /* Horizontal scroll wrapper so the chart stays usable on small screens */
 .gantt-scroll {
@@ -635,14 +637,14 @@ h1, h2, h3, h4 {
     filter: saturate(1.15);
 }
 
-.is-edu  .gantt-bar { background: #aeaca6; border-left-color: #1c1c1a; }
-.is-work .gantt-bar { background: #cbc9c3; border-left-color: #1c1c1a; }
-.is-org  .gantt-bar { background: #e4e2dc; border-left-color: #1c1c1a; }
+.is-edu  .gantt-bar { background: #bfdbfe; border-left-color: #2563eb; }
+.is-work .gantt-bar { background: #fde68a; border-left-color: #d97706; }
+.is-org  .gantt-bar { background: #a7f3d0; border-left-color: #059669; }
 
 .is-current .gantt-bar { animation: bar-pulse 2.2s ease-in-out infinite; }
 @keyframes bar-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(120, 120, 120, 0); }
-    50%      { box-shadow: 0 0 0 4px rgba(120, 120, 120, 0.35); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+    50%      { box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.30); }
 }
 
 .gantt-label {
