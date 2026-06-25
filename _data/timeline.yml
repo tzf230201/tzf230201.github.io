@@ -28,14 +28,14 @@ items:
     start: 2019-10-01
     end: 2020-12-01
 
-  - role: "Competitor — Mobile Robotics"
+  - role: "Mobile Robotics Competitor"
     org: "ASEAN Skills Competition"
     cert: "https://drive.google.com/file/d/19-KrbkLAL8kFno8pT8F3oiR97kIbzUia/view?usp=sharing"
     category: org
     start: 2019-01-01
     end: 2019-10-01
 
-  - role: "Humanoid Robot Team — Co-Leader"
+  - role: "Co-Leader, Humanoid Robot Team"
     org: "EEPIS Robot Soccer (EROS)"
     category: org
     start: 2019-11-01

@@ -7,7 +7,7 @@ permalink: /contact/
 
 <div class="contact-content">
     <div class="contact-intro">
-        <p>I'm always interested in discussing robotics, embedded systems, and engineering opportunities. Whether you want to collaborate on a project, discuss technical challenges, or just connect — reach out through any of the channels below.</p>
+        <p>I'm always interested in discussing robotics, embedded systems, and engineering opportunities. Whether you want to collaborate on a project, discuss technical challenges, or just connect, reach out through any of the channels below.</p>
     </div>
 
     <div class="contact-methods">

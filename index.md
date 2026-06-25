@@ -9,7 +9,7 @@ title: Home
         <h1 class="hero-title">Hi, I'm <span class="highlight">Teuku Zikri Fatahillah</span></h1>
         <p class="hero-subtitle">Robotics &amp; Embedded Systems Engineer &middot; M.Eng @ Tokyo Metropolitan University</p>
         <p class="hero-description">
-            I'm a robotics and embedded systems engineer, currently doing my M.Eng at Tokyo Metropolitan University. I've worked on avionics displays, an electric-bus control unit, a humanoid soccer robot, and FPGA-based perception — usually somewhere between the firmware, the electronics, and the code.
+            I'm a robotics and embedded systems engineer, currently doing my M.Eng at Tokyo Metropolitan University. I've worked on avionics displays, an electric-bus control unit, a humanoid soccer robot, and FPGA-based perception, usually somewhere between the firmware, the electronics, and the code.
         </p>
         <div class="hero-actions">
             <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View My Projects</a>
@@ -41,7 +41,7 @@ title: Home
         </div>
         <div class="about-content">
             <p>
-                A highly motivated engineer with expertise across the robotics stack — Embedded Systems, Automation, Electronics Design, IoT, DSP, FPGA, Computer Vision, and the Robot Operating System (ROS/ROS2).
+                A highly motivated engineer with expertise across the robotics stack: Embedded Systems, Automation, Electronics Design, IoT, DSP, FPGA, Computer Vision, and the Robot Operating System (ROS/ROS2).
             </p>
             <p>
                 I hold a track record of winning national competitions and have hands-on R&amp;D experience across avionics, automotive, and marine technology. I'm currently pursuing a Master of Engineering at Tokyo Metropolitan University while deepening my work in electronics, AI, and autonomous systems.
@@ -67,7 +67,7 @@ title: Home
         <div class="section-head">
             <span class="section-kicker">// my journey</span>
             <h2 class="section-title">Overview Timeline</h2>
-            <p class="section-sub">Education, organization &amp; work — at a glance.</p>
+            <p class="section-sub">Education, organizations, and work over time.</p>
         </div>
 
         <div class="timeline-legend">

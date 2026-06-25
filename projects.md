@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
 
-            // Pull a thumbnail from each repo's README.md (raw CDN — no API rate limit)
+            // Pull a thumbnail from each repo's README.md (raw CDN, no API rate limit)
             var cards = grid.querySelectorAll('.repo-card');
             repos.forEach(function (r, i) {
                 var card = cards[i];
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="section-head">
         <span class="section-kicker">// rosrun</span>
         <h2 class="section-title">Drive a Robot with /cmd_vel</h2>
-        <p class="section-sub">A tiny teleop. Drive the turtle like turtlesim — every key press publishes a <code>geometry_msgs/Twist</code> to <code>/cmd_vel</code>. Dodge the TurtleBot3-style pillars and reach the goals before the 60&nbsp;s timer runs out.</p>
+        <p class="section-sub">A tiny teleop. Drive the turtle like turtlesim, and every key press publishes a <code>geometry_msgs/Twist</code> to <code>/cmd_vel</code>. Dodge the TurtleBot3-style pillars and reach the goals before the 60&nbsp;s timer runs out.</p>
     </div>
     <div class="game-card">
         <canvas id="cmdvel-canvas" width="920" height="440" class="game-canvas" aria-label="cmd_vel teleop game"></canvas>

@@ -139,12 +139,12 @@ Industrial Robotics Laboratory
 
 **Competition Awards:**
 
-- **1st Place — Overall**, KRSBI-Humanoid · Kontes Robot Indonesia (KRI) 2021 — [📄 Certificate](https://drive.google.com/file/d/12G93wXLHL9m8xaeZVwWCW7ixxk9gPJGo/view?usp=sharing)
-- **1st Place — Humanoid Sprint**, 2021 — [📄 Certificate](https://drive.google.com/file/d/1t5OZ1Qtv61nGQD8Ca01dXrgN3Mo3_X2-/view?usp=sharing)
-- **2nd Place — Humanoid Ball Dribbling**, 2021 — [📄 Certificate](https://drive.google.com/file/d/15wXfL1nZ7qrEKdjAz2kUToiA5i1_b1ks/view?usp=sharing)
-- **3rd Place — Humanoid Robot Cooperation**, 2021 — [📄 Certificate](https://drive.google.com/file/d/1IeBGSdQhzQAt1nw2beYOM0bFHLzK82IU/view?usp=sharing)
-- **1st Place — Humanoid Ball Dribbling**, 2020 — [📄 Certificate](https://drive.google.com/file/d/1yWsQuFd0xY0ZyYOV_rGDnLX6WleSgD4W/view?usp=sharing)
-- **Honorable Mention — Humanoid Sprint**, 2020 — [📄 Certificate](https://drive.google.com/file/d/1s5c62mNvQKXNdPCPEclWlJ_hXfpegGf9/view?usp=sharing)
+- **1st Place · Overall**, KRSBI-Humanoid · Kontes Robot Indonesia (KRI) 2021 · [📄 Certificate](https://drive.google.com/file/d/12G93wXLHL9m8xaeZVwWCW7ixxk9gPJGo/view?usp=sharing)
+- **1st Place · Humanoid Sprint**, 2021 · [📄 Certificate](https://drive.google.com/file/d/1t5OZ1Qtv61nGQD8Ca01dXrgN3Mo3_X2-/view?usp=sharing)
+- **2nd Place · Humanoid Ball Dribbling**, 2021 · [📄 Certificate](https://drive.google.com/file/d/15wXfL1nZ7qrEKdjAz2kUToiA5i1_b1ks/view?usp=sharing)
+- **3rd Place · Humanoid Robot Cooperation**, 2021 · [📄 Certificate](https://drive.google.com/file/d/1IeBGSdQhzQAt1nw2beYOM0bFHLzK82IU/view?usp=sharing)
+- **1st Place · Humanoid Ball Dribbling**, 2020 · [📄 Certificate](https://drive.google.com/file/d/1yWsQuFd0xY0ZyYOV_rGDnLX6WleSgD4W/view?usp=sharing)
+- **Honorable Mention · Humanoid Sprint**, 2020 · [📄 Certificate](https://drive.google.com/file/d/1s5c62mNvQKXNdPCPEclWlJ_hXfpegGf9/view?usp=sharing)
 
 **Technical Contributions:**
 - Developed 20 DoF humanoid robot with dynamic walking capability
@@ -168,19 +168,19 @@ Industrial Robotics Laboratory
 
 ---
 
-### ASEAN Skills Competition 2019 — Mobile Robotics
+### ASEAN Skills Competition 2019 · Mobile Robotics
 **National Training Team (Quarantine) – Competitor**  
 *2019*
 
-- **1st Place** — Regional Selection (Seleksi Daerah), Mobile Robotics — [📄 Certificate](https://drive.google.com/file/d/19-KrbkLAL8kFno8pT8F3oiR97kIbzUia/view?usp=sharing)
-- **3rd Place** — National Selection (Seleksi Nasional), Mobile Robotics — [📄 Certificate](https://drive.google.com/file/d/1jXcYniuPxPpEExFUY9R5FCgrNv0piZXi/view?usp=sharing)
+- **1st Place** · Regional Selection (Seleksi Daerah), Mobile Robotics · [📄 Certificate](https://drive.google.com/file/d/19-KrbkLAL8kFno8pT8F3oiR97kIbzUia/view?usp=sharing)
+- **3rd Place** · National Selection (Seleksi Nasional), Mobile Robotics · [📄 Certificate](https://drive.google.com/file/d/1jXcYniuPxPpEExFUY9R5FCgrNv0piZXi/view?usp=sharing)
 - Selected for the national training team representing the Mobile Robotics field
 
 ---
 
 ## Organizational Experience
 
-### PPI TMU — Persatuan Pelajar Indonesia, Tokyo Metropolitan University
+### PPI TMU · Persatuan Pelajar Indonesia, Tokyo Metropolitan University
 **Member**  
 *2025 – Present*
 
@@ -256,19 +256,19 @@ Industrial Robotics Laboratory
 
 ## Certifications
 
-- **Robot Operating System (ROS)** — [📄 Certificate](https://drive.google.com/file/d/1LM8hsLIXTGnpNHXLcgbOVcnnWag0LxZK/view?usp=sharing)
-- **CoppeliaSim / V-REP** — [📄 Certificate](https://drive.google.com/file/d/19XatatfVS4H4B0ARhDy1Ca2_XALR_KIi/view?usp=sharing)
-- **Autodesk Inventor** — [📄 Certificate](https://drive.google.com/file/d/1a_00ngwbrEVT2FfVWGpNtntYzX5hZO9P/view?usp=sharing)
-- **Embedded Systems and Data Acquisition** (2021) — [📄 Certificate](https://drive.google.com/file/d/13Xv3cw4rMbddr5dr_QXpSMCCHodCf_wS/view?usp=sharing)
-- **Nature Masterclasses** — *Getting Published: Effectively Communicating Your Research* (Expert Trainer-led workshop) — [📄 Certificate](https://drive.google.com/file/d/1wZqS2FHIkRcvL9hELS3fHMuLNpHDSvhn/view?usp=sharing)
+- **Robot Operating System (ROS)** · [📄 Certificate](https://drive.google.com/file/d/1LM8hsLIXTGnpNHXLcgbOVcnnWag0LxZK/view?usp=sharing)
+- **CoppeliaSim / V-REP** · [📄 Certificate](https://drive.google.com/file/d/19XatatfVS4H4B0ARhDy1Ca2_XALR_KIi/view?usp=sharing)
+- **Autodesk Inventor** · [📄 Certificate](https://drive.google.com/file/d/1a_00ngwbrEVT2FfVWGpNtntYzX5hZO9P/view?usp=sharing)
+- **Embedded Systems and Data Acquisition** (2021) · [📄 Certificate](https://drive.google.com/file/d/13Xv3cw4rMbddr5dr_QXpSMCCHodCf_wS/view?usp=sharing)
+- **Nature Masterclasses** · *Getting Published: Effectively Communicating Your Research* (Expert Trainer-led workshop) · [📄 Certificate](https://drive.google.com/file/d/1wZqS2FHIkRcvL9hELS3fHMuLNpHDSvhn/view?usp=sharing)
 
 ---
 
 ## Achievements & Activities
 
-- **Highest Score** — Certified Internship Program Batch II (PT. INKA)
-- **Robotics Workshop Speaker / Instructor** — [📄 Certificates](https://drive.google.com/drive/folders/1jC2G61Z253U08smOECb1QE_vJEKeILxf)
-- **Committee Member — Java Robot Contest X** (2018–2019) — [📄 Certificate](https://drive.google.com/file/d/1z2y2tYTTZwQREU7dWf3LJCxSkeJ87j4Q/view?usp=sharing)
+- **Highest Score** · Certified Internship Program Batch II (PT. INKA)
+- **Robotics Workshop Speaker / Instructor** · [📄 Certificates](https://drive.google.com/drive/folders/1jC2G61Z253U08smOECb1QE_vJEKeILxf)
+- **Committee Member · Java Robot Contest X** (2018–2019) · [📄 Certificate](https://drive.google.com/file/d/1z2y2tYTTZwQREU7dWf3LJCxSkeJ87j4Q/view?usp=sharing)
 - Multiple national robotics competition participations
 
 ---
