@@ -5,40 +5,41 @@
 
 /* ---------- Design Tokens ---------- */
 :root {
-    /* Brand gradient stops */
-    --c-violet: #7c3aed;
-    --c-indigo: #4f46e5;
-    --c-pink: #ec4899;
-    --c-orange: #f97316;
-    --c-amber: #fbbf24;
-    --c-cyan: #06b6d4;
+    /* Neutral accents (kept minimal; color comes from imagery) */
+    --c-violet: #111111;
+    --c-indigo: #111111;
+    --c-pink: #111111;
+    --c-orange: #b45309;
+    --c-amber: #b45309;
+    --c-cyan: #0e7490;
 
-    --gradient-brand: linear-gradient(120deg, #6366f1 0%, #a855f7 45%, #ec4899 100%);
-    --gradient-warm: linear-gradient(120deg, #f97316 0%, #ec4899 100%);
-    --gradient-cool: linear-gradient(120deg, #06b6d4 0%, #6366f1 100%);
+    /* "Gradients" are now flat ink — used as solid fills and text clips */
+    --gradient-brand: #111111;
+    --gradient-warm: #111111;
+    --gradient-cool: #111111;
 
-    /* Light theme surfaces */
-    --primary: #7c3aed;
-    --primary-dark: #6d28d9;
-    --accent: #ec4899;
-    --text: #1e1b2e;
-    --text-soft: #5b5772;
-    --text-faint: #8b8aa3;
+    /* Light theme — gallery white */
+    --primary: #111111;
+    --primary-dark: #000000;
+    --accent: #111111;
+    --text: #0e0e0d;
+    --text-soft: #565552;
+    --text-faint: #9a9892;
     --bg: #ffffff;
-    --bg-alt: #f6f3ff;
-    --bg-tint: #faf8ff;
+    --bg-alt: #f4f3f0;
+    --bg-tint: #faf9f6;
     --surface: #ffffff;
-    --border: #ece8f7;
-    --border-strong: #d9d2f0;
+    --border: #e7e5e0;
+    --border-strong: #d3d0c9;
 
-    --shadow-sm: 0 1px 3px rgba(60, 40, 110, 0.08);
-    --shadow: 0 8px 24px rgba(80, 50, 140, 0.10);
-    --shadow-lg: 0 20px 50px rgba(80, 50, 140, 0.18);
-    --shadow-glow: 0 12px 40px rgba(168, 85, 247, 0.28);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.10);
+    --shadow-glow: 0 6px 22px rgba(0, 0, 0, 0.07);
 
-    --radius-sm: 10px;
-    --radius: 16px;
-    --radius-lg: 24px;
+    --radius-sm: 6px;
+    --radius: 10px;
+    --radius-lg: 14px;
     --radius-pill: 999px;
 
     --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -50,23 +51,31 @@
 }
 
 [data-theme="dark"] {
-    --primary: #a78bfa;
-    --primary-dark: #8b5cf6;
-    --accent: #f472b6;
-    --text: #f1edff;
-    --text-soft: #b6b0d4;
-    --text-faint: #847ea8;
-    --bg: #0e0a1f;
-    --bg-alt: #16102e;
-    --bg-tint: #130d28;
-    --surface: #1a1336;
-    --border: #2a2150;
-    --border-strong: #3a2f6b;
+    --c-orange: #fb923c;
+    --c-amber: #fbbf24;
+    --c-cyan: #22d3ee;
 
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-    --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6);
-    --shadow-glow: 0 12px 44px rgba(167, 139, 250, 0.35);
+    --gradient-brand: #f2f1ee;
+    --gradient-warm: #f2f1ee;
+    --gradient-cool: #f2f1ee;
+
+    --primary: #f2f1ee;
+    --primary-dark: #ffffff;
+    --accent: #f2f1ee;
+    --text: #f2f1ee;
+    --text-soft: #a8a6a0;
+    --text-faint: #706e68;
+    --bg: #0c0c0b;
+    --bg-alt: #151513;
+    --bg-tint: #121210;
+    --surface: #151513;
+    --border: #2a2a26;
+    --border-strong: #3a3a35;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 6px 22px rgba(0, 0, 0, 0.5);
 }
 
 /* ---------- Reset ---------- */
@@ -112,7 +121,7 @@ h1, h2, h3, h4 {
 
 ::selection {
     background: var(--accent);
-    color: #fff;
+    color: var(--bg);
 }
 
 /* ---------- Container ---------- */
@@ -197,7 +206,7 @@ h1, h2, h3, h4 {
 .navbar-menu a:hover { color: var(--text); }
 
 .navbar-menu a.active {
-    color: #fff;
+    color: var(--bg);
     background: var(--gradient-brand);
     box-shadow: var(--shadow-glow);
 }
@@ -303,10 +312,7 @@ h1, h2, h3, h4 {
     position: absolute;
     inset: 0;
     z-index: -2;
-    background:
-        radial-gradient(45% 55% at 18% 18%, rgba(99, 102, 241, 0.30), transparent 60%),
-        radial-gradient(45% 55% at 82% 22%, rgba(236, 72, 153, 0.28), transparent 60%),
-        radial-gradient(60% 60% at 50% 100%, rgba(249, 115, 22, 0.22), transparent 60%);
+    background: radial-gradient(70% 60% at 50% 0%, var(--bg-alt), transparent 70%);
 }
 
 .hero::after {
@@ -317,10 +323,10 @@ h1, h2, h3, h4 {
     background-image:
         linear-gradient(var(--border) 1px, transparent 1px),
         linear-gradient(90deg, var(--border) 1px, transparent 1px);
-    background-size: 44px 44px;
+    background-size: 56px 56px;
     -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, #000 30%, transparent 75%);
     mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, #000 30%, transparent 75%);
-    opacity: 0.6;
+    opacity: 0.35;
 }
 
 .hero-eyebrow {
@@ -368,10 +374,11 @@ h1, h2, h3, h4 {
 }
 
 .hero-subtitle {
-    font-family: var(--font-mono);
-    font-size: clamp(1rem, 2.2vw, 1.35rem);
-    color: var(--accent);
-    font-weight: 600;
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    color: var(--text-soft);
+    font-weight: 500;
+    letter-spacing: 0.01em;
     margin-bottom: 1.25rem;
 }
 
@@ -446,13 +453,13 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary {
-    color: #fff;
+    color: var(--bg);
     background: var(--gradient-brand);
     background-size: 160% 160%;
     box-shadow: var(--shadow-glow);
 }
 .btn-primary:hover {
-    color: #fff;
+    color: var(--bg);
     transform: translateY(-3px);
     background-position: 100% 0;
     box-shadow: 0 18px 45px rgba(168, 85, 247, 0.42);
@@ -792,7 +799,7 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     padding: 0.3rem 0.7rem;
     border-radius: var(--radius-pill);
-    color: #fff;
+    color: var(--bg);
     background: var(--gradient-warm);
     box-shadow: var(--shadow);
 }
@@ -993,7 +1000,7 @@ h1, h2, h3, h4 {
     border-color: var(--primary);
 }
 .filter-tag.active {
-    color: #fff;
+    color: var(--bg);
     background: var(--gradient-brand);
     border-color: transparent;
     box-shadow: var(--shadow-glow);
@@ -1218,7 +1225,7 @@ h1, h2, h3, h4 {
 }
 .resume-toc a:hover { color: var(--text); border-color: var(--primary); }
 .resume-toc a.active {
-    color: #fff;
+    color: var(--bg);
     background: var(--gradient-brand);
     border-color: transparent;
 }
@@ -1417,7 +1424,7 @@ h1, h2, h3, h4 {
 }
 .contact-method:hover .ic {
     background: var(--gradient-brand);
-    color: #fff;
+    color: var(--bg);
 }
 .contact-method p { color: var(--text-soft); word-break: break-word; }
 
@@ -1468,7 +1475,7 @@ h1, h2, h3, h4 {
     transition: var(--transition);
 }
 .footer-social a:hover {
-    color: #fff;
+    color: var(--bg);
     background: var(--gradient-brand);
     border-color: transparent;
     transform: translateY(-3px);
