@@ -30,6 +30,7 @@ title: Home
             </div>
         </div>
         <p class="hero-quip" title="with apologies to “Attention Is All You Need”">// robotics is all you need</p>
+        <p class="hero-quip" title="with apologies to “Steal Like an Artist”" style="margin-top:0.35rem">// steal like an engineer</p>
     </div>
 </section>
 
