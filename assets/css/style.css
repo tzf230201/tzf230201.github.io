@@ -47,7 +47,7 @@
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
 
-    --maxw: 1440px;
+    --maxw: 1600px;
 }
 
 [data-theme="dark"] {
@@ -800,8 +800,13 @@ h1, h2, h3, h4 {
     box-shadow: var(--shadow);
 }
 
-/* Wide page variant (Projects listing) — fill the container */
-.page-wide { max-width: 100%; }
+/* Wide page variant (Projects listing) — break out to ~full viewport width */
+.page-wide {
+    width: 95vw;
+    max-width: 95vw;
+    margin-left: calc(50% - 47.5vw);
+    margin-right: calc(50% - 47.5vw);
+}
 
 /* ============================================================
    GitHub repositories (auto-loaded)
