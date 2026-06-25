@@ -19,7 +19,7 @@ content_class: page-wide
 
 <div class="gh-section">
     <div class="section-head">
-        <span class="section-kicker">// github</span>
+        <span class="section-kicker">GitHub</span>
         <h2 class="section-title">Open Source</h2>
     </div>
     <div id="gh-repos" class="repo-grid">
@@ -31,7 +31,7 @@ content_class: page-wide
 </div>
 
 <div class="section-head" style="margin-top:4.5rem">
-    <span class="section-kicker">// case studies</span>
+    <span class="section-kicker">Case studies</span>
     <h2 class="section-title">Closed Source</h2>
     <p class="section-sub">In-depth write-ups of selected engineering work.</p>
 </div>
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div class="robot-game" id="robot-game">
     <div class="section-head">
-        <span class="section-kicker">// rosrun</span>
+        <span class="section-kicker">Coffee break</span>
         <h2 class="section-title">Drive a Robot with /cmd_vel</h2>
         <p class="section-sub">A tiny teleop. Drive the turtle like turtlesim, and every key press publishes a <code>geometry_msgs/Twist</code> to <code>/cmd_vel</code>. Dodge the TurtleBot3-style pillars and reach the goals before the 60&nbsp;s timer runs out.</p>
     </div>

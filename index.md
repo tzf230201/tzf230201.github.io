@@ -36,7 +36,7 @@ title: Home
 <section class="section">
     <div class="container">
         <div class="section-head">
-            <span class="section-kicker">// about me</span>
+            <span class="section-kicker">About</span>
             <h2 class="section-title">Engineer across the full robotics stack</h2>
         </div>
         <div class="about-content">
@@ -65,7 +65,7 @@ title: Home
 <section class="section section-alt">
     <div class="container">
         <div class="section-head">
-            <span class="section-kicker">// my journey</span>
+            <span class="section-kicker">Journey</span>
             <h2 class="section-title">Overview Timeline</h2>
             <p class="section-sub">Education, organizations, and work over time.</p>
         </div>
@@ -127,7 +127,7 @@ title: Home
 <section class="section">
     <div class="container">
         <div class="section-head">
-            <span class="section-kicker">// selected work</span>
+            <span class="section-kicker">Selected work</span>
             <h2 class="section-title">Featured Projects</h2>
             <p class="section-sub">A few projects I'm proud of. Browse the full archive for more.</p>
         </div>

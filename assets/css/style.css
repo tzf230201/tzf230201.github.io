@@ -301,11 +301,12 @@ h1, h2, h3, h4 {
    ============================================================ */
 .hero {
     position: relative;
-    padding: 7rem 0 6rem;
+    padding: 8rem 0 6rem;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
     isolation: isolate;
 }
+.hero .container { max-width: 980px; }
 
 .hero::before {
     content: "";
@@ -333,16 +334,15 @@ h1, h2, h3, h4 {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
     letter-spacing: 0.02em;
     color: var(--text-soft);
     background: var(--surface);
     border: 1px solid var(--border-strong);
-    padding: 0.45rem 1rem;
+    padding: 0.4rem 0.9rem;
     border-radius: var(--radius-pill);
-    box-shadow: var(--shadow-sm);
     margin-bottom: 1.75rem;
 }
 
@@ -385,22 +385,22 @@ h1, h2, h3, h4 {
 .hero-description {
     font-size: 1.15rem;
     color: var(--text-soft);
-    max-width: 620px;
-    margin: 0 auto 2.25rem;
+    max-width: 600px;
+    margin: 0 0 2.25rem;
 }
 
 .hero-actions {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 .hero-stats {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 3rem;
     margin-top: 3.5rem;
 }
 
@@ -408,10 +408,7 @@ h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-size: 2.2rem;
     font-weight: 700;
-    background: var(--gradient-warm);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text);
 }
 
 .hero-stat .label {
@@ -495,13 +492,13 @@ h1, h2, h3, h4 {
 }
 
 .section-kicker {
-    font-family: var(--font-mono);
-    font-size: 0.82rem;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.6rem;
+    color: var(--text-faint);
+    margin-bottom: 0.75rem;
     display: block;
 }
 
@@ -575,9 +572,9 @@ h1, h2, h3, h4 {
     height: 14px;
     border-radius: 4px;
 }
-.swatch.work { background: #fde68a; border-left: 4px solid #f59e0b; }
-.swatch.edu  { background: #bfdbfe; border-left: 4px solid #3b82f6; }
-.swatch.org  { background: #a7f3d0; border-left: 4px solid #10b981; }
+.swatch.edu  { background: #aeaca6; border-left: 4px solid #1c1c1a; }
+.swatch.work { background: #cbc9c3; border-left: 4px solid #1c1c1a; }
+.swatch.org  { background: #e4e2dc; border-left: 4px solid #1c1c1a; }
 
 /* Horizontal scroll wrapper so the chart stays usable on small screens */
 .gantt-scroll {
@@ -638,14 +635,14 @@ h1, h2, h3, h4 {
     filter: saturate(1.15);
 }
 
-.is-edu  .gantt-bar { background: #bfdbfe; border-left-color: #3b82f6; }
-.is-work .gantt-bar { background: #fde68a; border-left-color: #f59e0b; }
-.is-org  .gantt-bar { background: #a7f3d0; border-left-color: #10b981; }
+.is-edu  .gantt-bar { background: #aeaca6; border-left-color: #1c1c1a; }
+.is-work .gantt-bar { background: #cbc9c3; border-left-color: #1c1c1a; }
+.is-org  .gantt-bar { background: #e4e2dc; border-left-color: #1c1c1a; }
 
 .is-current .gantt-bar { animation: bar-pulse 2.2s ease-in-out infinite; }
 @keyframes bar-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
-    50%      { box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.28); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(120, 120, 120, 0); }
+    50%      { box-shadow: 0 0 0 4px rgba(120, 120, 120, 0.35); }
 }
 
 .gantt-label {
@@ -686,7 +683,7 @@ h1, h2, h3, h4 {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     transition: var(--transition);
     display: flex;
     flex-direction: column;
@@ -832,7 +829,7 @@ h1, h2, h3, h4 {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 1.4rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     transition: var(--transition);
     overflow: hidden;
 }
