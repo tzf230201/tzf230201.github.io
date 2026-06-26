@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resume
-subtitle: "Robotics & Embedded Systems Engineer | M.Eng Candidate at Tokyo Metropolitan University | FPGA · ROS · Control Systems"
+subtitle: "M.Eng Candidate at Tokyo Metropolitan University<br>Robotics &amp; Embedded Systems Engineer"
 permalink: /resume/
 ---
 
