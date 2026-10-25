@@ -4,37 +4,41 @@ title: Home
 ---
 
 <section class="hero">
-    <div class="container">
-        <span class="hero-eyebrow"><span class="pulse"></span> Available for robotics & embedded roles</span>
-        <h1 class="hero-title">Hi, I'm <span class="highlight">Teuku Zikri Fatahillah</span></h1>
-        <p class="hero-subtitle">Robotics &amp; Embedded Systems Engineer &middot; M.Eng @ Tokyo Metropolitan University</p>
-        <p class="hero-description">
-            I'm a robotics and embedded systems engineer, currently doing my M.Eng at Tokyo Metropolitan University. I've worked on avionics displays, an electric-bus control unit, a humanoid soccer robot, and FPGA-based perception, usually somewhere between the firmware, the electronics, and the code.
-        </p>
-        <div class="hero-actions">
-            <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View My Projects</a>
-            <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Get in Touch</a>
-        </div>
-        <div class="hero-stats">
-            <div class="hero-stat">
-                <div class="num">3+</div>
-                <div class="label">Years Experience</div>
-            </div>
-            <div class="hero-stat">
-                <div class="num">{{ site.projects.size }}+</div>
-                <div class="label">Projects Built</div>
-            </div>
-            <div class="hero-stat">
-                <div class="num">G20</div>
-                <div class="label">Summit Deployment</div>
+    <div class="container hero-grid">
+        <div class="hero-main">
+            <span class="hero-eyebrow"><span class="pulse"></span> Available for robotics & embedded roles</span>
+            <h1 class="hero-title">Hi, I'm <span class="highlight">Teuku Zikri Fatahillah</span></h1>
+            <p class="hero-subtitle">Robotics &amp; Embedded Systems Engineer &middot; M.Eng @ Tokyo Metropolitan University</p>
+            <p class="hero-description">
+                I'm a robotics and embedded systems engineer, currently doing my M.Eng at Tokyo Metropolitan University. I've worked on avionics displays, an electric-bus control unit, a humanoid soccer robot, and FPGA-based perception, usually somewhere between the firmware, the electronics, and the code.
+            </p>
+            <div class="hero-actions">
+                <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View My Projects</a>
+                <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
-        <p class="hero-quip" title="with apologies to “Attention Is All You Need”">// robotics is all you need</p>
+        <div class="hero-aside">
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="num">3+</div>
+                    <div class="label">Years Experience</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">{{ site.projects.size }}+</div>
+                    <div class="label">Projects Built</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">G20</div>
+                    <div class="label">Summit Deployment</div>
+                </div>
+            </div>
+            <p class="hero-quip" title="with apologies to “Attention Is All You Need”">// robotics is all you need</p>
+        </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container">
+<section class="section section-about">
+    <div class="container split">
         <div class="section-head">
             <span class="section-kicker">About</span>
             <h2 class="section-title">Engineer across the full robotics stack</h2>
@@ -64,16 +68,18 @@ title: Home
 
 <section class="section section-alt">
     <div class="container">
-        <div class="section-head">
-            <span class="section-kicker">Journey</span>
-            <h2 class="section-title">Overview Timeline</h2>
-            <p class="section-sub">Education, organizations, and work over time.</p>
-        </div>
+        <div class="section-head-row">
+            <div class="section-head">
+                <span class="section-kicker">Journey</span>
+                <h2 class="section-title">Overview Timeline</h2>
+                <p class="section-sub">Education, organizations, and work over time.</p>
+            </div>
 
-        <div class="timeline-legend">
-            <span class="legend-item"><span class="swatch edu"></span> Education</span>
-            <span class="legend-item"><span class="swatch work"></span> Work</span>
-            <span class="legend-item"><span class="swatch org"></span> Organization</span>
+            <div class="timeline-legend">
+                <span class="legend-item"><span class="swatch edu"></span> Education</span>
+                <span class="legend-item"><span class="swatch work"></span> Work</span>
+                <span class="legend-item"><span class="swatch org"></span> Organization</span>
+            </div>
         </div>
 
         {%- assign tl = site.data.timeline -%}
@@ -81,44 +87,40 @@ title: Home
         {%- assign total_months = span_years | times: 12 -%}
         {%- assign last_year = tl.axis_end | minus: 1 -%}
         {%- assign col_w = 100.0 | divided_by: span_years -%}
-        <div class="gantt-scroll">
-            <div class="gantt">
-                <div class="gantt-header">
+        {%- comment -%} One row per item: details on the left, the bar on a shared year axis on the right {%- endcomment -%}
+        <div class="gantt" style="--col-w:{{ col_w | round: 4 }}%">
+            <div class="gantt-header" aria-hidden="true">
+                <div class="gantt-head-label"></div>
+                <div class="gantt-axis">
                     {%- for y in (tl.axis_start..last_year) -%}
                     {%- assign yleft = y | minus: tl.axis_start | times: col_w -%}
                     <span class="gantt-year" style="left:{{ yleft | round: 4 }}%">{{ y }}</span>
                     {%- endfor -%}
                 </div>
+            </div>
 
-                <div class="gantt-body" style="background-size:{{ col_w | round: 4 }}% 100%">
-                    {%- assign items = tl.items | sort: "start" -%}
-                    {%- for item in items -%}
-                        {%- assign sy = item.start | date: "%Y" | plus: 0 -%}
-                        {%- assign sm = item.start | date: "%m" | plus: 0 -%}
-                        {%- assign start_mo = sy | minus: tl.axis_start | times: 12 | plus: sm | minus: 1 -%}
-                        {%- if item.end -%}{%- assign endval = item.end -%}{%- else -%}{%- assign endval = site.time -%}{%- endif -%}
-                        {%- assign ey = endval | date: "%Y" | plus: 0 -%}
-                        {%- assign em = endval | date: "%m" | plus: 0 -%}
-                        {%- assign end_mo = ey | minus: tl.axis_start | times: 12 | plus: em | minus: 1 -%}
-                        {%- assign left = start_mo | times: 100.0 | divided_by: total_months -%}
-                        {%- assign width = end_mo | minus: start_mo | times: 100.0 | divided_by: total_months -%}
-                        {%- assign bar_right = left | plus: width -%}
-                        {%- assign right_off = 100 | minus: bar_right -%}
-                        {%- capture range -%}{{ item.start | date: "%b %Y" }} – {% if item.end %}{{ item.end | date: "%b %Y" }}{% else %}Present{% endif %}{%- endcapture -%}
-                    <div class="gantt-row is-{{ item.category }}{% if item.current %} is-current{% endif %}">
-                        <div class="gantt-track"><span class="gantt-bar" style="left:{{ left | round: 3 }}%;width:{{ width | round: 3 }}%" title="{{ range }}"></span></div>
-                        {%- if left >= 50 -%}
-                        <div class="gantt-label right" style="margin-right:{{ right_off | round: 3 }}%">
-                        {%- else -%}
-                        <div class="gantt-label" style="margin-left:{{ left | round: 3 }}%">
-                        {%- endif -%}
-                            <span class="role">{{ item.role }}</span>
-                            <span class="org">{% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.org }}</a>{% else %}{{ item.org }}{% endif %}{% if item.lab %} · {% if item.lab_link %}<a href="{{ item.lab_link }}" target="_blank" rel="noopener">{{ item.lab }}</a>{% else %}{{ item.lab }}{% endif %}{% endif %}{% if item.current %} · current{% endif %}</span>
-                            {%- if item.cert %}<a class="tl-cert" href="{{ item.cert }}" target="_blank" rel="noopener">📄 {{ item.cert_label | default: "Certificate" }}</a>{% endif %}
-                        </div>
+            <div class="gantt-body">
+                {%- assign items = tl.items | sort: "start" -%}
+                {%- for item in items -%}
+                    {%- assign sy = item.start | date: "%Y" | plus: 0 -%}
+                    {%- assign sm = item.start | date: "%m" | plus: 0 -%}
+                    {%- assign start_mo = sy | minus: tl.axis_start | times: 12 | plus: sm | minus: 1 -%}
+                    {%- if item.end -%}{%- assign endval = item.end -%}{%- else -%}{%- assign endval = site.time -%}{%- endif -%}
+                    {%- assign ey = endval | date: "%Y" | plus: 0 -%}
+                    {%- assign em = endval | date: "%m" | plus: 0 -%}
+                    {%- assign end_mo = ey | minus: tl.axis_start | times: 12 | plus: em | minus: 1 -%}
+                    {%- assign left = start_mo | times: 100.0 | divided_by: total_months -%}
+                    {%- assign width = end_mo | minus: start_mo | times: 100.0 | divided_by: total_months -%}
+                    {%- capture range -%}{{ item.start | date: "%b %Y" }} – {% if item.end %}{{ item.end | date: "%b %Y" }}{% else %}Present{% endif %}{%- endcapture -%}
+                <div class="gantt-row is-{{ item.category }}{% if item.current %} is-current{% endif %}">
+                    <div class="gantt-label">
+                        <span class="role">{{ item.role }}</span>
+                        <span class="org">{% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.org }}</a>{% else %}{{ item.org }}{% endif %}{% if item.lab %} · {% if item.lab_link %}<a href="{{ item.lab_link }}" target="_blank" rel="noopener">{{ item.lab }}</a>{% else %}{{ item.lab }}{% endif %}{% endif %}{% if item.current %} · current{% endif %}</span>
+                        <span class="gantt-meta"><span class="range">{{ range }}</span>{%- if item.cert %}<a class="tl-cert" href="{{ item.cert }}" target="_blank" rel="noopener">{{ item.cert_label | default: "Certificate" }}</a>{% endif %}</span>
                     </div>
-                    {%- endfor -%}
+                    <div class="gantt-track"><span class="gantt-bar" style="left:{{ left | round: 3 }}%;width:{{ width | round: 3 }}%" title="{{ range }}"></span></div>
                 </div>
+                {%- endfor -%}
             </div>
         </div>
     </div>
@@ -206,7 +208,7 @@ title: Home
             card.className = 'project-card project-card--gh';
             card.innerHTML =
                 '<span class="featured-badge">★ GitHub</span>' +
-                '<div class="project-card-image" hidden><a href="' + r.html_url + '" target="_blank" rel="noopener"><img alt="' + esc(r.name) + '"></a></div>' +
+                '<div class="project-card-image" hidden data-lang="' + esc(r.language || '') + '"><a href="' + r.html_url + '" target="_blank" rel="noopener"><img alt="' + esc(r.name) + '"></a></div>' +
                 '<div class="project-card-content">' +
                     '<h3><a href="' + r.html_url + '" target="_blank" rel="noopener">' + esc(r.name) + '</a></h3>' +
                     '<p class="project-description">' + (r.description ? esc(r.description) : '') + '</p>' +

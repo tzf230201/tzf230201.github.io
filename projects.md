@@ -10,11 +10,20 @@ content_class: page-wide
 {% capture tags_str %}{% for project in site.projects %}{% for tag in project.tags %}{{ tag }},{% endfor %}{% endfor %}{% endcapture %}
 {% assign all_tags = tags_str | split: "," | uniq | sort_natural %}
 
-<div class="projects-filter">
-    <button class="filter-tag active" data-filter="all">All</button>
-    {% for tag in all_tags %}
-    <button class="filter-tag" data-filter="{{ tag | downcase }}">{{ tag }}</button>
-    {% endfor %}
+<div class="projects-toolbar" id="projects-toolbar" hidden>
+    <div class="projects-filter" role="group" aria-label="Filter projects by topic">
+        <span class="filter-label">Filter by topic</span>
+        <div class="filter-primary">
+            <button type="button" class="filter-tag active" data-filter="all" aria-pressed="true">All</button>
+        </div>
+        <button type="button" class="filter-more-toggle" aria-expanded="false" aria-controls="filter-panel">More topics <span class="filter-more-count"></span></button>
+        <div class="filter-panel" id="filter-panel" hidden>
+            {% for tag in all_tags %}
+            <button type="button" class="filter-tag" data-filter="{{ tag | downcase }}">{{ tag }}</button>
+            {% endfor %}
+        </div>
+    </div>
+    <p class="filter-status" aria-live="polite"></p>
 </div>
 
 <div class="gh-section">
@@ -25,18 +34,19 @@ content_class: page-wide
     <div id="gh-repos" class="repo-grid">
         <p class="repo-status">Loading repositories…</p>
     </div>
+    <p class="grid-empty" data-empty-for="gh-repos" hidden>No open-source repositories match this topic.</p>
     <div class="text-center mt-2">
         <a class="btn btn-secondary" href="https://github.com/tzf230201?tab=repositories" target="_blank" rel="noopener">View all on GitHub →</a>
     </div>
 </div>
 
-<div class="section-head" style="margin-top:4.5rem">
+<div class="section-head section-head--spaced">
     <span class="section-kicker">Case studies</span>
     <h2 class="section-title">Closed Source</h2>
     <p class="section-sub">In-depth write-ups of selected engineering work.</p>
 </div>
 
-<div class="projects-grid">
+<div class="projects-grid" id="case-studies">
     {% if site.projects.size > 0 %}
         {% assign sorted_projects = site.projects | sort: "date" | reverse %}
         {% for project in sorted_projects %}
@@ -78,26 +88,137 @@ content_class: page-wide
         </div>
     {% endif %}
 </div>
+<p class="grid-empty" data-empty-for="case-studies" hidden>No case studies match this topic.</p>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    var filterBar = document.querySelector('.projects-filter');
-    if (!filterBar) return;
-    // Event delegation so dynamically-added GitHub topic buttons work too
-    filterBar.addEventListener('click', function (e) {
-        var btn = e.target.closest('.filter-tag');
-        if (!btn) return;
-        var filter = btn.getAttribute('data-filter');
-        filterBar.querySelectorAll('.filter-tag').forEach(function (t) { t.classList.remove('active'); });
-        btn.classList.add('active');
-        // Re-query at click time to include async-loaded GitHub repo cards
-        document.querySelectorAll('.project-card, .repo-card').forEach(function (card) {
-            var tags = (card.getAttribute('data-tags') || '').split(',');
-            var show = filter === 'all' || tags.indexOf(filter) !== -1;
-            card.style.display = show ? '' : 'none';
-        });
+/* Topic filter. Counts every tag across the case studies and the GitHub cards (Jekyll tags and
+   GitHub topics are merged: "Computer Vision" == "computer-vision"), shows the most-used topics
+   inline and tucks the long tail into a "More topics" panel. Rebuilt when the GitHub cards arrive. */
+(function () {
+    var toolbar = document.getElementById('projects-toolbar');
+    var bar = toolbar && toolbar.querySelector('.projects-filter');
+    if (!bar) return;
+    var primary = bar.querySelector('.filter-primary');
+    var panel = bar.querySelector('.filter-panel');
+    var moreBtn = bar.querySelector('.filter-more-toggle');
+    var moreCount = bar.querySelector('.filter-more-count');
+    var status = toolbar.querySelector('.filter-status');
+    var narrow = window.matchMedia('(max-width: 640px)');
+    function primaryMax() { return narrow.matches ? 5 : 12; } // phones: one short row, the rest in "More topics"
+    var active = 'all';
+    var labels = {};
+
+    function norm(t) { return String(t || '').toLowerCase().trim().replace(/[\s_]+/g, '-'); }
+    function cards() { return [].slice.call(document.querySelectorAll('.project-card, .repo-card')); }
+    function tagsOf(card) { return (card.getAttribute('data-tags') || '').split(',').map(norm).filter(Boolean); }
+    function byLabel(a, b) { return labels[a].localeCompare(labels[b], undefined, { sensitivity: 'base' }); }
+
+    // Keep the original capitalisation of the Jekyll tags for display
+    [].forEach.call(panel.querySelectorAll('.filter-tag'), function (b) {
+        labels[norm(b.getAttribute('data-filter'))] = b.textContent.trim();
     });
-});
+
+    function makeButton(key, label, count) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'filter-tag';
+        b.setAttribute('data-filter', key);
+        b.appendChild(document.createTextNode(label));
+        if (count != null) {
+            var c = document.createElement('span');
+            c.className = 'filter-count';
+            c.textContent = count;
+            b.appendChild(c);
+        }
+        return b;
+    }
+
+    function apply() {
+        var all = cards(), shown = 0;
+        all.forEach(function (card) {
+            var show = active === 'all' || tagsOf(card).indexOf(active) !== -1;
+            card.style.display = show ? '' : 'none';
+            if (show) shown++;
+        });
+        [].forEach.call(bar.querySelectorAll('.filter-tag'), function (b) {
+            var on = b.getAttribute('data-filter') === active;
+            b.classList.toggle('active', on);
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        [].forEach.call(document.querySelectorAll('[data-empty-for]'), function (note) {
+            var grid = document.getElementById(note.getAttribute('data-empty-for'));
+            var any = !grid || [].some.call(grid.querySelectorAll('.project-card, .repo-card'), function (c) { return c.style.display !== 'none'; });
+            note.hidden = active === 'all' || any;
+        });
+        status.textContent = '';
+        if (active === 'all') {
+            status.textContent = 'Showing all ' + all.length + ' projects';
+        } else {
+            status.appendChild(document.createTextNode('Showing ' + shown + ' of ' + all.length + ' projects tagged '));
+            var name = document.createElement('strong');
+            name.textContent = labels[active] || active;
+            status.appendChild(name);
+            status.appendChild(document.createTextNode(' · '));
+            var clear = document.createElement('button');
+            clear.type = 'button';
+            clear.className = 'filter-clear';
+            clear.setAttribute('data-filter', 'all');
+            clear.textContent = 'Clear filter';
+            status.appendChild(clear);
+        }
+    }
+
+    function build() {
+        var counts = {};
+        cards().forEach(function (card) {
+            var seen = {};
+            tagsOf(card).forEach(function (k) {
+                if (seen[k]) return;
+                seen[k] = true;
+                counts[k] = (counts[k] || 0) + 1;
+                if (!labels[k]) labels[k] = k;
+            });
+        });
+        var keys = Object.keys(counts);
+        var top = keys.filter(function (k) { return counts[k] > 1; })
+            .sort(function (a, b) { return (counts[b] - counts[a]) || byLabel(a, b); })
+            .slice(0, primaryMax());
+        var inTop = {};
+        top.forEach(function (k) { inTop[k] = true; });
+        var rest = keys.filter(function (k) { return !inTop[k]; }).sort(byLabel);
+
+        primary.textContent = '';
+        primary.appendChild(makeButton('all', 'All', null));
+        top.forEach(function (k) { primary.appendChild(makeButton(k, labels[k], counts[k])); });
+        panel.textContent = '';
+        rest.forEach(function (k) { panel.appendChild(makeButton(k, labels[k], counts[k])); });
+        moreCount.textContent = rest.length;
+        moreBtn.hidden = !rest.length;
+        if (!rest.length) { panel.hidden = true; moreBtn.setAttribute('aria-expanded', 'false'); }
+        if (active !== 'all' && !counts[active]) active = 'all';
+        apply();
+    }
+
+    toolbar.addEventListener('click', function (e) {
+        var pick = e.target.closest('[data-filter]');
+        if (pick && toolbar.contains(pick)) {
+            active = pick.getAttribute('data-filter');
+            apply();
+            return;
+        }
+        if (e.target.closest('.filter-more-toggle')) {
+            var open = moreBtn.getAttribute('aria-expanded') !== 'true';
+            moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            panel.hidden = !open;
+        }
+    });
+
+    // GitHub cards load asynchronously; their topics join the filter when they arrive
+    document.addEventListener('projects:updated', build);
+    if (narrow.addEventListener) narrow.addEventListener('change', build);
+    toolbar.hidden = false;
+    build();
+})();
 </script>
 
 <script>
@@ -177,24 +298,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     '</div>';
             }).join('');
 
-            // Merge GitHub topics into the shared tag filter (skip ones already present)
-            var filterBar = document.querySelector('.projects-filter');
-            if (filterBar) {
-                var existing = {};
-                filterBar.querySelectorAll('.filter-tag').forEach(function (b) { existing[b.getAttribute('data-filter')] = true; });
-                repos.forEach(function (r) {
-                    (r.topics || []).forEach(function (t) {
-                        var key = t.toLowerCase();
-                        if (existing[key]) return;
-                        existing[key] = true;
-                        var b = document.createElement('button');
-                        b.className = 'filter-tag';
-                        b.setAttribute('data-filter', key);
-                        b.textContent = t;
-                        filterBar.appendChild(b);
-                    });
-                });
-            }
+            // Let the topic filter pick up the GitHub topics
+            document.dispatchEvent(new CustomEvent('projects:updated'));
 
             // Pull a thumbnail from each repo's README.md (raw CDN, no API rate limit)
             var cards = grid.querySelectorAll('.repo-card');

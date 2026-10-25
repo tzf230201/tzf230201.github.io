@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<div class="page-container">
-    <div class="container">
-        <header class="page-header">
+<div class="page-container{% if page.content_class %} layout-{{ page.content_class }}{% endif %}">
+    <header class="page-header">
+        <div class="container">
             <h1>{{ page.title }}</h1>
             {% if page.subtitle %}
             <p class="subtitle">{{ page.subtitle }}</p>
             {% endif %}
-        </header>
-        
+        </div>
+    </header>
+
+    <div class="container">
         <div class="page-content {{ page.content_class }}">
             {{ content }}
         </div>
