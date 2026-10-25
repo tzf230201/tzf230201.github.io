@@ -18,6 +18,7 @@ M.Eng candidate in Mechanical Systems Engineering at Tokyo Metropolitan Universi
 **[Tokyo Metropolitan University](https://www.tmu.ac.jp/english/index.html)** · Japan <img src="https://flagcdn.com/jp.svg" alt="Japan" width="20" style="display:inline-block;vertical-align:middle;border-radius:2px;">  
 Master of Engineering - Mechanical Systems Engineering  
 [Intelligent Robotics Laboratory / Kubota Laboratory](https://kub-lab.jp/)  
+Tokyo Global Partner (TGP) Scholarship recipient  
 *October 2025 – September 2027 (Expected)*
 
 **[Politeknik Elektronika Negeri Surabaya (PENS)](https://www.pens.ac.id/)** · Indonesia <img src="https://flagcdn.com/id.svg" alt="Indonesia" width="20" style="display:inline-block;vertical-align:middle;border-radius:2px;">  
@@ -79,6 +80,15 @@ Industrial Robotics Laboratory
 
 ---
 
+### Graduate School Preparation
+**Career Break**  
+*April 2024 – September 2024*
+
+- Prepared applications for graduate study (M.Eng) in Japan
+- Studied the Japanese language
+
+---
+
 ### PT. Infoglobal Teknologi Semesta
 **Electronic Engineer – Contract**  
 *October 2022 – April 2024* · [📄 Certificate](https://drive.google.com/file/d/1f5H_25XOcWxXqd87NUN5z3seU22ZcZC5/view)
@@ -133,10 +143,14 @@ Industrial Robotics Laboratory
 
 ## Awards
 
+**Scholarship**
+
+- **Tokyo Global Partner (TGP) Scholarship** · Tokyo Metropolitan University · 2025 – Present
+
 **Academic**
 
 - **Excellence Award (Applied Technology Award)** · Research Project Seminar (3) (PBL) Final Presentation, Graduate School of Systems Design, Tokyo Metropolitan University (Team 4, with Yushin Engineering Co., Ltd.) · July 2026 · [📄 Certificate](https://drive.google.com/file/d/1YiiXtokLIAWIyZVxF7hHmrSTxVsaGQmy/view?usp=sharing)
-- **Highest Score** · Certified Internship and Independent Study Program Batch II (PT. INKA) · 2022
+- **Highest Score** · Certified Internship and Independent Study Program Batch II (PT. INKA) · 2022 · [📄 Certificate](https://drive.google.com/file/d/1dEjMEYla6MItw9q3Akhxx56kID7jGwfx/view)
 
 **Robotics Competitions** · EROS Humanoid Robot Team (PENS)
 
@@ -298,7 +312,7 @@ Industrial Robotics Laboratory
 
 ---
 
-*Last Updated: February 2026*
+*Last Updated: October 2026*
 
 <script>
 (function () {
