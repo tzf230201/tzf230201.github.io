@@ -39,7 +39,9 @@ Industrial Robotics Laboratory
         <h3 class="pub-title">{% if p.url and p.url != "" %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
         <p class="pub-authors">{{ p.authors | replace: "Fatahillah, T. Z.", "<strong>Fatahillah, T. Z.</strong>" | replace: "Teuku Zikri Fatahillah", "<strong>Teuku Zikri Fatahillah</strong>" }}</p>
         <p class="pub-venue">{{ p.venue }}{% if p.year %} · {{ p.year }}{% endif %}{% if p.award %} · <span class="pub-award">🏆 {{ p.award }}</span>{% endif %}</p>
-        {% if p.certificate and p.certificate != "" %}<p class="pub-links"><a href="{{ p.certificate }}" target="_blank" rel="noopener">📄 View Certificate</a></p>{% endif %}
+        {%- assign has_proj = false -%}{%- if p.project and p.project != "" -%}{%- assign has_proj = true -%}{%- endif -%}
+        {%- assign has_cert = false -%}{%- if p.certificate and p.certificate != "" -%}{%- assign has_cert = true -%}{%- endif %}
+        {% if has_proj or has_cert %}<p class="pub-links">{% if has_proj %}<a href="{{ p.project }}" target="_blank" rel="noopener">Project Page</a>{% endif %}{% if has_proj and has_cert %} · {% endif %}{% if has_cert %}<a href="{{ p.certificate }}" target="_blank" rel="noopener">📄 View Certificate</a>{% endif %}</p>{% endif %}
     </div>
 </div>
 {% endfor %}
