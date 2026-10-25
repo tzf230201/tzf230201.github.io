@@ -131,13 +131,14 @@ Industrial Robotics Laboratory
 
 ---
 
-## Competition
+## Awards
 
-### EEPIS Robot Soccer (EROS)
-**Humanoid Robot Team – Co-Leader, Programmer, Electrical Design**  
-*November 2019 – November 2021*
+**Academic**
 
-**Competition Awards:**
+- **Excellence Award (Applied Technology Award)** · Research Project Seminar (3) (PBL) Final Presentation, Graduate School of Systems Design, Tokyo Metropolitan University (Team 4, with Yushin Engineering Co., Ltd.) · July 2026 · [📄 Certificate](https://drive.google.com/file/d/1YiiXtokLIAWIyZVxF7hHmrSTxVsaGQmy/view?usp=sharing)
+- **Highest Score** · Certified Internship and Independent Study Program Batch II (PT. INKA) · 2022
+
+**Robotics Competitions** · EROS Humanoid Robot Team (PENS)
 
 - **1st Place · Overall**, KRSBI-Humanoid · Kontes Robot Indonesia (KRI) 2021 · [📄 Certificate](https://drive.google.com/file/d/12G93wXLHL9m8xaeZVwWCW7ixxk9gPJGo/view?usp=sharing)
 - **1st Place · Humanoid Sprint**, 2021 · [📄 Certificate](https://drive.google.com/file/d/1t5OZ1Qtv61nGQD8Ca01dXrgN3Mo3_X2-/view?usp=sharing)
@@ -145,6 +146,28 @@ Industrial Robotics Laboratory
 - **3rd Place · Humanoid Robot Cooperation**, 2021 · [📄 Certificate](https://drive.google.com/file/d/1IeBGSdQhzQAt1nw2beYOM0bFHLzK82IU/view?usp=sharing)
 - **1st Place · Humanoid Ball Dribbling**, 2020 · [📄 Certificate](https://drive.google.com/file/d/1yWsQuFd0xY0ZyYOV_rGDnLX6WleSgD4W/view?usp=sharing)
 - **Honorable Mention · Humanoid Sprint**, 2020 · [📄 Certificate](https://drive.google.com/file/d/1s5c62mNvQKXNdPCPEclWlJ_hXfpegGf9/view?usp=sharing)
+
+**ASEAN Skills Competition 2019 · Mobile Robotics**
+
+- **1st Place** · Regional Selection (Seleksi Daerah), Mobile Robotics · [📄 Certificate](https://drive.google.com/file/d/19-KrbkLAL8kFno8pT8F3oiR97kIbzUia/view?usp=sharing)
+- **3rd Place** · National Selection (Seleksi Nasional), Mobile Robotics · [📄 Certificate](https://drive.google.com/file/d/1jXcYniuPxPpEExFUY9R5FCgrNv0piZXi/view?usp=sharing)
+- Selected for the National Training Team (Quarantine) representing the Mobile Robotics field
+
+---
+
+## Organizational Experience
+
+### PPI TMU · Persatuan Pelajar Indonesia, Tokyo Metropolitan University
+**Member**  
+*2025 – Present*
+
+- Active member of the Indonesian Students Association at Tokyo Metropolitan University
+
+---
+
+### EEPIS Robot Soccer (EROS)
+**Humanoid Robot Team – Co-Leader, Programmer, Electrical Design**  
+*November 2019 – November 2021*
 
 **Technical Contributions:**
 - Developed 20 DoF humanoid robot with dynamic walking capability
@@ -165,26 +188,6 @@ Industrial Robotics Laboratory
 - TCP/IP, UDP communication
 - Docker containerization
 - STM32 embedded programming
-
----
-
-### ASEAN Skills Competition 2019 · Mobile Robotics
-**National Training Team (Quarantine) – Competitor**  
-*2019*
-
-- **1st Place** · Regional Selection (Seleksi Daerah), Mobile Robotics · [📄 Certificate](https://drive.google.com/file/d/19-KrbkLAL8kFno8pT8F3oiR97kIbzUia/view?usp=sharing)
-- **3rd Place** · National Selection (Seleksi Nasional), Mobile Robotics · [📄 Certificate](https://drive.google.com/file/d/1jXcYniuPxPpEExFUY9R5FCgrNv0piZXi/view?usp=sharing)
-- Selected for the national training team representing the Mobile Robotics field
-
----
-
-## Organizational Experience
-
-### PPI TMU · Persatuan Pelajar Indonesia, Tokyo Metropolitan University
-**Member**  
-*2025 – Present*
-
-- Active member of the Indonesian Students Association at Tokyo Metropolitan University
 
 ---
 
@@ -264,9 +267,8 @@ Industrial Robotics Laboratory
 
 ---
 
-## Achievements & Activities
+## Activities
 
-- **Highest Score** · Certified Internship Program Batch II (PT. INKA)
 - **Robotics Workshop Speaker / Instructor** · [📄 Certificates](https://drive.google.com/drive/folders/1jC2G61Z253U08smOECb1QE_vJEKeILxf)
 - **Committee Member · Java Robot Contest X** (2018–2019) · [📄 Certificate](https://drive.google.com/file/d/1z2y2tYTTZwQREU7dWf3LJCxSkeJ87j4Q/view?usp=sharing)
 - Multiple national robotics competition participations
