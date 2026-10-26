@@ -16,16 +16,19 @@
 - title: "Intel RealSense D405 or D435 Wrist Camera Mount for Kinova Gen3 Lite"
   url: "https://grabcad.com/library/intel-realsense-d405-or-d435-wrist-camera-mount-for-kinova-gen3-lite-1"
   description: "Wrist camera mount for fitting an Intel RealSense D405 or D435 to a Kinova Gen3 Lite."
+  image: "/assets/images/grabcad/kinova-gen3-lite-wrist-mount.png"
   tags: [CAD, Robotics, RealSense, Robot Arm, Kinova Gen3 Lite]
 
 - title: "Extended Version myCobot Adaptive Gripper"
   url: "https://grabcad.com/library/extended-version-mycobot-adaptive-gripper-1"
   description: "Extended design of the myCobot adaptive gripper."
+  image: "/assets/images/grabcad/mycobot-extended-adaptive-gripper.png"
   tags: [CAD, Robotics, Robot Arm, Gripper]
 
 - title: "Unitree Go2 Front Top Mounting Plate for ROBOTIS OpenMANIPULATOR-X"
   url: "https://grabcad.com/library/unitree-go2-front-top-mounting-plate-for-robotis-openmanipulator-x-1"
   description: "Front-top mounting plate for fitting a ROBOTIS OpenMANIPULATOR-X to a Unitree Go2."
+  image: "/assets/images/grabcad/unitree-go2-openmanipulator-mount.png"
   tags: [CAD, Robotics, Robot Arm, Unitree Go2]
 
 - title: "LiDAR-Camera Bracket for Livox Mid-360 and Intel RealSense D435"
@@ -55,4 +58,5 @@
 - title: "2020 Angle Bracket"
   url: "https://grabcad.com/library/2020-angle-bracket-1"
   description: "2020 angle bracket for mechanical assemblies."
+  image: "/assets/images/grabcad/2020-angle-bracket.png"
   tags: [CAD, Mechanical Design, Bracket]
