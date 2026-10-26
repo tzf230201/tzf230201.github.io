@@ -1,5 +1,5 @@
 ---
-title: Humanoid Robot Digital Twin - Center of Mass Projection
+title: "Humanoid Robot Digital Twin&nbsp;- Center of Mass Projection"
 description: Real-time Center of Mass (CoM) projection for 20 DoF humanoid robot using ROS, URDF, and RViz with 68% error reduction.
 cover_image: /assets/images/projects/dynamic_walking_1.png
 tags: [ROS, Humanoid, URDF, Robotics, Digital Twin, Kinematics]

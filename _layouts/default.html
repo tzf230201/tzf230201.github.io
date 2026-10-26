@@ -55,15 +55,36 @@
         </div>
     </footer>
 
-    <!-- Theme toggle -->
+    <!-- Theme toggle (aria-pressed tells assistive tech whether the dark theme is on) -->
     <script>
-        document.addEventListener('click', function (e) {
-            var btn = e.target.closest('.theme-toggle');
-            if (!btn) return;
-            var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', cur);
-            try { localStorage.setItem('theme', cur); } catch (err) {}
-        });
+        (function () {
+            var btn = document.querySelector('.theme-toggle');
+            function sync() {
+                if (btn) btn.setAttribute('aria-pressed', document.documentElement.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
+            }
+            sync();
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.theme-toggle')) return;
+                var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', cur);
+                try { localStorage.setItem('theme', cur); } catch (err) {}
+                sync();
+            });
+        })();
+    </script>
+
+    <!-- Mobile menu: also close on Esc or a tap outside the navbar -->
+    <script>
+        (function () {
+            var cb = document.getElementById('nav-toggle');
+            if (!cb) return;
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && cb.checked) { cb.checked = false; cb.focus(); }
+            });
+            document.addEventListener('click', function (e) {
+                if (cb.checked && !e.target.closest('.navbar')) cb.checked = false;
+            });
+        })();
     </script>
 
     <!-- Console cameo 🛠️ -->

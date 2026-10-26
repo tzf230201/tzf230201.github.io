@@ -25,6 +25,8 @@ layout: default
                 </header>
 
                 {% if page.cover_image %}
+                {%- comment -%} The cover shows here; hide its repeat when the article opens with the same image {%- endcomment %}
+                <style>.project-content > p:nth-child(-n+5):has(> img:only-child[src="{{ page.cover_image | relative_url }}"]) { display: none; }</style>
                 <div class="project-cover">
                     <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}" loading="lazy">
                 </div>

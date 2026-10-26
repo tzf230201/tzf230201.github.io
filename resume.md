@@ -1,7 +1,7 @@
 ---
 layout: resume
 title: Resume
-subtitle: "M.Eng Candidate at Tokyo Metropolitan University<br>Robotics &amp; Embedded Systems Engineer"
+subtitle: "M.Eng Candidate at Tokyo&nbsp;Metropolitan&nbsp;University<br>Robotics &amp; Embedded Systems&nbsp;Engineer"
 permalink: /resume/
 ---
 
@@ -239,7 +239,7 @@ Industrial Robotics Laboratory
 **Scholarship**
 {: .cv-label}
 
-- <span class="cv-item">**Tokyo Global Partner (TGP) Scholarship** · Tokyo Metropolitan University · 2025&nbsp;–&nbsp;Present</span>
+- <span class="cv-item">**Tokyo Global Partner (TGP) Scholarship** · Tokyo Metropolitan University · <span class="nowrap">2025 – Present</span></span>
 
 </div>
 
@@ -255,7 +255,7 @@ Industrial Robotics Laboratory
 
 <div class="cv-entry cv-entry--group" markdown="1">
 
-**Robotics Competitions** · EROS Humanoid Robot Team (PENS)
+**Robotics Competitions**&nbsp;· EROS Humanoid Robot Team (PENS)
 {: .cv-label}
 
 - <span class="cv-item">**1st Place · Overall**, KRSBI-Humanoid · Kontes Robot Indonesia (KRI) 2021</span> [Certificate](https://drive.google.com/file/d/12G93wXLHL9m8xaeZVwWCW7ixxk9gPJGo/view?usp=sharing){: .doc-link}
@@ -269,7 +269,7 @@ Industrial Robotics Laboratory
 
 <div class="cv-entry cv-entry--group" markdown="1">
 
-**ASEAN Skills Competition 2019 · Mobile Robotics**
+**ASEAN Skills Competition 2019&nbsp;· Mobile Robotics**
 {: .cv-label}
 
 - <span class="cv-item">**1st Place** · Regional Selection (Seleksi Daerah), Mobile Robotics</span> [Certificate](https://drive.google.com/file/d/19-KrbkLAL8kFno8pT8F3oiR97kIbzUia/view?usp=sharing){: .doc-link}

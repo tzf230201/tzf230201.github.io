@@ -130,6 +130,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 16px); /* anchors and focused elements clear the sticky navbar */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
@@ -491,8 +492,9 @@ button { font: inherit; color: inherit; }
 
 .hero-eyebrow {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start; /* the dot stays on the first line when the label wraps on phones */
     gap: 10px;
+    text-wrap: balance;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.14em;
@@ -501,6 +503,8 @@ button { font: inherit; color: inherit; }
     margin-bottom: 28px;
 }
 .hero-eyebrow .pulse {
+    flex: none;
+    margin-top: 0.42em;
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -533,6 +537,7 @@ button { font: inherit; color: inherit; }
     margin-bottom: 14px;
     padding-left: 16px;
     border-left: 2px solid var(--hero-accent);
+    text-wrap: balance;
 }
 
 .hero-description {
@@ -634,6 +639,7 @@ button { font: inherit; color: inherit; }
     font-weight: 600;
     line-height: 1.14;
     letter-spacing: -0.012em;
+    text-wrap: balance;
 }
 
 .section-sub {
@@ -878,8 +884,11 @@ button { font: inherit; color: inherit; }
 
 /* GitHub-pinned repos in the home grid: the README image when there is one, otherwise a quiet
    navy "cover" (repo glyph + language) so the slot reads as designed, not as a broken image */
-.project-card--gh .project-card-image { background: var(--surface); }
+.project-card--gh .project-card-image { background: var(--bg-alt); }
 .project-card--gh .project-card-image img { object-fit: contain; }
+.project-card--gh .project-card-image.is-photo img { object-fit: cover; } /* landscape photos fill the frame */
+.project-card--gh .project-card-image:not(.is-photo):not([hidden]) { padding: 14px; } /* diagrams / portraits on a mat */
+.project-card--gh .project-description { flex: none; } /* keep the topics right under the text */
 .project-card-image[hidden] { display: none; }
 .project-card--gh .project-card-image[hidden] {
     display: grid;
@@ -918,6 +927,7 @@ button { font: inherit; color: inherit; }
     line-height: 1.3;
     margin-bottom: 8px;
     overflow-wrap: anywhere;
+    text-wrap: pretty;
 }
 .project-card-content h3 a { color: var(--text); }
 .project-card-content h3 a:hover { color: var(--text); text-decoration: underline; }
@@ -1200,9 +1210,8 @@ button { font: inherit; color: inherit; }
     line-height: 1.35;
     letter-spacing: 0;
     margin: 2px 0 6px;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word; /* long names break at "_" / "-" (<wbr> in the markup), not mid-word */
 }
-.repo-card:has(.featured-badge) h3 { padding-right: 92px; }
 .repo-card h3 a { color: var(--text); }
 .repo-card h3 a:hover { color: var(--text); text-decoration: underline; }
 .repo-card h3 svg { flex-shrink: 0; margin-top: 3px; color: var(--text-faint); }
@@ -1214,10 +1223,6 @@ button { font: inherit; color: inherit; }
     font-size: 0.875rem;
     line-height: 1.55;
     margin-bottom: 10px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 .repo-desc em { color: var(--text-faint); }
 
@@ -1244,7 +1249,9 @@ button { font: inherit; color: inherit; }
 .lang-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--primary); }
 .repo-meta .stat { display: inline-flex; align-items: center; gap: 4px; }
 
-.repo-card .featured-badge { top: 16px; left: auto; right: 16px; }
+/* The badge sits in the flow above the name, so long names never run under it */
+.repo-card .featured-badge { position: static; grid-column: 2; justify-self: start; margin-bottom: 8px; }
+.repo-card:has(> .featured-badge) { grid-template-rows: auto auto 1fr auto auto; }
 
 .repo-status {
     grid-column: 1 / -1;
@@ -1290,6 +1297,7 @@ button { font: inherit; color: inherit; }
     touch-action: none;
     cursor: pointer;
 }
+.game-canvas:focus-visible { outline-offset: -3px; } /* the card clips anything outside */
 .game-overlay {
     position: absolute;
     inset: 0;
@@ -1348,6 +1356,7 @@ button { font: inherit; color: inherit; }
     line-height: 1.08;
     letter-spacing: -0.018em;
     margin-bottom: 12px;
+    text-wrap: balance;
 }
 .page-header .subtitle {
     font-size: clamp(1.05rem, 0.98rem + 0.3vw, 1.25rem);
@@ -1364,8 +1373,7 @@ button { font: inherit; color: inherit; }
 
 .cv-layout {
     --cv-side: 264px;
-    max-width: 1312px;
-    display: grid;
+    display: grid; /* the standard container, so the sidebar lines up with the navbar mark */
     grid-template-columns: var(--cv-side) minmax(0, 1fr);
     gap: clamp(40px, 5vw, 72px);
     align-items: start;
@@ -1480,9 +1488,16 @@ button { font: inherit; color: inherit; }
     .cv-name { font-size: 1.7rem; }
     .toc-list a { padding-top: 3px; padding-bottom: 3px; }
 }
-@media (min-width: 1024px) and (max-height: 780px) {
+@media (min-width: 1024px) and (max-height: 820px) {
     .cv-contact { display: none; }
 }
+@media (min-width: 1024px) and (max-height: 703px) {
+    .cv-headline { display: none; }
+}
+@media (min-width: 1024px) and (max-height: 614px) {
+    .cv-side { position: static; max-height: none; overflow: visible; } /* too short to stick: scroll with the page */
+}
+.cv-side :focus-visible { outline-offset: -2px; } /* draw rings inside, where the sidebar's scroll box can't clip them */
 
 /* Main column */
 .cv-main {
@@ -1502,7 +1517,6 @@ button { font: inherit; color: inherit; }
     margin: 0 0 28px;
     padding-top: 40px;
     border-top: 1px solid var(--border);
-    scroll-margin-top: calc(var(--nav-h) + 16px);
 }
 .cv-section:first-child h2 { padding-top: 0; border-top: 0; }
 
@@ -1511,6 +1525,7 @@ button { font: inherit; color: inherit; }
 .cv-main a { font-weight: 600; }
 
 .cv-section--summary p {
+    max-width: 34em; /* ~66 characters per line */
     font-family: var(--font-display);
     font-size: clamp(1.1rem, 1.02rem + 0.3vw, 1.22rem);
     line-height: 1.6;
@@ -1887,6 +1902,7 @@ button { font: inherit; color: inherit; }
     line-height: 1.1;
     letter-spacing: -0.016em;
     margin-bottom: 20px;
+    text-wrap: balance;
 }
 .project-header .subtitle {
     font-size: 1.15rem;
@@ -2105,6 +2121,7 @@ button { font: inherit; color: inherit; }
     color: var(--on-navy-soft);
     padding: 48px 0 28px;
 }
+[data-theme="dark"] .footer { border-top: 1px solid var(--border); } /* dark footer is close to the page colour */
 .footer-inner {
     display: flex;
     align-items: center;
@@ -2147,6 +2164,7 @@ button { font: inherit; color: inherit; }
    Utilities
    ============================================================ */
 .text-center { text-align: center; }
+.nowrap { white-space: nowrap; }
 .text-muted { color: var(--text-faint); font-size: 0.9rem; }
 .mt-2 { margin-top: 32px; }
 
@@ -2164,7 +2182,7 @@ button { font: inherit; color: inherit; }
    Responsive
    ============================================================ */
 @media (min-width: 1680px) {
-    .cv-layout { --cv-side: 288px; max-width: 1400px; }
+    .cv-layout { --cv-side: 288px; }
     .cv-main { max-width: 940px; --cv-gutter: 160px; --cv-gap: 48px; }
     .cv-kv { --kv-label: 180px; }
 }
@@ -2219,7 +2237,7 @@ button { font: inherit; color: inherit; }
         border-bottom: 1px solid var(--border);
     }
     .cv-main { order: 5; max-width: none; padding-top: 36px; }
-    .cv-main h2 { scroll-margin-top: calc(var(--nav-h) + 48px + 16px); }
+    html:has(.cv-page) { scroll-padding-top: calc(var(--nav-h) + 64px); } /* navbar + sticky Contents bar */
 
     .toc-label { display: none; }
     .toc-toggle {
@@ -2313,8 +2331,6 @@ button { font: inherit; color: inherit; }
 
     .repo-card { grid-template-columns: 64px minmax(0, 1fr); column-gap: 14px; padding: 14px; }
     .repo-card-image { width: 64px; }
-    .repo-card:has(.featured-badge) h3 { padding-right: 0; }
-    .repo-card .featured-badge { position: static; grid-column: 2; justify-self: start; margin-bottom: 8px; }
 
     .contact-method { grid-template-columns: 40px minmax(0, 1fr) 16px; gap: 4px 14px; }
     .contact-method .ic { grid-row: 1 / span 2; width: 40px; height: 40px; }
@@ -2378,15 +2394,16 @@ button { font: inherit; color: inherit; }
 /* The résumé prints on a named page with a running footer (name + page x / y) */
 @page cv {
     margin: 14mm 15mm 16mm;
+    @top-center { content: ""; } /* an empty margin box keeps the browser's date/URL header off the CV */
     @bottom-left {
         content: "Teuku Zikri Fatahillah · Resume";
         font: 7.5pt/1 'Inter', sans-serif;
-        color: #777777;
+        color: #666666;
     }
     @bottom-right {
         content: counter(page) " / " counter(pages);
         font: 7.5pt/1 'Inter', sans-serif;
-        color: #777777;
+        color: #666666;
     }
 }
 
@@ -2410,6 +2427,23 @@ button { font: inherit; color: inherit; }
         --border-strong: #9a9a9a;
         --rail-node: #0b1d3a;
         --award: #111111;
+        --cat-edu: #0b1d3a;
+        --cat-work: #1c4fc4;
+        --cat-org: #7b8799;
+    }
+
+    /* Marks drawn as backgrounds must survive the print dialog's default "Background graphics: off" */
+    .cv-main li::before,
+    .cv-timeline > .cv-entry::after,
+    .cv-timeline > .pub-item::after,
+    .gantt-bar,
+    .gantt-track,
+    .legend-item .swatch,
+    .section-kicker::before,
+    .featured-badge,
+    .lang-dot {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
     html { font-size: 12.5px; scroll-behavior: auto; }
@@ -2475,7 +2509,11 @@ button { font: inherit; color: inherit; }
         page-break-after: avoid;
     }
     .cv-section:first-child h2 { padding-top: 0; margin-top: 12pt; border-bottom: 0.75pt solid #9a9a9a; }
-    .cv-section--summary p { font-size: 10.5pt; line-height: 1.5; }
+    /* Keep the PDF's text order equal to reading order (ATS parsers read the content stream):
+       positioned boxes paint after static ones, so position the static blocks too.
+       :where() keeps this at 0,1,0 so the absolutely placed dates, labels and years are unaffected. */
+    .cv-main :where(h2, h3, h4, p, ul, .cv-key) { position: relative; }
+    .cv-section--summary p { max-width: none; font-size: 10.5pt; line-height: 1.5; }
 
     .cv-main p,
     .cv-main li { orphans: 3; widows: 3; }
@@ -2524,18 +2562,20 @@ button { font: inherit; color: inherit; }
     .doc-link::before,
     .tl-cert::before { display: none; }
     .cv-main .doc-link { color: #0b1d3a; font-weight: 600; }
+    .cv-main .pub-project { color: #0b1d3a; font-size: 0.875em; }
 
     .pub-item { padding-bottom: 8pt; break-inside: avoid; }
     .cv-main .pub-year { font-size: 10.5pt; }
+    .cv-main .pub-year.is-repeat { opacity: 1; color: var(--text-faint); } /* a year continued onto a new page */
     .pub-title { font-size: 10pt; margin-bottom: 2pt; }
     .cv-main .pub-type { margin-bottom: 2pt; font-size: 7pt; }
     .cv-main .pub-authors,
     .cv-main .pub-venue { font-size: 9pt; line-height: 1.4; }
 
     .cv-groups > .cv-entry { padding-bottom: 7pt; margin-bottom: 7pt; break-inside: avoid; }
-    .cv-entry > .cv-label { font-size: 9pt; }
+    .cv-entry > .cv-label { font-size: 9pt; text-wrap: wrap; }
     .cv-section--projects .cv-entry > .cv-label { font-size: 10.5pt; }
-    .cv-kv { --kv-label: 33mm; line-height: 1.5; }
+    .cv-kv { --kv-label: 38mm; line-height: 1.5; }
 
     .cv-section--list li { padding: 3pt 0; }
     .cv-section--list li:first-child { border-top: 0; }
@@ -2546,8 +2586,13 @@ button { font: inherit; color: inherit; }
     .hero { background: #fff; color: #111; border: 0; padding: 0 0 16pt; }
     .hero-title .highlight, .hero-subtitle, .hero-stat .num { color: #111; }
     .hero-description, .hero-title, .hero-stat .label { color: #333; }
+    .hero-eyebrow { color: #555555; }
     .hero-actions, .hero-quip, .projects-toolbar, .robot-game { display: none !important; }
     .page-header { background: #fff; padding: 0 0 12pt; margin-bottom: 16pt; }
     .section, .section-alt { padding: 16pt 0; background: #fff; border: 0; }
+    .section-head,
+    .section-head-row { break-inside: avoid; break-after: avoid; }
+    h2, h3, h4 { break-after: avoid; }
+    .gantt-row { break-inside: avoid; }
     .project-card, .repo-card { break-inside: avoid; box-shadow: none; }
 }

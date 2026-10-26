@@ -54,7 +54,7 @@ content_class: page-wide
             {% if project.featured %}<span class="featured-badge">★ Featured</span>{% endif %}
             {% if project.cover_image %}
             <div class="project-card-image">
-                <a href="{{ project.url | relative_url }}">
+                <a href="{{ project.url | relative_url }}" tabindex="-1" aria-hidden="true">
                     <img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}" loading="lazy">
                 </a>
             </div>
@@ -76,7 +76,7 @@ content_class: page-wide
                 {% endif %}
 
                 <div class="project-card-footer">
-                    <a href="{{ project.url | relative_url }}" class="card-link">View Details &rarr;</a>
+                    <a href="{{ project.url | relative_url }}" class="card-link">View case study &rarr;</a>
                 </div>
             </div>
         </div>
@@ -108,7 +108,24 @@ content_class: page-wide
     var active = 'all';
     var labels = {};
 
-    function norm(t) { return String(t || '').toLowerCase().trim().replace(/[\s_]+/g, '-'); }
+    // GitHub topics that mean the same as another tag, and display names for GitHub-only topics
+    var ALIAS = {
+        'embedded-systems': 'embedded-system', ros2: 'ros', 'robotic-arm': 'arm-robot', moveit2: 'moveit',
+        'stm32f746g-discovery': '32f746g-discovery', 'playback-audio': 'audio-playback', 'record-audio': 'audio-recording'
+    };
+    var NICE = {
+        ai: 'AI', iot: 'IoT', bsp: 'BSP', kicad: 'KiCad', canopen: 'CANopen', opencv: 'OpenCV', moveit: 'MoveIt',
+        'arm-robot': 'Robot Arm', '32f746g-discovery': '32F746G Discovery', stm32cubeide: 'STM32CubeIDE', stm32f7: 'STM32F7',
+        'esp8266-projects': 'ESP8266', 'tang-nano-9k': 'Tang Nano 9K', 'mediapipe-hands': 'MediaPipe Hands',
+        'wav-file': 'WAV File', 'wav-player': 'WAV Player', 'wav-recorder': 'WAV Recorder'
+    };
+    function norm(t) {
+        var k = String(t || '').toLowerCase().trim().replace(/[\s_]+/g, '-');
+        return ALIAS[k] || k;
+    }
+    function nice(k) {
+        return NICE[k] || k.replace(/-/g, ' ').replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); });
+    }
     function cards() { return [].slice.call(document.querySelectorAll('.project-card, .repo-card')); }
     function tagsOf(card) { return (card.getAttribute('data-tags') || '').split(',').map(norm).filter(Boolean); }
     function byLabel(a, b) { return labels[a].localeCompare(labels[b], undefined, { sensitivity: 'base' }); }
@@ -176,7 +193,7 @@ content_class: page-wide
                 if (seen[k]) return;
                 seen[k] = true;
                 counts[k] = (counts[k] || 0) + 1;
-                if (!labels[k]) labels[k] = k;
+                if (!labels[k]) labels[k] = nice(k);
             });
         });
         var keys = Object.keys(counts);
@@ -202,8 +219,11 @@ content_class: page-wide
     toolbar.addEventListener('click', function (e) {
         var pick = e.target.closest('[data-filter]');
         if (pick && toolbar.contains(pick)) {
+            var fromClear = pick.classList.contains('filter-clear');
             active = pick.getAttribute('data-filter');
             apply();
+            // "Clear filter" is rebuilt by apply(); keep keyboard focus in the toolbar
+            if (fromClear) primary.querySelector('[data-filter="all"]').focus();
             return;
         }
         if (e.target.closest('.filter-more-toggle')) {
@@ -289,10 +309,10 @@ content_class: page-wide
                 var forks = r.forks_count ? '<span class="stat">⑂ ' + r.forks_count + '</span>' : '';
                 return '<div class="repo-card" data-name="' + esc(r.name) + '" data-branch="' + esc(r.default_branch || 'main') + '" data-tags="' + esc((r.topics || []).join(',').toLowerCase()) + '">' +
                     (isPinned(r) ? '<span class="featured-badge">★ Featured</span>' : '') +
-                    '<a class="repo-card-image" href="' + r.html_url + '" target="_blank" rel="noopener" hidden><img alt="' + esc(r.name) + '"></a>' +
+                    '<a class="repo-card-image" href="' + r.html_url + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" hidden><img alt="' + esc(r.name) + '"></a>' +
                     '<h3><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8zM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2z"/></svg>' +
-                    '<a href="' + r.html_url + '" target="_blank" rel="noopener">' + esc(r.name) + '</a></h3>' +
-                    '<p class="repo-desc">' + (r.description ? esc(r.description) : '<em>No description provided.</em>') + '</p>' +
+                    '<a href="' + r.html_url + '" target="_blank" rel="noopener">' + esc(r.name).replace(/[_-]/g, '$&<wbr>') + '</a></h3>' +
+                    '<p class="repo-desc">' + (r.description ? esc(r.description) : '') + '</p>' +
                     (topics ? '<div class="repo-topics">' + topics + '</div>' : '') +
                     '<div class="repo-meta">' + lang + stars + forks + '</div>' +
                     '</div>';
@@ -344,11 +364,11 @@ content_class: page-wide
         <p class="section-sub">A tiny teleop. Drive the turtle like turtlesim, and every key press publishes a <code>geometry_msgs/Twist</code> to <code>/cmd_vel</code>. Dodge the TurtleBot3-style pillars and reach the goals before the 60&nbsp;s timer runs out.</p>
     </div>
     <div class="game-card">
-        <canvas id="cmdvel-canvas" width="920" height="440" class="game-canvas" aria-label="cmd_vel teleop game"></canvas>
+        <canvas id="cmdvel-canvas" width="920" height="440" class="game-canvas" tabindex="0" aria-label="cmd_vel teleop game"></canvas>
         <div class="game-overlay" id="cmdvel-overlay">
             <div>
                 <div class="game-emoji">🐢</div>
-                <p class="game-msg" id="cmdvel-msg">Drive with <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> or <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><br>Reach the goals. Press a key or tap to start.</p>
+                <p class="game-msg" id="cmdvel-msg">Drive with <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> or <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><br>Reach the goals. Click or tap to start.</p>
                 <p class="game-best" id="cmdvel-best"></p>
             </div>
         </div>
@@ -370,6 +390,7 @@ content_class: page-wide
     var best = parseInt(localStorage.getItem(BEST_KEY) || '0', 10);
 
     var MAXV = 3.3, MAXW = 0.052, GAME_TIME = 60, TR = 13;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)'); // no pulsing goal ring
     var state = 'ready';
     var bot, goal, vel, score, timeLeft, trail, wallMsg;
     // TurtleBot3-world-style cylindrical pillars (walls to dodge)
@@ -414,12 +435,18 @@ content_class: page-wide
     var keys = {};
     var DRIVE = { ArrowUp: 1, ArrowDown: 1, ArrowLeft: 1, ArrowRight: 1, KeyW: 1, KeyS: 1, KeyA: 1, KeyD: 1 };
     var visible = false;
+    // The arrow keys only drive the turtle once the visitor has engaged with the game (click, tap or
+    // keyboard focus), so scrolling past it with the keyboard keeps working
+    var armed = false;
     if ('IntersectionObserver' in window) {
-        new IntersectionObserver(function (es) { es.forEach(function (e) { visible = e.isIntersecting; }); }, { threshold: 0.3 }).observe(canvas);
+        new IntersectionObserver(function (es) {
+            es.forEach(function (e) { visible = e.isIntersecting; });
+            if (!visible && state !== 'running') armed = false;
+        }, { threshold: 0.3 }).observe(canvas);
     } else { visible = true; }
 
     window.addEventListener('keydown', function (e) {
-        if (!visible) return;
+        if (!visible || (!armed && state !== 'running')) return;
         if (DRIVE[e.code]) {
             e.preventDefault();
             keys[e.code] = true;
@@ -427,8 +454,10 @@ content_class: page-wide
         }
     });
     window.addEventListener('keyup', function (e) { keys[e.code] = false; });
-    canvas.addEventListener('pointerdown', function (e) { e.preventDefault(); if (state !== 'running') start(); });
-    overlay.addEventListener('pointerdown', function (e) { e.preventDefault(); if (state !== 'running') start(); });
+    canvas.addEventListener('focus', function () { armed = true; });
+    canvas.addEventListener('blur', function () { if (state !== 'running') armed = false; });
+    canvas.addEventListener('pointerdown', function (e) { e.preventDefault(); armed = true; if (state !== 'running') start(); });
+    overlay.addEventListener('pointerdown', function (e) { e.preventDefault(); armed = true; if (state !== 'running') start(); });
 
     function update(dt) {
         var f = Math.min(dt * 60, 3);
@@ -486,7 +515,7 @@ content_class: page-wide
 
         // goal
         if (goal) {
-            var pulse = 1 + Math.sin(Date.now() / 300) * 0.12;
+            var pulse = calm.matches ? 1 : 1 + Math.sin(Date.now() / 300) * 0.12;
             ctx.strokeStyle = acc; ctx.lineWidth = 3;
             ctx.beginPath(); ctx.arc(goal.x, goal.y, goal.r * pulse, 0, Math.PI * 2); ctx.stroke();
             ctx.fillStyle = acc; ctx.beginPath(); ctx.arc(goal.x, goal.y, 4, 0, Math.PI * 2); ctx.fill();

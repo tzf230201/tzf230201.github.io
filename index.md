@@ -8,7 +8,7 @@ title: Home
         <div class="hero-main">
             <span class="hero-eyebrow"><span class="pulse"></span> Available for robotics & embedded roles</span>
             <h1 class="hero-title">Hi, I'm <span class="highlight">Teuku Zikri Fatahillah</span></h1>
-            <p class="hero-subtitle">Robotics &amp; Embedded Systems Engineer &middot; M.Eng @ Tokyo Metropolitan University</p>
+            <p class="hero-subtitle">Robotics &amp; Embedded Systems Engineer&nbsp;&middot; M.Eng @ Tokyo Metropolitan University</p>
             <p class="hero-description">
                 I'm a robotics and embedded systems engineer, currently doing my M.Eng at Tokyo Metropolitan University. I've worked on avionics displays, an electric-bus control unit, a humanoid soccer robot, and FPGA-based perception, usually somewhere between the firmware, the electronics, and the code.
             </p>
@@ -116,7 +116,7 @@ title: Home
                     <div class="gantt-label">
                         <span class="role">{{ item.role }}</span>
                         <span class="org">{% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.org }}</a>{% else %}{{ item.org }}{% endif %}{% if item.lab %} · {% if item.lab_link %}<a href="{{ item.lab_link }}" target="_blank" rel="noopener">{{ item.lab }}</a>{% else %}{{ item.lab }}{% endif %}{% endif %}{% if item.current %} · current{% endif %}</span>
-                        <span class="gantt-meta"><span class="range">{{ range }}</span>{%- if item.cert %}<a class="tl-cert" href="{{ item.cert }}" target="_blank" rel="noopener">{{ item.cert_label | default: "Certificate" }}</a>{% endif %}</span>
+                        <span class="gantt-meta"><span class="range">{{ range }}{% if item.current and item.end %} (expected){% endif %}</span>{%- if item.cert %}<a class="tl-cert" href="{{ item.cert }}" target="_blank" rel="noopener">{{ item.cert_label | default: "Certificate" }}</a>{% endif %}</span>
                     </div>
                     <div class="gantt-track"><span class="gantt-bar" style="left:{{ left | round: 3 }}%;width:{{ width | round: 3 }}%" title="{{ range }}"></span></div>
                 </div>
@@ -142,7 +142,7 @@ title: Home
             <div class="project-card">
                 {% if project.cover_image %}
                 <div class="project-card-image">
-                    <a href="{{ project.url | relative_url }}">
+                    <a href="{{ project.url | relative_url }}" tabindex="-1" aria-hidden="true">
                         <img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}" loading="lazy">
                     </a>
                 </div>
@@ -158,7 +158,7 @@ title: Home
                     </div>
                     {% endif %}
                     <div class="project-card-footer">
-                        <a href="{{ project.url | relative_url }}" class="card-link">View Project &rarr;</a>
+                        <a href="{{ project.url | relative_url }}" class="card-link">View case study &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -208,7 +208,7 @@ title: Home
             card.className = 'project-card project-card--gh';
             card.innerHTML =
                 '<span class="featured-badge">★ GitHub</span>' +
-                '<div class="project-card-image" hidden data-lang="' + esc(r.language || '') + '"><a href="' + r.html_url + '" target="_blank" rel="noopener"><img alt="' + esc(r.name) + '"></a></div>' +
+                '<div class="project-card-image" hidden data-lang="' + esc(r.language || '') + '"><a href="' + r.html_url + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img alt="' + esc(r.name) + '"></a></div>' +
                 '<div class="project-card-content">' +
                     '<h3><a href="' + r.html_url + '" target="_blank" rel="noopener">' + esc(r.name) + '</a></h3>' +
                     '<p class="project-description">' + (r.description ? esc(r.description) : '') + '</p>' +
@@ -224,7 +224,12 @@ title: Home
                     var url = firstImage(md, r.name, branch); if (!url) return;
                     var box = card.querySelector('.project-card-image'), img = box && box.querySelector('img');
                     if (!img) return;
-                    img.onload = function () { box.hidden = false; };
+                    // landscape photos fill the frame; portraits and diagrams sit whole on a quiet mat
+                    img.onload = function () {
+                        var ratio = img.naturalWidth / img.naturalHeight;
+                        box.classList.toggle('is-photo', ratio > 1.25 && ratio < 2.1);
+                        box.hidden = false;
+                    };
                     img.src = url;
                 }).catch(function () {});
         });
