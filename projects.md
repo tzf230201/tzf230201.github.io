@@ -7,7 +7,7 @@ content_class: page-wide
 ---
 
 {% comment %} Build a unique, sorted list of tags across all projects {% endcomment %}
-{% capture tags_str %}{% for project in site.projects %}{% for tag in project.tags %}{{ tag }},{% endfor %}{% endfor %}{% endcapture %}
+{% capture tags_str %}{% for project in site.projects %}{% for tag in project.tags %}{{ tag }},{% endfor %}{% endfor %}{% for model in site.data.grabcad %}{% for tag in model.tags %}{{ tag }},{% endfor %}{% endfor %}{% endcapture %}
 {% assign all_tags = tags_str | split: "," | uniq | sort_natural %}
 
 <div class="projects-toolbar" id="projects-toolbar" hidden>
@@ -39,6 +39,40 @@ content_class: page-wide
         <a class="btn btn-secondary" href="https://github.com/tzf230201?tab=repositories" target="_blank" rel="noopener">View all on GitHub →</a>
     </div>
 </div>
+
+{% if site.data.grabcad.size > 0 %}
+<section aria-labelledby="cad-models-title">
+    <div class="section-head section-head--spaced">
+        <span class="section-kicker">GrabCAD</span>
+        <h2 class="section-title" id="cad-models-title">CAD Models</h2>
+        <p class="section-sub">Mechanical designs, sensor mounts, and hardware for robotics.</p>
+    </div>
+    <div class="repo-grid" id="cad-models">
+        {% for model in site.data.grabcad %}
+        <div class="repo-card" data-tags="{{ model.tags | join: ',' | downcase | escape }}">
+            <a class="repo-card-image" href="{{ model.url | escape }}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"{% unless model.image %} hidden{% endunless %}>
+                {% if model.image %}<img src="{{ model.image | relative_url | escape }}" alt="{{ model.title | escape }}" loading="lazy" width="96" height="96">{% endif %}
+            </a>
+            <h3>
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184zM1 4.239v7.923l6.5 2.6V6.838L1 4.239zm7.5 10.523 6.5-2.6V4.239L8.5 6.838v7.924zm-.5-8.789L14.154 3.5 8 1.038 1.846 3.5 8 5.973z"/></svg>
+                <a href="{{ model.url | escape }}" target="_blank" rel="noopener noreferrer">{{ model.title | escape }}</a>
+            </h3>
+            {% if model.description %}<p class="repo-desc">{{ model.description | escape }}</p>{% endif %}
+            <div class="repo-topics">
+                {% for tag in model.tags limit: 4 %}<span class="tag">{{ tag | escape }}</span>{% endfor %}
+            </div>
+            <div class="repo-meta">
+                <a class="card-link" href="{{ model.url | escape }}" target="_blank" rel="noopener noreferrer">View on GrabCAD &rarr;</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <p class="grid-empty" data-empty-for="cad-models" hidden>No CAD models match this topic.</p>
+    <div class="text-center mt-2">
+        <a class="btn btn-secondary" href="https://grabcad.com/teuku.zikri.fatahillah-3/models" target="_blank" rel="noopener noreferrer">View all on GrabCAD &rarr;</a>
+    </div>
+</section>
+{% endif %}
 
 <div class="section-head section-head--spaced">
     <span class="section-kicker">Case studies</span>
@@ -91,7 +125,7 @@ content_class: page-wide
 <p class="grid-empty" data-empty-for="case-studies" hidden>No case studies match this topic.</p>
 
 <script>
-/* Topic filter. Counts every tag across the case studies and the GitHub cards (Jekyll tags and
+/* Topic filter. Counts every tag across case studies, CAD models, and GitHub cards (Jekyll tags and
    GitHub topics are merged: "Computer Vision" == "computer-vision"), shows the most-used topics
    inline and tucks the long tail into a "More topics" panel. Rebuilt when the GitHub cards arrive. */
 (function () {
@@ -110,11 +144,12 @@ content_class: page-wide
 
     // GitHub topics that mean the same as another tag, and display names for GitHub-only topics
     var ALIAS = {
-        'embedded-systems': 'embedded-system', ros2: 'ros', 'robotic-arm': 'arm-robot', moveit2: 'moveit',
+        'embedded-systems': 'embedded-system', ros2: 'ros', 'robotic-arm': 'arm-robot', 'robot-arm': 'arm-robot', moveit2: 'moveit',
         'stm32f746g-discovery': '32f746g-discovery', 'playback-audio': 'audio-playback', 'record-audio': 'audio-recording'
     };
     var NICE = {
-        ai: 'AI', iot: 'IoT', bsp: 'BSP', kicad: 'KiCad', canopen: 'CANopen', opencv: 'OpenCV', moveit: 'MoveIt',
+        ai: 'AI', iot: 'IoT', bsp: 'BSP', cad: 'CAD', lidar: 'LiDAR', slam: 'SLAM', realsense: 'RealSense',
+        kicad: 'KiCad', canopen: 'CANopen', opencv: 'OpenCV', moveit: 'MoveIt',
         'arm-robot': 'Robot Arm', '32f746g-discovery': '32F746G Discovery', stm32cubeide: 'STM32CubeIDE', stm32f7: 'STM32F7',
         'esp8266-projects': 'ESP8266', 'tang-nano-9k': 'Tang Nano 9K', 'mediapipe-hands': 'MediaPipe Hands',
         'wav-file': 'WAV File', 'wav-player': 'WAV Player', 'wav-recorder': 'WAV Recorder'

@@ -1,0 +1,35 @@
+# Models shown in the CAD Models section of /projects/.
+# Add entries here to publish more models; no browser-side GrabCAD request is needed.
+# Metadata and preview images checked on 2026-10-26 through the public index:
+# https://www.stlfinder.com/author/teuku%2Bzikri%2BFatahillah/
+# The card links below point to the original GrabCAD models.
+
+- title: "Emergency Button Case with Cable-Tie Mounting (22 mm diameter)"
+  url: "https://grabcad.com/library/emergency-button-case-with-cable-tie-mounting-22-mm-diameter-1"
+  description: "Cable-tie mounting case for a 22 mm emergency button, designed for quick installation on prototypes and robotics setups."
+  image: "/assets/images/grabcad/emergency-button-case.webp"
+  tags: [CAD, Autodesk Inventor, Robotics, Electrical]
+
+- title: "LiDAR-Camera Bracket for Livox Mid-360 and Intel RealSense D435"
+  url: "https://grabcad.com/library/lidar-camera-bracket-for-livox-mid-360-and-intel-realsense-d435-1"
+  description: "Sensor bracket combining a Livox Mid-360 at a 45° tilt with an Intel RealSense D435 for robot perception."
+  image: "/assets/images/grabcad/livox-mid360-realsense-d435.webp"
+  tags: [CAD, Autodesk Inventor, Robotics, LiDAR, RealSense, Sensor Fusion, SLAM]
+
+- title: "LiDAR-Camera Bracket for Livox Mid-360 and Tier IV C2"
+  url: "https://grabcad.com/library/lidar-camera-bracket-for-livox-mid-360-and-tier-iv-c2-1"
+  description: "Mounting bracket pairing a Livox Mid-360 at a 45° tilt with a Tier IV C2 camera for autonomous navigation platforms."
+  image: "/assets/images/grabcad/livox-mid360-tier-iv-c2.webp"
+  tags: [CAD, Autodesk Inventor, Robotics, LiDAR, Sensor Fusion, SLAM]
+
+- title: "RealSense Wrist Mount for Piper Arm"
+  url: "https://grabcad.com/library/realsense-wrist-mount-for-piper-arm-1"
+  description: "Adjustable wrist mount for the Piper robot arm, supporting RealSense D455, D435, and D405 depth cameras."
+  image: "/assets/images/grabcad/realsense-piper-wrist-mount.webp"
+  tags: [CAD, Autodesk Inventor, Robotics, RealSense, Robot Arm]
+
+- title: "Jetson AGX Orin Base Mount"
+  url: "https://grabcad.com/library/jetson-agx-orin-base-mount-1"
+  description: "Base plate for mounting a Jetson AGX Orin on robot frames and aluminum profiles, with adjustable attachment slots."
+  image: "/assets/images/grabcad/jetson-agx-orin-base-mount.webp"
+  tags: [CAD, Autodesk Inventor, Robotics, Jetson]

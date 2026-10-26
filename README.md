@@ -49,6 +49,29 @@ Personal website built with Jekyll and hosted on GitHub Pages.
 
 3. The project will automatically appear on the `/projects/` page
 
+### Adding a GrabCAD Model
+
+The **CAD Models** section on `/projects/` renders entries from `_data/grabcad.yml`.
+It uses local preview images and does not depend on a live request to GrabCAD.
+New uploads on GrabCAD need to be added to this file to appear on the website.
+
+1. Save a preview image in `assets/images/grabcad/`.
+2. Add an entry to `_data/grabcad.yml`:
+
+   ```yaml
+   - title: "My CAD Model"
+     url: "https://grabcad.com/library/my-cad-model-1"
+     description: "Short description of the design."
+     image: "/assets/images/grabcad/my-cad-model.webp"
+     tags: [CAD, Autodesk Inventor, Robotics]
+   ```
+
+Images and descriptions are optional. All tags participate in the shared topic
+filter; the first four are displayed on the card. An empty model list hides the
+section. The initial five entries and their previews were found through the
+[public model index](https://www.stlfinder.com/author/teuku%2Bzikri%2BFatahillah/)
+on 2026-10-26; all project links open the original GrabCAD pages.
+
 ## 📁 Project Structure
 
 ```
