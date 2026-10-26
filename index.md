@@ -156,6 +156,7 @@ title: Home
     </div>
 </section>
 
+{% include github-thumbnails.html %}
 <script>
 (function () {
     var grid = document.getElementById('featured-grid');
@@ -163,25 +164,9 @@ title: Home
     var USER = 'tzf230201';
 
     function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
-    function firstImage(md, repo, branch) {
-        var re = /!\[[^\]]*\]\(\s*<?([^)\s>]+)>?[^)]*\)|<img[^>]+src\s*=\s*["']([^"']+)["']/ig, m;
-        while ((m = re.exec(md))) {
-            var u = m[1] || m[2]; if (!u) continue;
-            if (/shields\.io|img\.shields|badgen|\/badge|badge\.|\.svg($|\?)|actions\/work/i.test(u)) continue;
-            var g = u.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/(?:blob|raw)\/([^/]+)\/(.+)$/i)
-                 || u.match(/^https?:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/i);
-            if (g) return 'https://cdn.jsdelivr.net/gh/' + g[1] + '/' + g[2] + '@' + g[3] + '/' + g[4].split('?')[0];
-            if (/^https?:\/\//i.test(u)) return u;
-            if (u.indexOf('//') === 0) return 'https:' + u;
-            var rel = (u.charAt(0) === '/' ? u.slice(1) : u.replace(/^\.\//, ''));
-            return 'https://cdn.jsdelivr.net/gh/' + USER + '/' + repo + '@' + branch + '/' + rel;
-        }
-        return null;
-    }
-
     Promise.all([
         fetch('https://pinned.berrysauce.dev/get/' + USER + '?_=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }),
-        fetch('https://api.github.com/users/' + USER + '/repos?per_page=100').then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; })
+        fetch('https://api.github.com/users/' + USER + '/repos?per_page=100', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; })
     ]).then(function (out) {
         var pins = out[0] || [], repos = out[1] || [];
         if (!pins.length || !repos.length) return;
@@ -203,20 +188,19 @@ title: Home
                 '</div>';
             grid.appendChild(card);
             var branch = r.default_branch || 'main';
-            fetch('https://cdn.jsdelivr.net/gh/' + USER + '/' + r.name + '@' + branch + '/README.md')
-                .then(function (res) { return res.ok ? res.text() : null; })
+            var revision = r.pushed_at || r.updated_at || '';
+            PortfolioGitHub.readme(USER, r.name, branch, revision)
                 .then(function (md) {
                     if (!md) return;
-                    var url = firstImage(md, r.name, branch); if (!url) return;
+                    var url = PortfolioGitHub.firstImage(md, USER, r.name, branch, revision); if (!url) return;
                     var box = card.querySelector('.project-card-image'), img = box && box.querySelector('img');
                     if (!img) return;
                     // landscape photos fill the frame; portraits and diagrams sit whole on a quiet mat
-                    img.onload = function () {
+                    PortfolioGitHub.loadImage(img, url, function () {
                         var ratio = img.naturalWidth / img.naturalHeight;
                         box.classList.toggle('is-photo', ratio > 1.25 && ratio < 2.1);
                         box.hidden = false;
-                    };
-                    img.src = url;
+                    }, function () { box.hidden = true; });
                 }).catch(function () {});
         });
     }).catch(function () {});

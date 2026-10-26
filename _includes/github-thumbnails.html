@@ -1,0 +1,68 @@
+<script>
+/* Both project lists use the first non-badge README image. Prefer GitHub's raw
+   files; mutable jsDelivr branch URLs can remain in the browser cache for days. */
+(function () {
+    function version(url, revision) {
+        if (!revision) return url;
+        var parsed = new URL(url);
+        parsed.searchParams.set('v', revision);
+        return parsed.href;
+    }
+
+    function cdnImage(url) {
+        var parsed = new URL(url);
+        if (parsed.hostname !== 'raw.githubusercontent.com') return null;
+        var parts = parsed.pathname.slice(1).split('/');
+        if (parts.length < 4) return null;
+        return 'https://cdn.jsdelivr.net/gh/' + parts[0] + '/' + parts[1] + '@' + parts[2] + '/' + parts.slice(3).join('/') + parsed.search;
+    }
+
+    function readme(user, repo, branch, revision) {
+        var raw = version('https://raw.githubusercontent.com/' + user + '/' + repo + '/' + branch + '/README.md', revision);
+        var cdn = version('https://cdn.jsdelivr.net/gh/' + user + '/' + repo + '@' + branch + '/README.md', revision);
+        function request(url) {
+            return fetch(url, { cache: 'no-cache' }).then(function (response) {
+                if (!response.ok) throw new Error('README unavailable: ' + response.status);
+                return response.text();
+            });
+        }
+        return request(raw).catch(function () { return request(cdn); });
+    }
+
+    function firstImage(md, user, repo, branch, revision) {
+        var re = /!\[[^\]]*\]\(\s*<?([^)\s>]+)>?[^)]*\)|<img[^>]+src\s*=\s*["']([^"']+)["']/ig;
+        var match;
+        while ((match = re.exec(md))) {
+            var url = match[1] || match[2];
+            if (!url || /shields\.io|img\.shields|badgen|\/badge|badge\.|\.svg($|\?)|actions\/work/i.test(url)) continue;
+            var github = url.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/(?:blob|raw)\/([^/]+)\/(.+)$/i)
+                || url.match(/^https?:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/i);
+            if (github) {
+                return version('https://raw.githubusercontent.com/' + github[1] + '/' + github[2] + '/' + github[3] + '/' + github[4], revision);
+            }
+            if (/^https?:\/\//i.test(url)) return url;
+            if (url.indexOf('//') === 0) return 'https:' + url;
+            var relative = url.replace(/^\//, '').replace(/^\.\//, '');
+            return version(new URL(relative, 'https://raw.githubusercontent.com/' + user + '/' + repo + '/' + branch + '/').href, revision);
+        }
+        return null;
+    }
+
+    function loadImage(img, url, onLoad, onError) {
+        var fallback = cdnImage(url);
+        img.onload = onLoad;
+        img.onerror = function () {
+            if (fallback) {
+                var next = fallback;
+                fallback = null;
+                img.src = next;
+            } else if (onError) {
+                onError();
+            }
+        };
+        img.src = url;
+    }
+
+    window.PortfolioGitHub = { readme: readme, firstImage: firstImage, loadImage: loadImage };
+})();
+</script>

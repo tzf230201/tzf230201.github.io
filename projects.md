@@ -258,6 +258,7 @@ content_class: page-wide
 })();
 </script>
 
+{% include github-thumbnails.html %}
 <script>
 (function () {
     var grid = document.getElementById('gh-repos');
@@ -270,30 +271,10 @@ content_class: page-wide
 
     function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
 
-    // Find the first usable image URL in a README's markdown (skips badges), resolving relative paths
-    function firstImage(md, repo, branch) {
-        var re = /!\[[^\]]*\]\(\s*<?([^)\s>]+)>?[^)]*\)|<img[^>]+src\s*=\s*["']([^"']+)["']/ig;
-        var m;
-        while ((m = re.exec(md))) {
-            var u = m[1] || m[2];
-            if (!u) continue;
-            if (/shields\.io|img\.shields|badgen|\/badge|badge\.|\.svg($|\?)|actions\/work/i.test(u)) continue;
-            // GitHub blob/raw or raw.githubusercontent links -> jsDelivr CDN (reliable, CORS, cached)
-            var g = u.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/(?:blob|raw)\/([^/]+)\/(.+)$/i)
-                 || u.match(/^https?:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/i);
-            if (g) return 'https://cdn.jsdelivr.net/gh/' + g[1] + '/' + g[2] + '@' + g[3] + '/' + g[4].split('?')[0];
-            if (/^https?:\/\//i.test(u)) return u;
-            if (u.indexOf('//') === 0) return 'https:' + u;
-            var rel = (u.charAt(0) === '/' ? u.slice(1) : u.replace(/^\.\//, ''));
-            return 'https://cdn.jsdelivr.net/gh/' + USER + '/' + repo + '@' + branch + '/' + rel;
-        }
-        return null;
-    }
-
     function isPinned(r) { return !!PINNED[(r.name || '').toLowerCase()]; }
 
     function loadRepos() {
-    fetch('https://api.github.com/users/' + USER + '/repos?per_page=100&sort=updated')
+    fetch('https://api.github.com/users/' + USER + '/repos?per_page=100&sort=updated', { cache: 'no-cache' })
         .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
         .then(function (repos) {
             repos = repos.filter(function (r) {
@@ -325,24 +306,24 @@ content_class: page-wide
             // Let the topic filter pick up the GitHub topics
             document.dispatchEvent(new CustomEvent('projects:updated'));
 
-            // Pull a thumbnail from each repo's README.md (raw CDN, no API rate limit)
+            // Follow the first README image, using the repo's update time to refresh cached files.
             var cards = grid.querySelectorAll('.project-tile');
             repos.forEach(function (r, i) {
                 var card = cards[i];
                 if (!card) return;
                 var branch = r.default_branch || 'main';
-                fetch('https://cdn.jsdelivr.net/gh/' + USER + '/' + r.name + '@' + branch + '/README.md')
-                    .then(function (res) { return res.ok ? res.text() : null; })
+                var revision = r.pushed_at || r.updated_at || '';
+                PortfolioGitHub.readme(USER, r.name, branch, revision)
                     .then(function (md) {
                         if (!md) return;
-                        var url = firstImage(md, r.name, branch);
+                        var url = PortfolioGitHub.firstImage(md, USER, r.name, branch, revision);
                         if (!url) return;
                         var box = card.querySelector('.project-tile-image');
                         var img = box && box.querySelector('img');
                         if (!img) return;
-                        img.onload = function () { box.hidden = false; };
-                        img.onerror = function () { box.hidden = true; };
-                        img.src = url;
+                        PortfolioGitHub.loadImage(img, url,
+                            function () { box.hidden = false; },
+                            function () { box.hidden = true; });
                     })
                     .catch(function () {});
             });
