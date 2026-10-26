@@ -17,23 +17,9 @@ title: Home
                 <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
-        <div class="hero-aside">
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <div class="num">3+</div>
-                    <div class="label">Years Experience</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="num">{{ site.projects.size }}+</div>
-                    <div class="label">Projects Built</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="num">G20</div>
-                    <div class="label">Summit Deployment</div>
-                </div>
-            </div>
-            <p class="hero-quip" title="with apologies to “Attention Is All You Need”">// robotics is all you need</p>
-        </div>
+        <figure class="hero-portrait">
+            <img src="{{ '/assets/images/teuku-zikri-fatahillah.jpg' | relative_url }}" alt="Teuku Zikri Fatahillah" width="3120" height="4160" fetchpriority="high" decoding="async">
+        </figure>
     </div>
 </section>
 
