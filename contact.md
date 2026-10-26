@@ -50,5 +50,13 @@ permalink: /contact/
             <h3>GrabCAD</h3>
             <p><a href="https://grabcad.com/teuku.zikri.fatahillah-3" target="_blank" rel="noopener noreferrer">grabcad.com/teuku.zikri.fatahillah</a></p>
         </div>
+
+        <div class="contact-method">
+            <div class="ic">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="6" width="14" height="14" rx="2"/><path d="M12 3v3M9 3h6M5 10H3v7h2m14-7h2v7h-2M8 20v2m8-2v2M9 16h6"/><circle cx="9" cy="11" r="1"/><circle cx="15" cy="11" r="1"/></svg>
+            </div>
+            <h3>Instructables</h3>
+            <p><a href="https://www.instructables.com/member/teukuzikrifatahillah" target="_blank" rel="noopener noreferrer">instructables.com/member/teukuzikrifatahillah</a></p>
+        </div>
     </div>
 </div>
