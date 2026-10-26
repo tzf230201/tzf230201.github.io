@@ -69,7 +69,7 @@ New uploads on GrabCAD need to be added to this file to appear on the website.
 Images and descriptions are optional. All tags participate in the shared topic
 filter; the first four are displayed on the card. An empty model list hides the
 section. Model URLs are supplied directly by the profile owner.
-The five existing previews were found through the
+Prefer original model gallery photos for previews. Some earlier previews came from the
 [public model index](https://www.stlfinder.com/author/teuku%2Bzikri%2BFatahillah/)
 on 2026-10-26. Copy model URLs directly from GrabCAD when updating the list;
 third-party indexes can omit models or retain outdated URLs. An HTTP 403 from an

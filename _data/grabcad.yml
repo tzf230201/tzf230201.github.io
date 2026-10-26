@@ -2,14 +2,15 @@
 # Add entries here to publish more models; no browser-side GrabCAD request is needed.
 # Model URLs supplied by the profile owner on 2026-10-26.
 # This list is manually maintained, not a live profile sync.
-# The five existing preview images were imported from this public index:
+# Earlier preview images were imported from this public index:
 # https://www.stlfinder.com/author/teuku%2Bzikri%2BFatahillah/
-# New entries can omit the optional image when no preview is available.
+# Prefer original gallery photos for previews; image is optional when unavailable.
 
 - title: "Emergency Button Case (22 mm diameter)"
   url: "https://grabcad.com/library/emergency-button-case-22-mm-diameter-1"
   description: "Cable-tie mounting case for a 22 mm emergency button, designed for quick installation on prototypes and robotics setups."
-  image: "/assets/images/grabcad/emergency-button-case.webp"
+  # Original gallery photo: https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/8ce3b0b4a104378fcc8b1a25ee560e9d/large.jpeg
+  image: "/assets/images/grabcad/emergency-button-case-real.jpeg"
   tags: [CAD, Autodesk Inventor, Robotics, Electrical]
 
 - title: "Intel RealSense D405 or D435 Wrist Camera Mount for Kinova Gen3 Lite"
