@@ -68,7 +68,7 @@ Industrial Robotics Laboratory
     <div class="pub-body">
         <p class="pub-type">{{ p.type | default: "Publication" }}</p>
         <h3 class="pub-title">{% if p.url and p.url != "" %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
-        <p class="pub-authors">{{ p.authors | replace: "Fatahillah, T. Z.", "<strong>Fatahillah, T. Z.</strong>" | replace: "Teuku Zikri Fatahillah", "<strong>Teuku Zikri Fatahillah</strong>" }}</p>
+        <p class="pub-authors">{{ p.authors | replace: "Teuku Zikri Fatahillah", "<strong>Teuku Zikri Fatahillah</strong>" }}</p>
         <p class="pub-venue">{{ p.venue }}{% if p.year %}<span class="pub-venue-year"> · {{ p.year }}</span>{% endif %}{% if p.award %} · <span class="pub-award">{{ p.award }}</span>{% endif %}</p>
         {%- assign has_proj = false -%}{%- if p.project and p.project != "" -%}{%- assign has_proj = true -%}{%- endif -%}
         {%- assign has_cert = false -%}{%- if p.certificate and p.certificate != "" -%}{%- assign has_cert = true -%}{%- endif %}
@@ -533,7 +533,7 @@ Industrial Robotics Laboratory
 ## Languages
 
 - <span class="cv-item">**English** - Professional Working Proficiency</span> [EF SET Certificate](https://cert.efset.org/en/ui9fgu){: .doc-link}
-- <span class="cv-item">**Japanese** - Currently Learning (N4 Level)</span>
+- <span class="cv-item">**Japanese** - Currently Learning (N3 Level)</span>
 - <span class="cv-item">**Indonesian** - Native</span>
 
 </section>

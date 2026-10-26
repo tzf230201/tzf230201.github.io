@@ -4,7 +4,7 @@
 #
 # Format for each entry:
 #   - title:       "Paper title"
-#     authors:     "Teuku Zikri Fatahillah, Co-Author B"   # your name is auto-bolded
+#     authors:     "Teuku Zikri Fatahillah, Full Author Name" # full names in author order; your name is auto-bolded
 #     venue:       "Proceedings / Journal name, publisher, pp. xx-yy"
 #     year:        2022
 #     type:        "Conference Paper"      # Journal Article | Conference Paper | Thesis | Preprint | Patent
@@ -16,7 +16,7 @@
 list:
   - title: "Edge-Cell Graph Encoding and Fixed-Point Arithmetic for FPGA Growing Neural Gas"
     authors: "Teuku Zikri Fatahillah, Raditya Artha Rochmanto, Achmad Fahrul Aji, Anhar Risnumawan, Chyan Zheng Siow, Naoyuki Kubota"
-    venue: "2026 International Joint Conference on Neural Networks (IJCNN), IEEE WCCI 2026"
+    venue: "2026 IEEE World Congress on Computational Intelligence (WCCI)"
     year: 2026
     type: "Conference Paper"
     url: "https://doi.org/10.1109/IJCNN69854.2026.11728420"
@@ -24,7 +24,7 @@ list:
 
   - title: "Interpretable Soil-Robust Bipedal Locomotion on Tilled Soils with Material Curriculum and a Stance-Gated Slip Reward"
     authors: "Anhar Risnumawan, Achmad Fahrul Aji, Yoshimasa Nakamura, Teuku Zikri Fatahillah, Hasan Imaduddin, Naoyuki Kubota"
-    venue: "2026 IEEE World Congress on Computational Intelligence (WCCI), IEEE"
+    venue: "2026 IEEE World Congress on Computational Intelligence (WCCI)"
     year: 2026
     type: "Conference Paper"
     url: "https://drive.google.com/file/d/1Yji8UxYHwcNIxi1SlfuaH7CAwSwxxlt-/view?usp=sharing"
@@ -45,14 +45,14 @@ list:
     certificate: "https://drive.google.com/file/d/1rAfedl7EGExT-MzDgYOSoPsLMwCcyG1I/view?usp=sharing"
 
   - title: "Integrated Footstep Planning and CoM Control for Enhanced Stability and Maneuverability in EROS Humanoid Robot"
-    authors: "Fatahillah, T. Z.; Surya Nobelia, B.; Risnurmawan, A.; Alasiry, A. H.; Pradana, E. Y.; Wijaya, C. K."
+    authors: "Teuku Zikri Fatahillah, Bianca Surya Nobelia, Anhar Risnumawan, Ali Husein Alasiry, Erlangga Yudi Pradana, Candra Kusuma Wijaya"
     venue: "2024 International Electronics Symposium on Engineering Technology and Applications (IES-ETA), IEEE"
     year: 2024
     type: "Conference Paper"
     url: "https://doi.org/10.1109/IES63037.2024.10665839"
 
   - title: "Analysis of Stability on the ERISA Humanoid Dance Robot"
-    authors: "Surya Nobelia, B.; Satria, N.; Henfri Binugroho, E.; Fatahillah, T. Z."
+    authors: "Bianca Surya Nobelia, Novian Fajar Satria, Eko Henfri Binugroho, Teuku Zikri Fatahillah"
     venue: "5th International Conference on Applied Science and Technology on Engineering Science (iCAST-ES), SciTePress, pp. 182–187"
     year: 2023
     type: "Conference Paper"
