@@ -1,14 +1,31 @@
 # Models shown in the CAD Models section of /projects/.
 # Add entries here to publish more models; no browser-side GrabCAD request is needed.
-# Metadata and preview images checked on 2026-10-26 through the public index:
+# Model URLs supplied by the profile owner on 2026-10-26.
+# This list is manually maintained, not a live profile sync.
+# The five existing preview images were imported from this public index:
 # https://www.stlfinder.com/author/teuku%2Bzikri%2BFatahillah/
-# The card links below point to the original GrabCAD models.
+# New entries can omit the optional image when no preview is available.
 
-- title: "Emergency Button Case with Cable-Tie Mounting (22 mm diameter)"
-  url: "https://grabcad.com/library/emergency-button-case-with-cable-tie-mounting-22-mm-diameter-1"
+- title: "Emergency Button Case (22 mm diameter)"
+  url: "https://grabcad.com/library/emergency-button-case-22-mm-diameter-1"
   description: "Cable-tie mounting case for a 22 mm emergency button, designed for quick installation on prototypes and robotics setups."
   image: "/assets/images/grabcad/emergency-button-case.webp"
   tags: [CAD, Autodesk Inventor, Robotics, Electrical]
+
+- title: "Intel RealSense D405 or D435 Wrist Camera Mount for Kinova Gen3 Lite"
+  url: "https://grabcad.com/library/intel-realsense-d405-or-d435-wrist-camera-mount-for-kinova-gen3-lite-1"
+  description: "Wrist camera mount for fitting an Intel RealSense D405 or D435 to a Kinova Gen3 Lite."
+  tags: [CAD, Robotics, RealSense, Robot Arm, Kinova Gen3 Lite]
+
+- title: "Extended Version myCobot Adaptive Gripper"
+  url: "https://grabcad.com/library/extended-version-mycobot-adaptive-gripper-1"
+  description: "Extended design of the myCobot adaptive gripper."
+  tags: [CAD, Robotics, Robot Arm, Gripper]
+
+- title: "Unitree Go2 Front Top Mounting Plate for ROBOTIS OpenMANIPULATOR-X"
+  url: "https://grabcad.com/library/unitree-go2-front-top-mounting-plate-for-robotis-openmanipulator-x-1"
+  description: "Front-top mounting plate for fitting a ROBOTIS OpenMANIPULATOR-X to a Unitree Go2."
+  tags: [CAD, Robotics, Robot Arm, Unitree Go2]
 
 - title: "LiDAR-Camera Bracket for Livox Mid-360 and Intel RealSense D435"
   url: "https://grabcad.com/library/lidar-camera-bracket-for-livox-mid-360-and-intel-realsense-d435-1"
@@ -33,3 +50,8 @@
   description: "Base plate for mounting a Jetson AGX Orin on robot frames and aluminum profiles, with adjustable attachment slots."
   image: "/assets/images/grabcad/jetson-agx-orin-base-mount.webp"
   tags: [CAD, Autodesk Inventor, Robotics, Jetson]
+
+- title: "2020 Angle Bracket"
+  url: "https://grabcad.com/library/2020-angle-bracket-1"
+  description: "2020 angle bracket for mechanical assemblies."
+  tags: [CAD, Mechanical Design, Bracket]
