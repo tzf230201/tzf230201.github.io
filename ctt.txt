@@ -1,6 +1,3 @@
-- pada halaman awal, tag tentang CAD belum ada
-- tolong tambahkan, "skillset tidak bisa saya cantumkan semua disini, 
-    untuk mengerti lebih lanjut project yang pernah saya kerjakan, silahkan lihat daftar project"
 - tolong tambahkan, saya telah menulis sejak 2024 di instructables
 - mungkin design saya ataupun project saya bukanlah yang terbaik,
     tapi orang orang yang lebih pintar dari saya dan design yang lebih bagus daripada saya, mereka tidak berbagi / share

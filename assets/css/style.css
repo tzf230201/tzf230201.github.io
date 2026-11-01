@@ -979,7 +979,7 @@ button { font: inherit; color: inherit; }
 /* ============================================================
    Projects page
    ============================================================ */
-.layout-page-wide .container { max-width: none; }
+.layout-page-wide .container { max-width: 1360px; }
 .page-content.page-wide { max-width: none; }
 
 .projects-toolbar {
