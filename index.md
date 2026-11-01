@@ -47,7 +47,11 @@ title: Home
                 <span class="skill-chip">TensorFlow</span>
                 <span class="skill-chip">CAN Bus</span>
                 <span class="skill-chip">KiCAD</span>
+                <span class="skill-chip">CAD / 3D Modeling</span>
             </div>
+            <p class="about-skills-note">
+                My full skill set goes beyond what's listed here. To learn more about the projects I've worked on, browse my <a href="{{ '/projects/' | relative_url }}">project list</a>.
+            </p>
         </div>
     </div>
 </section>

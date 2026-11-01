@@ -1,0 +1,13 @@
+- pada halaman awal, tag tentang CAD belum ada
+- tolong tambahkan, "skillset tidak bisa saya cantumkan semua disini, 
+    untuk mengerti lebih lanjut project yang pernah saya kerjakan, silahkan lihat daftar project"
+- tolong tambahkan, saya telah menulis sejak 2024 di instructables
+- mungkin design saya ataupun project saya bukanlah yang terbaik,
+    tapi orang orang yang lebih pintar dari saya dan design yang lebih bagus daripada saya, mereka tidak berbagi / share
+    mungkin ada yang bilang, jika orang bodoh bisa menulis, maka informasi tidak guna akan menyebar di dunia
+    tapi saya ebrusaha sebisa mungkin untuk transparan dalam apa yang saya kerjakan, dan saya sebisa mungkin share editable file
+    tidak seperti .stl ataupun hanya .gcode saja, saya share .itp file dan .step file di tiap design saya, dan saya share juga
+    foto hasil implementasi asli dari design saya agar orang bsia tau bahwa ini benar benar pernah diimplementasikan.
+    jadi meskipun design saya masih kurang bagus, orang dapat dengan mudah membaca penjelasan saya dan mengedit hasil kerja saya,
+    seiring berjalanya waktu, saya kira skill saya akan improve dari orang orang yang memberi saran kepada saya.
+    oleh karena itu saya berpendapat, share meskipun hasil belum bagus lebih baik daripada design bagus tapi tidak di share

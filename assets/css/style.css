@@ -682,6 +682,10 @@ button { font: inherit; color: inherit; }
     border: 1px solid var(--border-strong);
     color: var(--text);
 }
+.about-skills-note {
+    margin-top: 20px;
+    font-size: 0.9375rem;
+}
 
 /* ============================================================
    Gantt timeline
