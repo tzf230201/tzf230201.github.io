@@ -255,7 +255,7 @@ Industrial Robotics Laboratory
 
 <div class="cv-entry cv-entry--group" markdown="1">
 
-**Robotics Competitions**&nbsp;· EROS Humanoid Robot Team (PENS)
+**Robotics Competitions**&nbsp;· [EROS Humanoid Robot Team](https://eepis-robotsoccer.github.io/) (PENS)
 {: .cv-label}
 
 - <span class="cv-item">**1st Place · Overall**, KRSBI-Humanoid · Kontes Robot Indonesia (KRI) 2021</span> [Certificate](https://drive.google.com/file/d/12G93wXLHL9m8xaeZVwWCW7ixxk9gPJGo/view?usp=sharing){: .doc-link}
@@ -292,7 +292,7 @@ Industrial Robotics Laboratory
 
 <div class="cv-entry" markdown="1">
 
-### PPI TMU · Persatuan Pelajar Indonesia, Tokyo Metropolitan University
+### [PPI TMU](https://www.instagram.com/ppi_tmu/) · Persatuan Pelajar Indonesia, Tokyo Metropolitan University
 **Member**
 {: .cv-role}
 
@@ -305,7 +305,7 @@ Industrial Robotics Laboratory
 
 <div class="cv-entry" markdown="1">
 
-### EEPIS Robot Soccer (EROS)
+### [EEPIS Robot Soccer (EROS)](https://eepis-robotsoccer.github.io/)
 **Humanoid Robot Team – Co-Leader, Programmer, Electrical Design**
 {: .cv-role}
 
@@ -345,7 +345,7 @@ Industrial Robotics Laboratory
 
 <div class="cv-entry" markdown="1">
 
-### HIMA ELKA PENS
+### [HIMA ELKA PENS](https://www.instagram.com/himaelkapens/)
 **Electronics Engineering Student Association – Research and Technology Staff**
 {: .cv-role}
 
@@ -441,58 +441,6 @@ Industrial Robotics Laboratory
 **Testing:** Oscilloscope, Logic Analyzer, Vector CANalyzer, Wireshark  
 **Project Management:** Trello, Hoddo
 {: .cv-kv}
-
-</div>
-
-</div>
-
-</section>
-
----
-
-<section class="cv-section cv-section--projects" markdown="1">
-
-## Key Projects
-
-<div class="cv-groups" markdown="1">
-
-<div class="cv-entry cv-entry--group" markdown="1">
-
-### 2024
-{: .cv-label}
-
-- **MPC on Ackermann Drive Robot** - Autonomous navigation with Lidar-based obstacle avoidance
-
-</div>
-
-<div class="cv-entry cv-entry--group" markdown="1">
-
-### 2023
-{: .cv-label}
-
-- **CAKRA-401 Submarine Console** - Reverse engineering military submarine display system
-- **Hawk-100 RCM** - Military-grade cockpit display with FPGA processing (66% faster)
-- **Wave Run-up CNN** - Real-time measurement system with 94% accuracy
-- **Sound Recognition System** - Motor fault detection on STM32 (88.3% accuracy)
-
-</div>
-
-<div class="cv-entry cv-entry--group" markdown="1">
-
-### 2022
-{: .cv-label}
-
-- **Humanoid Robot Digital Twin** - Real-time CoM projection (68% error reduction)
-- **Electric Bus VCU** - Complete firmware for G20 Summit deployment
-
-</div>
-
-<div class="cv-entry cv-entry--group" markdown="1">
-
-### 2021
-{: .cv-label}
-
-- **3D Tracking Lidar** - Perception system using ROS and PCL
 
 </div>
 

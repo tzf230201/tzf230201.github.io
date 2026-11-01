@@ -33,7 +33,7 @@ title: Home
                 A highly motivated engineer with expertise across the robotics stack: Embedded Systems, Automation, Electronics Design, IoT, DSP, FPGA, Computer Vision, and the Robot Operating System (ROS/ROS2).
             </p>
             <p>
-                I hold a track record of winning national competitions and have hands-on R&amp;D experience across avionics, automotive, and marine technology. I'm currently pursuing a Master of Engineering at Tokyo Metropolitan University while deepening my work in electronics, AI, and autonomous systems.
+                I hold a track record of winning national competitions and have hands-on R&amp;D experience across robotics, avionics, automotive, and marine technology. I'm currently pursuing a Master of Engineering at Tokyo Metropolitan University while deepening my work in electronics, AI, and autonomous systems.
             </p>
             <div class="about-skills">
                 <span class="skill-chip">C / C++</span>

@@ -40,38 +40,6 @@ content_class: page-wide
     </div>
 </div>
 
-{% if site.data.grabcad.size > 0 %}
-<section aria-labelledby="cad-models-title">
-    <div class="section-head section-head--spaced">
-        <span class="section-kicker">GrabCAD</span>
-        <h2 class="section-title" id="cad-models-title">CAD Models</h2>
-        <p class="section-sub">Mechanical designs, sensor mounts, and hardware for robotics.</p>
-    </div>
-    <div class="project-image-grid" id="cad-models">
-        {% for model in site.data.grabcad %}
-        <a class="project-tile" href="{{ model.url | escape }}" target="_blank" rel="noopener noreferrer" data-tags="{{ model.tags | join: ',' | downcase | escape }}" aria-labelledby="cad-title-{{ forloop.index }}"{% if model.description %} aria-describedby="cad-description-{{ forloop.index }}"{% endif %}>
-            <div class="project-tile-image"{% unless model.image %} hidden{% endunless %}>
-                {% if model.image %}<img src="{{ model.image | relative_url | escape }}" alt="" loading="lazy" decoding="async">{% endif %}
-            </div>
-            <div class="project-tile-content">
-                <h3 id="cad-title-{{ forloop.index }}">{{ model.title | escape }}</h3>
-                <div class="project-tile-details">
-                    <div>
-                        {% if model.description %}<p id="cad-description-{{ forloop.index }}">{{ model.description | escape }}</p>{% endif %}
-                        <span class="project-tile-cta">View on GrabCAD <span aria-hidden="true">&nearr;</span></span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        {% endfor %}
-    </div>
-    <p class="grid-empty" data-empty-for="cad-models" hidden>No CAD models match this topic.</p>
-    <div class="text-center mt-2">
-        <a class="btn btn-secondary" href="https://grabcad.com/teuku.zikri.fatahillah-3/models" target="_blank" rel="noopener noreferrer">View all on GrabCAD &rarr;</a>
-    </div>
-</section>
-{% endif %}
-
 <div class="section-head section-head--spaced">
     <span class="section-kicker">Case studies</span>
     <h2 class="section-title">Closed Source</h2>
@@ -105,6 +73,38 @@ content_class: page-wide
     {% endif %}
 </div>
 <p class="grid-empty" data-empty-for="case-studies" hidden>No case studies match this topic.</p>
+
+{% if site.data.grabcad.size > 0 %}
+<section aria-labelledby="cad-models-title">
+    <div class="section-head section-head--spaced">
+        <span class="section-kicker">GrabCAD</span>
+        <h2 class="section-title" id="cad-models-title">CAD Models</h2>
+        <p class="section-sub">Mechanical designs, sensor mounts, and hardware for robotics.</p>
+    </div>
+    <div class="project-image-grid" id="cad-models">
+        {% for model in site.data.grabcad %}
+        <a class="project-tile" href="{{ model.url | escape }}" target="_blank" rel="noopener noreferrer" data-tags="{{ model.tags | join: ',' | downcase | escape }}" aria-labelledby="cad-title-{{ forloop.index }}"{% if model.description %} aria-describedby="cad-description-{{ forloop.index }}"{% endif %}>
+            <div class="project-tile-image"{% unless model.image %} hidden{% endunless %}>
+                {% if model.image %}<img src="{{ model.image | relative_url | escape }}" alt="" loading="lazy" decoding="async">{% endif %}
+            </div>
+            <div class="project-tile-content">
+                <h3 id="cad-title-{{ forloop.index }}">{{ model.title | escape }}</h3>
+                <div class="project-tile-details">
+                    <div>
+                        {% if model.description %}<p id="cad-description-{{ forloop.index }}">{{ model.description | escape }}</p>{% endif %}
+                        <span class="project-tile-cta">View on GrabCAD <span aria-hidden="true">&nearr;</span></span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <p class="grid-empty" data-empty-for="cad-models" hidden>No CAD models match this topic.</p>
+    <div class="text-center mt-2">
+        <a class="btn btn-secondary" href="https://grabcad.com/teuku.zikri.fatahillah-3/models" target="_blank" rel="noopener noreferrer">View all on GrabCAD &rarr;</a>
+    </div>
+</section>
+{% endif %}
 
 <script>
 /* Topic filter. Counts every tag across case studies, CAD models, and GitHub cards (Jekyll tags and
