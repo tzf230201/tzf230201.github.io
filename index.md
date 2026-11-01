@@ -6,7 +6,6 @@ title: Home
 <section class="hero">
     <div class="container hero-grid">
         <div class="hero-main">
-            <span class="hero-eyebrow"><span class="pulse"></span> Available for robotics & embedded roles</span>
             <h1 class="hero-title">Hi, I'm <span class="highlight">Teuku Zikri Fatahillah</span></h1>
             <p class="hero-subtitle">Robotics &amp; Embedded Systems Engineer&nbsp;&middot; M.Eng @ Tokyo Metropolitan University</p>
             <p class="hero-description">
