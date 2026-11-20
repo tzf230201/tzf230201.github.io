@@ -88,7 +88,7 @@ Industrial Robotics Laboratory
 
 <div class="cv-timeline" markdown="1">
 
-<!-- <div class="cv-entry" markdown="1">
+<div class="cv-entry" markdown="1">
 
 ### PT. Reka Inovasi Cerdas
 **Electronics & Embedded Systems Engineer**
@@ -125,7 +125,7 @@ Industrial Robotics Laboratory
 - Prepared detailed monthly reports for management review
 - **Key Achievement: Successfully reduced machine downtime by 30% through proactive maintenance scheduling**
 
-</div> -->
+</div>
 
 <div class="cv-entry cv-entry--break" markdown="1">
 
@@ -133,7 +133,7 @@ Industrial Robotics Laboratory
 **Career Break**
 {: .cv-role}
 
-*April 2024 – September 2025*
+*April 2024 – September 2024*
 {: .cv-date}
 
 - Prepared applications for graduate study (M.Eng) in Japan
@@ -448,11 +448,10 @@ Industrial Robotics Laboratory
 
 <section class="cv-section cv-section--list" markdown="1">
 
-## Activities
+## Volunteering
 
 - <span class="cv-item">**Robotics Workshop Speaker / Instructor**</span> [Certificate](https://drive.google.com/file/d/1oa4RlBlyCuv_HFF2FLR6KOpuIlpDxIRj/view?usp=sharing){: .doc-link}
 - <span class="cv-item">**Committee Member · Java Robot Contest X** (2018–2019)</span> [Certificate](https://drive.google.com/file/d/1z2y2tYTTZwQREU7dWf3LJCxSkeJ87j4Q/view?usp=sharing){: .doc-link}
-- <span class="cv-item">Multiple national robotics competition participations</span>
 
 </section>
 
