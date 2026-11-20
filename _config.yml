@@ -32,6 +32,9 @@ defaults:
 
 # Exclude from processing
 exclude:
+  - short_resume.md
+  - motivation_letter.md
+  - output/pdf
   - README.md
   - Gemfile
   - Gemfile.lock

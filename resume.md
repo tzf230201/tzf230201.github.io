@@ -9,7 +9,7 @@ permalink: /resume/
 
 ## Summary
 
-M.Eng candidate in Mechanical Systems Engineering at Tokyo Metropolitan University, specializing in robotics, embedded systems, FPGA-based edge intelligence, and control systems.
+M.Eng. candidate in Mechanical Systems Engineering at Tokyo Metropolitan University, working on projects involving robotics, embedded systems, FPGA, and control systems.
 
 </section>
 
@@ -42,7 +42,8 @@ Tokyo Global Partner (TGP) Scholarship recipient
 Bachelor of Applied Engineering - Electronics Engineering
 {: .cv-role}
 
-Industrial Robotics Laboratory
+Industrial Robotics Laboratory<br>
+Adaro Scholarship recipient
 {: .cv-detail}
 
 *May 2018 – August 2022* · [Graduation Certificate & Transcript](https://drive.google.com/file/d/1Zkzphf9Zs9DofBsya9QLxsumhvso7-r3/view){: .doc-link}
@@ -452,7 +453,6 @@ Industrial Robotics Laboratory
 
 - <span class="cv-item">**Robotics Workshop Speaker / Instructor**</span> [Certificate](https://drive.google.com/file/d/1oa4RlBlyCuv_HFF2FLR6KOpuIlpDxIRj/view?usp=sharing){: .doc-link}
 - <span class="cv-item">**Committee Member · Java Robot Contest X** (2018–2019)</span> [Certificate](https://drive.google.com/file/d/1z2y2tYTTZwQREU7dWf3LJCxSkeJ87j4Q/view?usp=sharing){: .doc-link}
-
 </section>
 
 ---
