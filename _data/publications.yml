@@ -19,7 +19,7 @@ list:
     venue: "2026 IEEE World Congress on Computational Intelligence (WCCI)"
     year: 2026
     type: "Conference Paper"
-    url: "https://doi.org/10.1109/IJCNN69854.2026.11728420"
+    url: "https://ieeexplore.ieee.org/document/11728420"
     project: "https://tzf230201.github.io/fpga_gng/"
 
   - title: "Interpretable Soil-Robust Bipedal Locomotion on Tilled Soils with Material Curriculum and a Stance-Gated Slip Reward"
@@ -27,7 +27,7 @@ list:
     venue: "2026 IEEE World Congress on Computational Intelligence (WCCI)"
     year: 2026
     type: "Conference Paper"
-    url: "https://drive.google.com/file/d/1Yji8UxYHwcNIxi1SlfuaH7CAwSwxxlt-/view?usp=sharing"
+    url: "https://ieeexplore.ieee.org/document/11626469"
 
   - title: "From Viability to Knowledge: A Grand Dialectic Framework for Emergent Cognition in Embodied Agents"
     authors: "Faadhil Assayfullooh, Teuku Zikri Fatahillah, Naoyuki Kubota"
@@ -42,14 +42,14 @@ list:
     year: 2026
     type: "Conference Paper"
     url: "https://sites.google.com/view/ccsr2026/program"
-    certificate: "https://drive.google.com/file/d/1rAfedl7EGExT-MzDgYOSoPsLMwCcyG1I/view?usp=sharing"
+    certificate: "https://drive.google.com/file/d/1p9ZvUvhcVjREtTdVRL1W9p3s2GR33q0M/view?usp=drive_link"
 
   - title: "Integrated Footstep Planning and CoM Control for Enhanced Stability and Maneuverability in EROS Humanoid Robot"
     authors: "Teuku Zikri Fatahillah, Bianca Surya Nobelia, Anhar Risnumawan, Ali Husein Alasiry, Erlangga Yudi Pradana, Candra Kusuma Wijaya"
     venue: "2024 International Electronics Symposium on Engineering Technology and Applications (IES-ETA), IEEE"
     year: 2024
     type: "Conference Paper"
-    url: "https://doi.org/10.1109/IES63037.2024.10665839"
+    url: "https://ieeexplore.ieee.org/document/10665839"
 
   - title: "Analysis of Stability on the ERISA Humanoid Dance Robot"
     authors: "Bianca Surya Nobelia, Novian Fajar Satria, Eko Henfri Binugroho, Teuku Zikri Fatahillah"
