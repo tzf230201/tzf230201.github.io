@@ -7,9 +7,9 @@ permalink: /resume/
 
 <section class="cv-section cv-section--summary" markdown="1">
 
-## Professional Summary
+## Summary
 
-M.Eng candidate in Mechanical Systems Engineering at Tokyo Metropolitan University, specializing in robotics, embedded systems, FPGA-based edge intelligence, and control systems. Experienced in developing embedded firmware, FPGA-based video processing, ROS-based robotic systems, and industrial automation systems across avionics, electric vehicle, and robotics projects. Published in IEEE conferences and actively working on robotics research and embedded AI.
+M.Eng candidate in Mechanical Systems Engineering at Tokyo Metropolitan University, specializing in robotics, embedded systems, FPGA-based edge intelligence, and control systems.
 
 </section>
 
@@ -72,7 +72,7 @@ Industrial Robotics Laboratory
         <p class="pub-venue">{{ p.venue }}{% if p.year %}<span class="pub-venue-year"> · {{ p.year }}</span>{% endif %}{% if p.award %} · <span class="pub-award">{{ p.award }}</span>{% endif %}</p>
         {%- assign has_proj = false -%}{%- if p.project and p.project != "" -%}{%- assign has_proj = true -%}{%- endif -%}
         {%- assign has_cert = false -%}{%- if p.certificate and p.certificate != "" -%}{%- assign has_cert = true -%}{%- endif %}
-        {% if has_proj or has_cert %}<p class="pub-links">{% if has_proj %}<a class="pub-project" href="{{ p.project }}" target="_blank" rel="noopener">Project Page</a>{% endif %}{% if has_cert %}<a class="doc-link" href="{{ p.certificate }}" target="_blank" rel="noopener">View Certificate</a>{% endif %}</p>{% endif %}
+        {% if has_proj or has_cert %}<p class="pub-links">{% if has_proj %}<a class="pub-project" href="{{ p.project }}" target="_blank" rel="noopener">Project Page</a>{% endif %}{% if has_cert %}<a class="doc-link" href="{{ p.certificate }}" target="_blank" rel="noopener">Certificate</a>{% endif %}</p>{% endif %}
     </div>
 </article>
 {% endfor %}
@@ -88,7 +88,7 @@ Industrial Robotics Laboratory
 
 <div class="cv-timeline" markdown="1">
 
-<div class="cv-entry" markdown="1">
+<!-- <div class="cv-entry" markdown="1">
 
 ### PT. Reka Inovasi Cerdas
 **Electronics & Embedded Systems Engineer**
@@ -125,7 +125,7 @@ Industrial Robotics Laboratory
 - Prepared detailed monthly reports for management review
 - **Key Achievement: Successfully reduced machine downtime by 30% through proactive maintenance scheduling**
 
-</div>
+</div> -->
 
 <div class="cv-entry cv-entry--break" markdown="1">
 
@@ -133,7 +133,7 @@ Industrial Robotics Laboratory
 **Career Break**
 {: .cv-role}
 
-*April 2024 – September 2024*
+*April 2024 – September 2025*
 {: .cv-date}
 
 - Prepared applications for graduate study (M.Eng) in Japan
@@ -237,7 +237,7 @@ Industrial Robotics Laboratory
 **Academic**
 {: .cv-label}
 
-- <span class="cv-item">**Excellence Award (Applied Technology Award)** · Research Project Seminar (3) (PBL) Final Presentation, Graduate School of Systems Design, Tokyo Metropolitan University (Team 4, with Yushin Engineering Co., Ltd.) · July 2026</span> [Certificate](https://drive.google.com/file/d/1YiiXtokLIAWIyZVxF7hHmrSTxVsaGQmy/view?usp=sharing){: .doc-link}
+- <span class="cv-item">**Applied Technology Award** · Project Based Learning (PBL) Final Presentation, Graduate School of Systems Design, Tokyo Metropolitan University (Team 4, with Yushin Engineering Co., Ltd.) · July 2026</span> [Certificate](https://drive.google.com/file/d/1YiiXtokLIAWIyZVxF7hHmrSTxVsaGQmy/view?usp=sharing){: .doc-link}
 - <span class="cv-item">**Highest Score** · Certified Internship and Independent Study Program Batch II (PT. INKA) · 2022</span> [Certificate](https://drive.google.com/file/d/1dEjMEYla6MItw9q3Akhxx56kID7jGwfx/view){: .doc-link}
 
 </div>
@@ -450,7 +450,7 @@ Industrial Robotics Laboratory
 
 ## Activities
 
-- <span class="cv-item">**Robotics Workshop Speaker / Instructor**</span> [Certificates](https://drive.google.com/drive/folders/1jC2G61Z253U08smOECb1QE_vJEKeILxf){: .doc-link}
+- <span class="cv-item">**Robotics Workshop Speaker / Instructor**</span> [Certificate](https://drive.google.com/file/d/1oa4RlBlyCuv_HFF2FLR6KOpuIlpDxIRj/view?usp=sharing){: .doc-link}
 - <span class="cv-item">**Committee Member · Java Robot Contest X** (2018–2019)</span> [Certificate](https://drive.google.com/file/d/1z2y2tYTTZwQREU7dWf3LJCxSkeJ87j4Q/view?usp=sharing){: .doc-link}
 - <span class="cv-item">Multiple national robotics competition participations</span>
 
@@ -462,8 +462,8 @@ Industrial Robotics Laboratory
 
 ## Languages
 
-- <span class="cv-item">**English** - Professional Working Proficiency</span> [EF SET Certificate](https://cert.efset.org/en/ui9fgu){: .doc-link}
-- <span class="cv-item">**Japanese** - Currently Learning (N3 Level)</span>
+- <span class="cv-item">**English** - Professional Working Proficiency</span> [Certificate](https://cert.efset.org/en/ui9fgu){: .doc-link}
+- <span class="cv-item">**Japanese** - Daily Life Conversations</span>
 - <span class="cv-item">**Indonesian** - Native</span>
 
 </section>
