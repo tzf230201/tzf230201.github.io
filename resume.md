@@ -102,9 +102,7 @@ Industrial Robotics Laboratory
 - Conducted reverse engineering of valve turbine components for system optimization
 - Implemented embedded control systems for industrial automation
 - Created technical documentation and system specifications
-
-**Key Achievement:** Successfully delivered three major projects meeting client specifications and industrial standards
-{: .cv-key}
+- **Key Achievement: Successfully delivered three major projects meeting client specifications and industrial standards**
 
 </div>
 
@@ -125,9 +123,7 @@ Industrial Robotics Laboratory
 - Installed electrical panels and programmed PLCs (Siemens TIA Portal)
 - Installed and maintained pneumatic systems
 - Prepared detailed monthly reports for management review
-
-**Key Achievement:** Successfully reduced machine downtime by 30% through proactive maintenance scheduling
-{: .cv-key}
+- **Key Achievement: Successfully reduced machine downtime by 30% through proactive maintenance scheduling**
 
 </div>
 
@@ -162,7 +158,7 @@ Industrial Robotics Laboratory
 - Designed schematics and PCB layout for military-grade avionics display system
 - Implemented high-speed DDR-SDRAM interface for video processing
 - Programmed FPGA using VHDL for digital video processing
-- {: .cv-hl} **Achievement:** 66% reduction in video processing time
+- **Achievement: 66% reduction in video processing time**
 - Built comprehensive test equipment for quality assurance
 - Met all military standards (MIL-STD) compliance requirements
 
@@ -208,17 +204,10 @@ Industrial Robotics Laboratory
 - Implemented CAN bus communication protocol for vehicle subsystems
 - Designed and built VCU test jig for safe algorithm validation
 - Created comprehensive firmware documentation
-
-<div class="cv-key" markdown="1">
-
-**Key Achievements:**
-
-- **Highest score** in Certified Internship and Independent Study Program Batch II
-- Successfully deployed system for **G20 Summit 2022**
-- Contributed to achieving 40%+ Domestic Component Level (TKDN)
-- Completed project from design phase to road testing within tight deadline
-
-</div>
+- **Highest score in Certified Internship and Independent Study Program Batch II**
+- **Successfully deployed system for G20 Summit 2022**
+- **Contributed to achieving 40%+ Domestic Component Level (TKDN)**
+- **Completed project from design phase to road testing within tight deadline**
 
 </div>
 
@@ -320,17 +309,10 @@ Industrial Robotics Laboratory
 - Designed PCB schematics and layouts for sub-controllers (STM32)
 - Implemented kinematics and dynamics analysis for walking system
 - Developed URDF model for digital twin simulation
-
-<div class="cv-key" markdown="1">
-
-**Key Achievements:**
-
-- **68% reduction** in Center of Mass (CoM) error from ZMP reference
-- Improved maneuver system by implementing footstep planner
-- Applied control methods for humanoid robot reflex systems
-- Analyzed and optimized walking gait patterns
-
-</div>
+- **68% reduction in Center of Mass (CoM) error from ZMP reference**
+- **Improved maneuver system by implementing footstep planner**
+- **Applied control methods for humanoid robot reflex systems**
+- **Analyzed and optimized walking gait patterns**
 
 **Skills Developed:**
 {: .cv-sub}
